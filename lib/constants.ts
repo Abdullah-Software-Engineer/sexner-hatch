@@ -80,6 +80,43 @@ export const STATS = [
 ] as const
 
 // ============================================
+// Footer Data
+// ============================================
+export const FOOTER_AREAS_SERVED = [
+  'Arlington Heights',
+  'Des Plaines',
+  'Waukegan',
+  'Buffalo Grove',
+  'Clarendon Hills',
+  'Elgin',
+  'Long Grove',
+  'Palatine',
+] as const
+
+export const FOOTER_SHORTCUTS = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/practice-areas', label: 'Practice areas' },
+  { href: '/results', label: 'Results' },
+  { href: '/contact', label: 'Contact us' },
+] as const
+
+export const FOOTER_LEGAL_LINKS = [
+  { href: '/disclaimer', label: 'Disclaimer' },
+  { href: '/privacy-policy', label: 'Privacy policy' },
+  { href: '/terms-and-conditions', label: 'Terms and Conditions' },
+  { href: '/sitemap', label: 'Sitemap' },
+] as const
+
+export const FOOTER_SOCIAL_LINKS = [
+  { href: 'https://facebook.com', label: 'Facebook', icon: 'facebook' },
+  { href: 'https://x.com', label: 'X', icon: 'x' },
+  { href: 'https://linkedin.com', label: 'LinkedIn', icon: 'linkedin' },
+] as const
+
+export const FOOTER_COPYRIGHT = 'All rights reserved. Copyright © 2025 by Mitchell S. Sexner & Associates LLC'
+
+// ============================================
 // Theme Configuration
 // ============================================
 export const THEME = {

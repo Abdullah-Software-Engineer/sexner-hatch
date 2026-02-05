@@ -6,6 +6,12 @@ import PracticeAreas from './components/PracticeAreas'
 import WhatSetsUsApart from './components/WhatSetsUsApart'
 import TestimonialsMarquee from './components/TestimonialsMarquee'
 import ExperiencedAttorney from './components/ExperiencedAttorney'
+import SuccessStories from './components/SuccessStories'
+import SpeakWithTeam from './components/SpeakWithTeam'
+import LatestNews from './components/LatestNews'
+import ContactForm from './components/ContactForm'
+import FAQ from './components/FAQ'
+import Footer from './components/Footer'
 
 export default function Home() {
   return (
@@ -18,6 +24,12 @@ export default function Home() {
       <WhatSetsUsApart />
       <TestimonialsMarquee />
       <ExperiencedAttorney />
+      <SuccessStories />
+      <LatestNews />
+      <ContactForm />
+      <SpeakWithTeam />
+      <FAQ />
+      <Footer />
     </main>
   )
 }
