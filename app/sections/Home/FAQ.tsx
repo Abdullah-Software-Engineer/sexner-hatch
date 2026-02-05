@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
-import Container from './ui/Container'
-import Section from './ui/Section'
+import Container from '../../components/ui/Container'
+import Section from '../../components/ui/Section'
 
 const faqItems = [
   {

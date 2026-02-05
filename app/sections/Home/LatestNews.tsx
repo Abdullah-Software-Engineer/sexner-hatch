@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import Container from './ui/Container'
-import Section from './ui/Section'
-import Button from './ui/Button'
+import Container from '../../components/ui/Container'
+import Section from '../../components/ui/Section'
+import Button from '../../components/ui/Button'
 
 // Placeholder for featured article image – replace with your newspaper/legal image when available
 const FEATURED_IMAGE_PATH = '/home/home-page/hero-bg.webp'

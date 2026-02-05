@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Container from './ui/Container'
-import Section from './ui/Section'
+import Container from '../../components/ui/Container'
+import Section from '../../components/ui/Section'
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')

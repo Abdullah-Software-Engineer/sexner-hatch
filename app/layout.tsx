@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Poppins } from 'next/font/google'
 import './globals.css'
-import SideButtons from './components/SideButtons'
-import CallButton from './components/CallButton'
+import SideButtons from './components/ui/SideButtons'
+import CallButton from './components/ui/CallButton'
 
 const playfairDisplay = Playfair_Display({
   subsets: ['latin'],

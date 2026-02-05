@@ -1,9 +1,9 @@
 'use client'
 
 import { FaStar } from 'react-icons/fa'
-import Section from './ui/Section'
-import Container from './ui/Container'
-import Button from './ui/Button'
+import Section from '../../components/ui/Section'
+import Container from '../../components/ui/Container'
+import Button from '../../components/ui/Button'
 
 const testimonials = [
   {

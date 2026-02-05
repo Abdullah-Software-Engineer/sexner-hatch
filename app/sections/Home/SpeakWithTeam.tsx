@@ -1,8 +1,8 @@
 'use client'
 
-import Container from './ui/Container'
-import Section from './ui/Section'
-import Button from './ui/Button'
+import Container from '../../components/ui/Container'
+import Section from '../../components/ui/Section'
+import Button from '../../components/ui/Button'
 
 export default function SpeakWithTeam() {
   return (

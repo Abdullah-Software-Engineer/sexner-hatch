@@ -2,9 +2,9 @@
 
 import Link from 'next/link'
 import { FaGavel, FaFileContract, FaShieldAlt, FaBalanceScale, FaLock, FaUserShield } from 'react-icons/fa'
-import Container from './ui/Container'
-import Section from './ui/Section'
-import Button from './ui/Button'
+import Container from '../../components/ui/Container'
+import Section from '../../components/ui/Section'
+import Button from '../../components/ui/Button'
 import { PRACTICE_AREAS } from '@/lib/constants'
 
 const iconMap = {

@@ -1,8 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import Container from './ui/Container'
-import PhoneButton from './ui/PhoneButton'
+import Container from '../../components/ui/Container'
+import PhoneButton from '../../components/ui/PhoneButton'
 
 export default function Hero() {
   return (

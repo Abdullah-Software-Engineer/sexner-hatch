@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Section from './ui/Section'
+import Section from '../../components/ui/Section'
 
 const partnerImages = [
   { name: 'av-1-3-1.png 1.png', alt: 'AV Preeminent Rating' },

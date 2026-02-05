@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Container from './ui/Container'
+import Container from '../../components/ui/Container'
 
 export default function ExperiencedAttorney() {
   return (
