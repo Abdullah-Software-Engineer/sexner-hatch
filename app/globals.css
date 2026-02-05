@@ -837,32 +837,32 @@ p, span, div, a, button, input, textarea, label {
 
 /* Mobile - Hero Title */
 .hero-home-title-line1 {
-  font-size: 24px;
+  font-size: 38px;
 }
 
 .hero-home-title-line2 {
-  font-size: 32px;
+  font-size: 46px;
 }
 
 /* Tablet (1024px) - Hero Title */
 @media (min-width: 1024px) {
   .hero-home-title-line1 {
-    font-size: 36px;
+    font-size: 42px;
   }
 
   .hero-home-title-line2 {
-    font-size: 48px;
+    font-size: 52px;
   }
 }
 
 /* Laptop (1440px) - Hero Title */
 @media (min-width: 1440px) {
   .hero-home-title-line1 {
-    font-size: 64px;
+    font-size: 74px;
   }
 
   .hero-home-title-line2 {
-    font-size: 84px;
+    font-size: 98px;
   }
 }
 
