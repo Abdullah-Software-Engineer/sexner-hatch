@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Poppins } from 'next/font/google'
 import './globals.css'
+import SideButtons from './components/SideButtons'
+import CallButton from './components/CallButton'
 
 const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
@@ -28,7 +30,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfairDisplay.variable} ${poppins.variable}`}>
-      <body>{children}</body>
+      <body>
+        <SideButtons />
+        <CallButton />
+        {children}
+      </body>
     </html>
   )
 }
