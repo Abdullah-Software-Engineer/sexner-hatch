@@ -21,9 +21,14 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "marquee-scroll-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
       },
       animation: {
-        "marquee-scroll": "marquee-scroll 30s linear infinite",
+        "marquee-scroll": "marquee-scroll 60s linear infinite",
+        "marquee-scroll-reverse": "marquee-scroll-reverse 60s linear infinite",
       },
     },
   },

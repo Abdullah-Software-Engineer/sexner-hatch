@@ -28,37 +28,37 @@ export const PRACTICE_AREAS = [
   {
     id: '1',
     title: 'Criminal Defense',
-    description: 'Comprehensive defense for criminal charges including DUI, drug offenses, and violent crimes.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
     slug: 'criminal-defense',
   },
   {
     id: '2',
     title: 'DUI Defense',
-    description: 'Expert legal representation for DUI and DWI charges with proven track record.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
     slug: 'dui-defense',
   },
   {
     id: '3',
     title: 'Drug Crimes',
-    description: 'Defense against drug possession, trafficking, and manufacturing charges.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
     slug: 'drug-crimes',
   },
   {
     id: '4',
     title: 'Violent Crimes',
-    description: 'Experienced defense for assault, battery, and other violent crime allegations.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
     slug: 'violent-crimes',
   },
   {
     id: '5',
     title: 'White Collar Crimes',
-    description: 'Legal representation for fraud, embezzlement, and corporate crime charges.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
     slug: 'white-collar-crimes',
   },
   {
     id: '6',
     title: 'Domestic Violence',
-    description: 'Compassionate and effective defense for domestic violence accusations.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
     slug: 'domestic-violence',
   },
 ] as const

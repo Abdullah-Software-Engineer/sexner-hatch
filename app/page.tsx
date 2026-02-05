@@ -3,6 +3,8 @@ import Hero from './components/Hero'
 import LookingForLawyer from './components/LookingForLawyer'
 import PartnersMarquee from './components/PartnersMarquee'
 import PracticeAreas from './components/PracticeAreas'
+import WhatSetsUsApart from './components/WhatSetsUsApart'
+import TestimonialsMarquee from './components/TestimonialsMarquee'
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <LookingForLawyer />
       <PartnersMarquee />
       <PracticeAreas />
+      <WhatSetsUsApart />
+      <TestimonialsMarquee />
     </main>
   )
 }

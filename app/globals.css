@@ -113,7 +113,20 @@
     }
   }
   
+  @keyframes marquee-scroll-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
   .animate-marquee-scroll {
-    animation: marquee-scroll 30s linear infinite;
+    animation: marquee-scroll 60s linear infinite;
+  }
+  
+  .animate-marquee-scroll-reverse {
+    animation: marquee-scroll-reverse 60s linear infinite;
   }
 }
