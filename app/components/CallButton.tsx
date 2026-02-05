@@ -1,12 +1,23 @@
+'use client'
+
+import { SITE_CONFIG } from '@/lib/constants'
+import { getPhoneLink } from '@/lib/utils'
+
 export default function CallButton() {
   return (
-    <a href="tel:3129403228" className="call-button">
+    <a
+      href={getPhoneLink(SITE_CONFIG.phoneRaw)}
+      className="fixed bottom-[30px] right-[30px] w-10 h-10 bg-primary rounded-full flex items-center justify-center z-[99] shadow-lg transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl no-underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+      aria-label={`Call us at ${SITE_CONFIG.phone}`}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={2}
         stroke="currentColor"
+        className="w-5 h-5 text-white"
+        aria-hidden="true"
       >
         <path
           strokeLinecap="round"
