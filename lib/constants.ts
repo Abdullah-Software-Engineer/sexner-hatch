@@ -7,6 +7,9 @@ export const SITE_CONFIG = {
   description: 'Experienced criminal defense attorneys in Chicago with over 30 years of experience. We have helped over 20,000 clients with their legal matters.',
   phone: '(312) 940-3228',
   phoneRaw: '3129403228',
+  address: '2126 W Van Buren St. Chicago, IL 60612',
+  email: 'mitch@sexner.com',
+  fax: '847.690.9998',
 } as const
 
 // ============================================
@@ -18,6 +21,7 @@ export const NAVIGATION_LINKS = [
   { href: '/practice-areas', label: 'Practice Areas' },
   { href: '/resources', label: 'Resources' },
   { href: '/results', label: 'Results' },
+  { href: '/make-payment', label: 'Make Payment' },
   { href: '/contact', label: 'Contact' },
 ] as const
 
