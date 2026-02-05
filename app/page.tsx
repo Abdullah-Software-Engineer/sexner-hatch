@@ -1,4 +1,4 @@
-import Header from './components/Header'
+import Layout from './components/layout/Layout'
 import Hero from './sections/Home/Hero'
 import LookingForLawyer from './sections/Home/LookingForLawyer'
 import PartnersMarquee from './sections/Home/PartnersMarquee'
@@ -11,25 +11,24 @@ import SpeakWithTeam from './sections/Home/SpeakWithTeam'
 import LatestNews from './sections/Home/LatestNews'
 import ContactForm from './sections/Home/ContactForm'
 import FAQ from './sections/Home/FAQ'
-import Footer from './components/Footer'
 
 export default function Home() {
   return (
-    <main>
-      <Header />
-      <Hero />
-      <LookingForLawyer />
-      <PartnersMarquee />
-      <PracticeAreas />
-      <WhatSetsUsApart />
-      <TestimonialsMarquee />
-      <ExperiencedAttorney />
-      <SuccessStories />
-      <LatestNews />
-      <ContactForm />
-      <SpeakWithTeam />
-      <FAQ />
-      <Footer />
-    </main>
+    <Layout>
+      {/* <main> */}
+        <Hero />
+        <LookingForLawyer />
+        <PartnersMarquee />
+        <PracticeAreas />
+        <WhatSetsUsApart />
+        <TestimonialsMarquee />
+        <ExperiencedAttorney />
+        <SuccessStories />
+        <LatestNews />
+        <ContactForm />
+        <SpeakWithTeam />
+        <FAQ />
+      {/* </main> */}
+    </Layout>
   )
 }

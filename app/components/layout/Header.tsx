@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { NAVIGATION_LINKS, SITE_CONFIG } from '@/lib/constants'
 import { cn, throttle } from '@/lib/utils'
-import PhoneButton from './ui/PhoneButton'
+import PhoneButton from '../ui/PhoneButton'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
