@@ -7,7 +7,7 @@ import Section from '../../components/ui/Section'
 import Button from '../../components/ui/Button'
 
 // Placeholder for featured article image – replace with your newspaper/legal image when available
-const FEATURED_IMAGE_PATH = '/home/home-page/hero-bg.webp'
+const FEATURED_IMAGE_PATH = '/Home/home-page/hero-bg.webp'
 
 const HEADLINE =
   "Jury Returns Verdict in Sean 'P Diddy' Combs Criminal Trial"

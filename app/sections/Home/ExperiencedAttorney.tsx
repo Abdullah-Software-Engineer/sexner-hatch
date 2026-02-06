@@ -31,7 +31,7 @@ export default function ExperiencedAttorney() {
         <div className="hidden lg:block absolute top-0 bottom-0 w-[40%] z-20 pointer-events-none p-0 m-0" style={{ marginBottom: '-10px', right: '340px' }}>
           <div className="relative w-full h-full p-0 m-0">
             <Image
-              src="/home-page/women-pc.webp"
+              src="/Home/home-page/women-pc.webp"
               alt="Lady Justice"
               fill
               className="object-contain object-right-bottom p-0 m-0"
@@ -65,7 +65,7 @@ export default function ExperiencedAttorney() {
       {/* Mobile Image (visible only on small screens) */}
       <div className="lg:hidden relative h-[400px] w-full bg-white">
          <Image
-            src="/home-page/women-pc.webp"
+            src="/Home/home-page/women-pc.webp"
             alt="Lady Justice"
             fill
             className="object-contain object-center"
