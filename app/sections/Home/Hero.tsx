@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Background Image with Next.js Image optimization */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/home-page/hero-bg.webp"
+          src="/Home/home-page/hero-bg.webp"
           alt="Chicago Criminal Defense Attorneys"
           fill
           priority
