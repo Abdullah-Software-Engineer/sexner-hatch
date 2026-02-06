@@ -6,11 +6,11 @@ import Button from '../../components/ui/Button'
 
 export default function SpeakWithTeam() {
   return (
-    <Section className="bg-[#F8F8F8] py-10 md:py-14" id="speak-with-team">
+    <Section className="bg-[#F8F8F8] py-8 sm:py-10 md:py-14" id="speak-with-team">
       <Container>
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-8">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-5 sm:gap-6 md:gap-8">
           <div className="flex-1">
-            <h2 className="font-playfair text-2xl md:text-3xl lg:text-[34px] font-normal text-[#1a1a1a] leading-tight mb-4">
+            <h2 className="font-playfair text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-normal text-[#1a1a1a] leading-tight mb-3 sm:mb-4">
               Speak with our experienced team and understand your legal{' '}
               <span className="relative inline-block">
                 options

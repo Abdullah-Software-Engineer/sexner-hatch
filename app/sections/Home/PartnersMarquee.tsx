@@ -35,7 +35,7 @@ export default function PartnersMarquee() {
               className="flex-shrink-0 flex items-center justify-center"
             >
               <Image
-                src={`/Home/home-page/partners/${partner.name}`}
+                src={`/home/home-page/partners/${partner.name}`}
                 alt={partner.alt}
                 width={150}
                 height={100}

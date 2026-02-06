@@ -47,11 +47,11 @@ export default function TestimonialsMarquee() {
         </div>
       </Container>
 
-      <div className="flex flex-col gap-6 md:gap-8">
+      <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">
         {/* Row 1 - Scroll Left */}
         <div className="relative w-full overflow-hidden">
           <div 
-            className="flex w-max flex-nowrap gap-6 animate-marquee-scroll hover:[animation-play-state:paused] will-change-transform"
+            className="flex w-max flex-nowrap gap-4 sm:gap-6 animate-marquee-scroll hover:[animation-play-state:paused] will-change-transform"
             style={{ width: 'max-content' }}
           >
             {duplicatedTestimonials.map((item, idx) => (
@@ -63,7 +63,7 @@ export default function TestimonialsMarquee() {
         {/* Row 2 - Scroll Right */}
         <div className="relative w-full overflow-hidden">
           <div 
-            className="flex w-max flex-nowrap gap-6 animate-marquee-scroll-reverse hover:[animation-play-state:paused] will-change-transform"
+            className="flex w-max flex-nowrap gap-4 sm:gap-6 animate-marquee-scroll-reverse hover:[animation-play-state:paused] will-change-transform"
             style={{ width: 'max-content' }}
           >
             {duplicatedTestimonials.map((item, idx) => (
@@ -93,16 +93,16 @@ export default function TestimonialsMarquee() {
 function Card({ item }: { item: typeof testimonials[0] }) {
   return (
     <div 
-      className="w-[300px] md:w-[350px] lg:w-[510px] xl:w-[650px] flex-shrink-0 rounded-xl p-10 md:p-12 xl:p-16 text-center text-white flex flex-col items-center justify-center gap-4 transition-transform hover:scale-[1.02]"
+      className="w-[280px] sm:w-[300px] md:w-[350px] lg:w-[510px] xl:w-[650px] flex-shrink-0 rounded-xl p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 text-center text-white flex flex-col items-center justify-center gap-3 sm:gap-4 transition-transform hover:scale-[1.02]"
       style={{ background: 'linear-gradient(90deg, #2C3E50 40%, #C8A24F 99%)' }}
     >
-      <h3 className="text-xl font-poppins font-medium text-white">{item.name}</h3>
-      <p className="text-sm font-poppins leading-relaxed text-white/90">
-        “{item.text}”
+      <h3 className="text-lg sm:text-xl font-poppins font-medium text-white">{item.name}</h3>
+      <p className="text-xs sm:text-sm font-poppins leading-relaxed text-white/90">
+        "{item.text}"
       </p>
       <div className="flex gap-1.5 text-[#FFC300]">
         {[...Array(5)].map((_, i) => (
-          <FaStar key={i} className="w-4 h-4" />
+          <FaStar key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
         ))}
       </div>
     </div>

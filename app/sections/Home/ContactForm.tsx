@@ -18,8 +18,8 @@ export default function ContactForm() {
   return (
     <Section className="bg-[#28323C]" id="contact-form">
       <Container>
-        <div className="max-w-[600px] mx-auto">
-          <h2 className="font-playfair text-[26px] md:text-[36px] font-semibold text-white text-center mb-8 md:mb-10">
+        <div className="max-w-[600px] mx-auto px-4 sm:px-0">
+          <h2 className="font-playfair text-[22px] sm:text-[26px] md:text-[36px] font-semibold text-white text-center mb-6 sm:mb-8 md:mb-10">
             <span className="relative inline-block">
               <span className="relative">Get</span>
               <span className="absolute left-0 bottom-0 w-full h-0.5 bg-secondary" aria-hidden="true" />
@@ -27,7 +27,7 @@ export default function ContactForm() {
             {' '}your confidential case evaluation
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 md:space-y-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
               <input
                 type="text"

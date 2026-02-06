@@ -39,29 +39,30 @@ export default function SuccessStories() {
 
           {/* Right column: content card */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-xl border-2 border-secondary bg-white p-6 md:p-8 lg:p-10 h-full flex flex-col">
-              <div className="absolute top-6 right-6 md:top-8 md:right-8">
+            <div className="relative rounded-xl border-2 border-secondary bg-white p-4 sm:p-6 md:p-8 lg:p-10 h-full flex flex-col">
+              <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8">
                 <Button
                   href="/victories"
                   variant="primary"
                   size="sm"
                   ariaLabel="View all victories"
+                  className="text-xs sm:text-sm"
                 >
                   View all victories
                 </Button>
               </div>
 
-              <h3 className="font-poppins text-2xl md:text-3xl font-semibold text-[#333333] mb-2 pr-[160px] md:pr-[180px]">
+              <h3 className="font-poppins text-xl sm:text-2xl md:text-3xl font-semibold text-[#333333] mb-2 pr-20 sm:pr-32 md:pr-[160px] lg:pr-[180px]">
                 Dismissed
               </h3>
-              <p className="font-poppins text-sm md:text-base font-medium text-[#5D6D8D] mb-4">
+              <p className="font-poppins text-sm md:text-base font-medium text-[#5D6D8D] mb-3 md:mb-4">
                 Felony cannabis possession
               </p>
               <p className="font-poppins text-sm md:text-base text-[#333333] leading-relaxed flex-1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
               </p>
               <div
-                className="mt-6 pt-6 border-t border-dashed border-secondary"
+                className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-dashed border-secondary"
                 aria-hidden
               />
             </div>
