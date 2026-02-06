@@ -71,7 +71,7 @@ export default function WhatSetsUsApart() {
           {/* Right Side - Image */}
           <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden">
             <Image
-              src="/home-page/apart-image.webp"
+              src="/Home/home-page/apart-image.webp"
               alt="Our legal team working together"
               fill
               className="object-cover"
