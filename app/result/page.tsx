@@ -1,6 +1,7 @@
 import Layout from '../components/layout/Layout'
 import ResultHero from '../sections/Result/ResultHero'
 import CaseResultsWithForm from '../sections/Result/CaseResultsWithForm'
+import TestimonialsMarquee from '../sections/Home/TestimonialsMarquee'
 import SpeakWithTeam from '../sections/Home/SpeakWithTeam'
 
 export const metadata = {
@@ -14,8 +15,8 @@ export default function ResultPage() {
     <Layout>
       <ResultHero />
       <CaseResultsWithForm />
+      <TestimonialsMarquee />
       <SpeakWithTeam />
-      {/* < */}
     </Layout>
   )
 }
