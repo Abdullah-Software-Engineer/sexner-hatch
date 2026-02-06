@@ -33,11 +33,11 @@ export default function Header() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center flex-shrink-0 transition-opacity hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary rounded"
+              className=""
               aria-label={`${SITE_CONFIG.name} Home`}
             >
               <Image
-                src="/header/logo-white.webp"
+                src="/Home/header/sexner-white.png"
                 alt={SITE_CONFIG.name}
                 width={140}
                 height={50}
