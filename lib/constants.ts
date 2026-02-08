@@ -18,6 +18,7 @@ export const SITE_CONFIG = {
 export const NAVIGATION_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
+  { href: '/meet-our-team', label: 'Meet Our Team' },
   { href: '/practice-areas', label: 'Practice Areas' },
   { href: '/resources', label: 'Resources' },
   { href: '/results', label: 'Results' },
@@ -127,6 +128,7 @@ export const FOOTER_AREAS_SERVED = [
 export const FOOTER_SHORTCUTS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/meet-our-team', label: 'Meet our team' },
   { href: '/practice-areas', label: 'Practice areas' },
   { href: '/results', label: 'Results' },
   { href: '/contact', label: 'Contact us' },
