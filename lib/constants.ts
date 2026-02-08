@@ -21,6 +21,7 @@ export const NAVIGATION_LINKS = [
   { href: '/practice-areas', label: 'Practice Areas' },
   { href: '/resources', label: 'Resources' },
   { href: '/results', label: 'Results' },
+  { href: '/testimonial', label: 'Testimonial' },
   { href: '/make-payment', label: 'Make Payment' },
   { href: '/contact', label: 'Contact' },
 ] as const
