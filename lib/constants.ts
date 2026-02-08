@@ -68,6 +68,32 @@ export const PRACTICE_AREAS = [
 ] as const
 
 // ============================================
+// Courthouse Locations (for detail pages)
+// ============================================
+export const COURTHOUSE_LOCATIONS = [
+  { slug: '111th-street-branch-court', name: '111th Street Branch Court' },
+  { slug: '26th-california-criminal', name: '26th & California (Criminal)' },
+  { slug: 'daley-center-civil', name: 'Daley Center (Civil)' },
+  { slug: '555-w-harrison-domestic-violence', name: '555 W. Harrison (Domestic Violence)' },
+  { slug: 'grand-central-branch', name: 'Grand & Central Branch' },
+  { slug: 'skokie-courthouse', name: 'Skokie Courthouse' },
+  { slug: 'rolling-meadows-courthouse', name: 'Rolling Meadows Courthouse' },
+  { slug: 'maywood-courthouse', name: 'Maywood Courthouse' },
+  { slug: 'bridgeview-courthouse', name: 'Bridgeview Courthouse' },
+  { slug: 'markham-courthouse', name: 'Markham Courthouse' },
+  { slug: 'chicago-lawn-63rd-branch', name: 'Chicago Lawn (63rd) Branch' },
+  { slug: 'harrison-kedzie-branch', name: 'Harrison (Kedzie) Branch' },
+  { slug: 'leighton-criminal-court', name: 'Leighton Criminal Court' },
+  { slug: 'george-n-leighton-courthouse', name: 'George N. Leighton Courthouse' },
+  { slug: 'richard-j-daley-center', name: 'Richard J. Daley Center' },
+  { slug: 'englewood-branch-court', name: 'Englewood Branch Court' },
+  { slug: 'first-municipal-district', name: 'First Municipal District' },
+  { slug: 'second-municipal-district', name: 'Second Municipal District' },
+  { slug: 'third-municipal-district', name: 'Third Municipal District' },
+  { slug: 'fourth-municipal-district', name: 'Fourth Municipal District' },
+] as const
+
+// ============================================
 // Stats Data
 // ============================================
 export const STATS = [

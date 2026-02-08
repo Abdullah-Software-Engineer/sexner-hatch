@@ -1,6 +1,7 @@
 import Layout from '../components/layout/Layout'
+import OfficeContact from '../sections/Contact/OfficeContact'
 import CourthouseLocationHero from '../sections/CourthouseLocation/CourthouseLocationHero'
-import CourthouseLocationsWithForm from '../sections/CourthouseLocation/CourthouseLocationsWithForm'
+import DetailedCourthouseLocationContent from '../sections/CourthouseLocation/DetailedCourthouseLocationContent'
 import SpeakWithTeam from '../sections/Home/SpeakWithTeam'
 
 export const metadata = {
@@ -13,7 +14,8 @@ export default function CourthouseLocationPage() {
   return (
     <Layout>
       <CourthouseLocationHero />
-      <CourthouseLocationsWithForm />
+      <DetailedCourthouseLocationContent locationName="111th Street Branch Court" />
+      <OfficeContact />
       <SpeakWithTeam />
     </Layout>
   )
