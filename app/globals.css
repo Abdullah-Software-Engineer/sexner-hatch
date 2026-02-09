@@ -35,8 +35,16 @@
     line-height: 1.2;
   }
 
-  p, span, div, a, button, input, textarea, label {
+  p, div, a, button, input, textarea, label {
     font-family: var(--font-poppins), sans-serif;
+  }
+
+  span {
+    font-family: var(--font-poppins), sans-serif;
+  }
+
+  h1 span {
+    font-family: inherit;
   }
 }
 

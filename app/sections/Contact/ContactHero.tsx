@@ -2,13 +2,14 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaPhone } from 'react-icons/fa'
 import Container from '../../components/ui/Container'
 import { getPhoneLink } from '@/lib/utils'
 import { SITE_CONFIG } from '@/lib/constants'
 
 export default function ContactHero() {
   return (
-    <section className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden flex items-center">
+    <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden flex items-center">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -25,48 +26,43 @@ export default function ContactHero() {
 
       <div className="relative z-10 w-full py-16 md:py-24">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left: Headline */}
-            <div>
-              <h1 className="font-playfair font-light text-white text-[36px] leading-tight sm:text-[42px] md:text-[52px] lg:text-[58px] xl:text-[64px] drop-shadow-lg">
+            <div className="text-left">
+              <h1 
+                className="font-playfair font-medium text-white text-[42px] leading-tight sm:text-[56px] md:text-[64px] lg:text-[74px]"
+                style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}
+              >
                 GET IN TOUCH WITH
-                <br />
-                <span className="text-secondary">US TODAY</span>
+             
+                US <span className="text-secondary" style={{ fontFamily: 'var(--font-playfair), serif' }}>TODAY</span>
               </h1>
             </div>
 
             {/* Right: Contact info + CTA */}
-            <div className="flex flex-col gap-6 max-w-md lg:max-w-none">
-              <p className="font-poppins text-white text-base md:text-lg leading-relaxed">
+            <div className="flex flex-col gap-5 lg:pl-12 max-w-xl lg:ml-auto">
+              <p className="font-poppins text-white text-base md:text-lg leading-relaxed drop-shadow-md text-left lg:text-right">
                 Call us at{' '}
                 <a
                   href={getPhoneLink(SITE_CONFIG.phoneRaw)}
-                  className="text-secondary font-medium hover:underline"
+                  className="text-white font-medium hover:text-secondary transition-colors"
                 >
                   {SITE_CONFIG.phone}
                 </a>{' '}
                 or complete the form below for a free consultation.
               </p>
-              <Link
-                href={getPhoneLink(SITE_CONFIG.phoneRaw)}
-                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-full border-2 border-white bg-black/30 text-white font-medium hover:bg-white/10 transition-colors w-fit"
-                aria-label={`Call us now - ${SITE_CONFIG.phone}`}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5 text-secondary shrink-0"
-                  aria-hidden="true"
+              <div className="flex justify-start lg:justify-end">
+                <Link
+                  href={getPhoneLink(SITE_CONFIG.phoneRaw)}
+                  className="inline-flex items-center gap-4 pl-1.5 pr-8 py-1.5 rounded-full border border-secondary bg-transparent text-white font-medium hover:bg-transparent transition-colors w-fit shadow-lg backdrop-blur-sm group h-14"
+                  aria-label={`Call us now - ${SITE_CONFIG.phone}`}
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C2.95 22.5 0 19.55 0 16.5V6.75z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Call us now
-              </Link>
+                  <div className="flex items-center justify-center w-11 h-11 rounded-full bg-secondary text-white shrink-0 group-hover:scale-105 transition-transform">
+                    <FaPhone className="w-5 h-5" />
+                  </div>
+                  <span className="text-lg font-medium tracking-wide">Call us now</span>
+                </Link>
+              </div>
             </div>
           </div>
         </Container>
