@@ -25,9 +25,10 @@ export default function Home() {
         <ExperiencedAttorney />
         <SuccessStories />
         <LatestNews />
+        <FAQ />
         <ContactForm />
         <SpeakWithTeam />
-        <FAQ />
+        
       {/* </main> */}
     </Layout>
   )
