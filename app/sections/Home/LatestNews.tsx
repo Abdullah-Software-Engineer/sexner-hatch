@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
 import Button from '../../components/ui/Button'
+import { FaArrowRight } from 'react-icons/fa'
 
 // Placeholder for featured article image – replace with your newspaper/legal image when available
 const FEATURED_IMAGE_PATH = '/home/home-page/hero-bg.webp'
@@ -38,70 +39,52 @@ export default function LatestNews() {
           </Button>
         </div>
 
-        {/* News cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {/* Featured card – dark blue with image */}
-          <article className="rounded-xl overflow-hidden bg-primary flex flex-col">
-            <div className="relative aspect-16/10 w-full overflow-hidden">
-              <Image
-                src={FEATURED_IMAGE_PATH}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              {/* Geometric overlay */}
-              <div
-                className="absolute inset-0 bg-primary/40"
-                aria-hidden
-              />
-              <div
-                className="absolute inset-0 opacity-30"
-                style={{
-                  backgroundImage: `radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                }}
-                aria-hidden
-              />
-            </div>
-            <div className="p-5 md:p-6 flex flex-col flex-1">
-              <h3 className="text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
-                {HEADLINE}
-              </h3>
-              <p className="font-poppins text-sm text-white/90 mb-4 flex-1">
-                {SHORT_DESC}
-              </p>
-              <Link
-                href="/news"
-                className="inline-flex items-center gap-2 font-poppins font-medium text-sm bg-secondary text-white px-4 py-2.5 rounded-md hover:opacity-90 transition-opacity w-fit"
-                aria-label="Read more: Jury Returns Verdict"
-              >
-                Read more
-                <span aria-hidden>→</span>
-              </Link>
-            </div>
-          </article>
-
-          {/* Standard cards – gold background */}
-          {[1, 2].map((i) => (
+        {/* News cards - Flex container for expand/compress effect */}
+        <div className="flex flex-col md:flex-row gap-6 lg:gap-8 h-auto md:h-[600px]">
+          {[1, 2, 3].map((i) => (
             <article
               key={i}
-              className="rounded-xl overflow-hidden bg-secondary flex flex-col p-5 md:p-6"
+              className="flex-1 rounded-xl overflow-hidden bg-secondary hover:bg-primary transition-all duration-500 ease-in-out flex flex-col group min-w-0 hover:flex-[2] md:hover:flex-[2.5] relative"
             >
-              <h3 className="text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
-                {HEADLINE}
-              </h3>
-              <p className="font-poppins text-sm text-white/95 mb-4 flex-1 line-clamp-4">
-                {LONG_DESC}
-              </p>
-              <Link
-                href="/news"
-                className="inline-flex items-center gap-2 font-poppins font-medium text-sm bg-primary text-white px-4 py-2.5 rounded-md hover:opacity-90 transition-opacity w-fit"
-                aria-label={`Read more article ${i}`}
-              >
-                Read more
-                <span aria-hidden>→</span>
-              </Link>
+              <div className="p-4 pb-0 shrink-0">
+                <div className="relative w-full h-[250px] md:h-[300px] overflow-hidden rounded-xl">
+                  <Image
+                    src={FEATURED_IMAGE_PATH}
+                    alt=""
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+              </div>
+              
+              <div className="p-5 md:p-6 flex flex-col flex-1 min-w-0 overflow-hidden relative">
+                <div className="flex-1">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 line-clamp-2 shrink-0">
+                    {HEADLINE}
+                  </h3>
+                  <div className="relative overflow-hidden mb-16">
+                    <p className="font-poppins text-sm text-white/95 leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+                      <span className="group-hover:hidden">{LONG_DESC}</span>
+                      <span className="hidden group-hover:inline">{SHORT_DESC}</span>
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Button aligned to bottom right */}
+                <div className="absolute bottom-5 right-5 md:bottom-6 md:right-6">
+                  <Link
+                    href="/news"
+                    className="inline-flex items-center gap-3 font-poppins font-medium text-sm bg-primary group-hover:bg-secondary text-white pl-5 pr-1.5 py-1.5 rounded-full hover:opacity-90 transition-all duration-300 shadow-md group-hover:text-white"
+                    aria-label={`Read more article ${i}`}
+                  >
+                    <span>Read more</span>
+                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white text-primary group-hover:text-secondary shrink-0">
+                      <FaArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
             </article>
           ))}
         </div>

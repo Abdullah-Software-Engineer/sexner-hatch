@@ -26,10 +26,15 @@ const config: Config = {
           "0%": { transform: "translateX(-50%)" },
           "100%": { transform: "translateX(0)" },
         },
+        "marquee-scroll-vertical": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-50%)" },
+        },
       },
       animation: {
         "marquee-scroll": "marquee-scroll 60s linear infinite",
         "marquee-scroll-reverse": "marquee-scroll-reverse 60s linear infinite",
+        "marquee-scroll-vertical": "marquee-scroll-vertical 60s linear infinite",
       },
     },
   },

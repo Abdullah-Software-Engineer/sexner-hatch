@@ -61,7 +61,7 @@ export default function FAQ() {
           <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             Frequently asked questions
             <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
-          </h2>
+        </h2>
         </div>
 
         <div className="space-y-3">
