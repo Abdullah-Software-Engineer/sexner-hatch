@@ -5,9 +5,9 @@ import Container from '../../components/ui/Container'
 
 export default function ExperiencedAttorney() {
   return (
-    <section className="relative bg-white">
+    <section className="relative bg-white ">
       {/* Top White Section with Button */}
-      <div className="bg-white pt-12 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20 relative z-10">
+      <div className="bg-white pt-12 sm:pt-16 md:pt-20  relative z-10">
         <Container>
           
 
@@ -44,7 +44,28 @@ export default function ExperiencedAttorney() {
       </div>
 
       {/* Bottom Beige Strip */}
-     
+      <div className="bg-[#e8dec5] py-12 sm:py-16 md:py-20">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {[1, 2, 3].map((item) => (
+              <div
+                key={item}
+                className="bg-primary text-white p-10 sm:p-12 rounded-xl shadow-lg hover:translate-y-[-5px] transition-transform duration-300"
+              >
+                <h3 className="font-poppins text-2xl font-medium mb-4">
+                  Traffic Violation
+                </h3>
+                <p className="font-poppins text-sm leading-relaxed text-gray-300">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+                  Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet,
+                  cons.Lorem ipsum dolor sit amet, consecte.
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </div>
     </section>
   )
 }
