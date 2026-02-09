@@ -48,7 +48,7 @@ export default function SuccessStories() {
           <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             Success Stories
             <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
-          </h2>
+        </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
@@ -88,13 +88,13 @@ export default function SuccessStories() {
                     <div key={index} className="p-4 sm:p-6 md:p-8 lg:p-10 border-b border-dashed border-secondary last:border-b-0">
                       <h3 className="font-libre text-xl sm:text-2xl md:text-3xl font-semibold text-black mb-2 pr-20 sm:pr-32 md:pr-[160px] lg:pr-[180px]">
                         {story.title}
-                      </h3>
+              </h3>
                       <p className="font-poppins text-sm sm:text-base md:text-lg font-medium text-black/80 mb-3 md:mb-4">
                         {story.subtitle}
-                      </p>
+              </p>
                       <p className="font-poppins text-sm sm:text-base md:text-lg text-black/80 leading-relaxed">
                         {story.description}
-                      </p>
+              </p>
                     </div>
                   ))}
                 </div>
