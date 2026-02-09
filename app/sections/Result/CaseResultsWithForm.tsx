@@ -53,11 +53,11 @@ export default function CaseResultsWithForm() {
   }
 
   return (
-    <Section className="bg-[#F5F5F5]">
+    <Section className="bg-white">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-12">
           {/* Left: Intro + Filters + Result Cards */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="flex-1 lg:w-[58.33%] space-y-6 min-w-0">
             <p className="font-poppins text-primary text-base md:text-lg leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -125,64 +125,58 @@ export default function CaseResultsWithForm() {
             </div>
           </div>
 
-          {/* Right: Contact Form */}
-          <div className="lg:col-span-5">
-            <div className="rounded-xl overflow-hidden shadow-md">
-              <div className="bg-primary py-6 px-6 text-center">
-                <h2 className="font-libre font-semibold text-white text-xl md:text-2xl">
+          {/* Right: Contact Form - Sticky Sidebar */}
+          <aside className="w-full lg:w-[41.67%] lg:flex-shrink-0 lg:sticky lg:top-32 lg:self-start" style={{ position: '-webkit-sticky' } as any}>
+              <div className="bg-gradient-to-b from-[#1a2b3c] to-[#b89553] p-8 rounded-xl shadow-2xl border border-white/10">
+                <h3 className="font-libre text-white text-[28px] text-center mb-6 leading-tight">
                   Contact us for a free case evaluation
-                </h2>
+                </h3>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required
+                    className="w-full bg-[#f8f9fa] border-0 rounded px-4 py-3.5 text-primary placeholder:text-[#555] focus:ring-2 focus:ring-secondary outline-none transition-shadow"
+                    disabled={status === 'submitting'}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    required
+                    className="w-full bg-[#f8f9fa] border-0 rounded px-4 py-3.5 text-primary placeholder:text-[#555] focus:ring-2 focus:ring-secondary outline-none transition-shadow"
+                    disabled={status === 'submitting'}
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone number"
+                    required
+                    className="w-full bg-[#f8f9fa] border-0 rounded px-4 py-3.5 text-primary placeholder:text-[#555] focus:ring-2 focus:ring-secondary outline-none transition-shadow"
+                    disabled={status === 'submitting'}
+                  />
+                  <textarea
+                    name="message"
+                    placeholder="How can we help?"
+                    rows={4}
+                    required
+                    className="w-full bg-[#f8f9fa] border-0 rounded px-4 py-3.5 text-primary placeholder:text-[#555] focus:ring-2 focus:ring-secondary outline-none resize-none"
+                    disabled={status === 'submitting'}
+                  />
+                  <button
+                    type="submit"
+                    disabled={status === 'submitting'}
+                    className="w-full bg-[#c5a059] text-white font-medium text-lg py-3.5 rounded hover:bg-[#b89553] transition-colors mt-2 disabled:opacity-70"
+                  >
+                    {status === 'submitting' ? 'Submitting...' : 'Submit'}
+                  </button>
+                  <p className="text-white/80 text-[11px] leading-relaxed text-center mt-4">
+                    By clicking Submit you consent to receiving SMS messages. Message &amp; data rates may apply. Message frequency may vary. Reply Help for assistance. Reply Stop to opt-out.
+                  </p>
+                </form>
               </div>
-              <form onSubmit={handleSubmit} className="bg-white p-6 space-y-4">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow"
-                  disabled={status === 'submitting'}
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow"
-                  disabled={status === 'submitting'}
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone number"
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow"
-                  disabled={status === 'submitting'}
-                />
-                <textarea
-                  name="message"
-                  placeholder="How can we help?"
-                  rows={4}
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow resize-y min-h-[100px]"
-                  disabled={status === 'submitting'}
-                />
-                <button
-                  type="submit"
-                  disabled={status === 'submitting'}
-                  className="w-full py-3.5 rounded-lg bg-secondary text-white font-poppins font-semibold hover:bg-secondary/90 disabled:opacity-70 transition-opacity"
-                >
-                  {status === 'submitting' ? 'Submitting...' : 'Submit'}
-                </button>
-              </form>
-              <div className="bg-secondary/90 px-6 py-4">
-                <p className="text-white text-xs leading-relaxed">
-                  By clicking Submit you consent to receiving SMS messages.
-                  Message &amp; data rates may apply. Message frequency may vary.
-                  Reply Help for assistance. Reply Stop to opt-out.
-                </p>
-              </div>
-            </div>
-          </div>
+          </aside>
         </div>
       </Container>
     </Section>
