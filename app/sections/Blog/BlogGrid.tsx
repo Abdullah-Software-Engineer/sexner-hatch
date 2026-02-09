@@ -46,15 +46,15 @@ function LargeCard({ className }: { className?: string }) {
         />
       </div>
       <div className="p-5 md:p-6 flex flex-col flex-1 bg-primary">
-        <h3 className="font-poppins text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
+        <h3 className="font-libre text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
           {HEADLINE}
         </h3>
-        <p className="font-poppins text-sm text-white/90 mb-4 flex-1">
+        <p className="font-libre text-sm text-white/90 mb-4 flex-1">
           {SHORT_DESC}
         </p>
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 font-poppins font-medium text-sm bg-secondary text-white px-4 py-2.5 rounded-md hover:opacity-90 transition-opacity w-fit"
+          className="inline-flex items-center gap-2 font-libre font-medium text-sm bg-secondary text-white px-4 py-2.5 rounded-md hover:opacity-90 transition-opacity w-fit"
           aria-label={`Read more: ${HEADLINE}`}
         >
           Read more
@@ -71,15 +71,15 @@ function SmallCard({ className }: { className?: string }) {
     <article
       className={`rounded-lg overflow-hidden bg-secondary flex flex-col p-5 md:p-6 shadow-lg ${className || ''}`}
     >
-      <h3 className="font-poppins text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
+      <h3 className="font-libre text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
         {HEADLINE}
       </h3>
-      <p className="font-poppins text-sm text-white/95 mb-4 flex-1 line-clamp-4">
+      <p className="font-libre text-sm text-white/95 mb-4 flex-1 line-clamp-4">
         {LONG_DESC}
       </p>
       <Link
         href="/blog"
-        className="inline-flex items-center gap-2 font-poppins font-medium text-sm bg-secondary/90 text-white px-4 py-2.5 rounded-md hover:bg-secondary transition-colors w-fit border border-white/30"
+        className="inline-flex items-center gap-2 font-libre font-medium text-sm bg-secondary/90 text-white px-4 py-2.5 rounded-md hover:bg-secondary transition-colors w-fit border border-white/30"
         aria-label={`Read more: ${HEADLINE}`}
       >
         Read more

@@ -64,31 +64,31 @@ export default function BlogDetailContent() {
           {/* Main content column */}
           <div className="lg:col-span-8">
             <article>
-              <h2 className="font-playfair font-bold text-primary text-2xl md:text-3xl mb-4">
+              <h2 className="font-libre font-bold text-primary text-2xl md:text-3xl mb-4">
                 Heading 1
               </h2>
-              <p className="font-poppins text-primary text-base leading-relaxed mb-6">{LOREM}</p>
-              <p className="font-poppins text-primary text-base leading-relaxed mb-6">{LOREM}</p>
+              <p className="font-libre text-primary text-base leading-relaxed mb-6">{LOREM}</p>
+              <p className="font-libre text-primary text-base leading-relaxed mb-6">{LOREM}</p>
 
               <div
-                className="w-full h-[200px] rounded-lg bg-gray-200 mb-6 flex items-center justify-center text-gray-500 font-poppins text-sm"
+                className="w-full h-[200px] rounded-lg bg-gray-200 mb-6 flex items-center justify-center text-gray-500 font-libre text-sm"
                 aria-hidden
               >
                 Image placeholder
               </div>
 
-              <p className="font-poppins text-primary text-base leading-relaxed mb-6">{LOREM}</p>
-              <p className="font-poppins text-primary text-base leading-relaxed mb-6">{LOREM}</p>
+              <p className="font-libre text-primary text-base leading-relaxed mb-6">{LOREM}</p>
+              <p className="font-libre text-primary text-base leading-relaxed mb-6">{LOREM}</p>
 
               <div
-                className="w-full h-[200px] rounded-lg bg-gray-200 mb-6 flex items-center justify-center text-gray-500 font-poppins text-sm"
+                className="w-full h-[200px] rounded-lg bg-gray-200 mb-6 flex items-center justify-center text-gray-500 font-libre text-sm"
                 aria-hidden
               >
                 Image placeholder
               </div>
 
-              <p className="font-poppins text-primary text-base leading-relaxed mb-6">{LOREM}</p>
-              <p className="font-poppins text-primary text-base leading-relaxed">{LOREM}</p>
+              <p className="font-libre text-primary text-base leading-relaxed mb-6">{LOREM}</p>
+              <p className="font-libre text-primary text-base leading-relaxed">{LOREM}</p>
             </article>
           </div>
 
@@ -118,7 +118,7 @@ export default function BlogDetailContent() {
               <button
                 type="button"
                 onClick={() => setCategoriesOpen((o) => !o)}
-                className="w-full flex items-center justify-between px-4 py-3 bg-secondary text-white font-poppins font-medium text-left"
+                className="w-full flex items-center justify-between px-4 py-3 bg-secondary text-white font-libre font-medium text-left"
                 aria-expanded={categoriesOpen}
               >
                 <span>Categories</span>
@@ -141,7 +141,7 @@ export default function BlogDetailContent() {
                     <li key={i}>
                       <Link
                         href="#"
-                        className="block px-4 py-3 font-poppins text-sm text-primary hover:bg-secondary/10 focus:bg-secondary/10 transition-colors"
+                        className="block px-4 py-3 font-libre text-sm text-primary hover:bg-secondary/10 focus:bg-secondary/10 transition-colors"
                       >
                         {i + 1}. {label}
                       </Link>
@@ -153,7 +153,7 @@ export default function BlogDetailContent() {
 
             {/* Contact form */}
             <div className="rounded-lg overflow-hidden bg-primary p-5 md:p-6">
-              <h3 className="font-playfair font-semibold text-white text-lg md:text-xl text-center mb-4">
+              <h3 className="font-libre font-semibold text-white text-lg md:text-xl text-center mb-4">
                 Contact us for a free case evaluation
               </h3>
               <form onSubmit={handleSubmit} className="space-y-3">
@@ -190,7 +190,7 @@ export default function BlogDetailContent() {
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="w-full py-3.5 rounded-lg bg-secondary text-white font-poppins font-semibold hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary disabled:opacity-70 transition-opacity"
+                  className="w-full py-3.5 rounded-lg bg-secondary text-white font-libre font-semibold hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary disabled:opacity-70 transition-opacity"
                 >
                   {status === 'submitting' ? 'Submitting...' : 'Submit'}
                 </button>
@@ -204,7 +204,7 @@ export default function BlogDetailContent() {
 
             {/* Latest news */}
             <div>
-              <h3 className="font-playfair font-semibold text-primary text-xl text-center mb-4">
+              <h3 className="font-libre font-semibold text-primary text-xl text-center mb-4">
                 Latest news
               </h3>
               <ul className="space-y-4">
@@ -221,13 +221,13 @@ export default function BlogDetailContent() {
                       />
                     </div>
                     <div className="p-4">
-                      <h4 className="font-poppins font-semibold text-primary text-base mb-2 line-clamp-2">
+                      <h4 className="font-libre font-semibold text-primary text-base mb-2 line-clamp-2">
                         {HEADLINE}
                       </h4>
-                      <p className="font-poppins text-sm text-gray-600 mb-3 line-clamp-2">{SHORT_DESC}</p>
+                      <p className="font-libre text-sm text-gray-600 mb-3 line-clamp-2">{SHORT_DESC}</p>
                       <Link
                         href="/blog-detail"
-                        className="inline-flex items-center gap-2 font-poppins font-medium text-sm bg-primary text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity w-fit"
+                        className="inline-flex items-center gap-2 font-libre font-medium text-sm bg-primary text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity w-fit"
                         aria-label={`Read more: ${HEADLINE}`}
                       >
                         Read more
@@ -240,13 +240,13 @@ export default function BlogDetailContent() {
                 {[1, 2, 3, 4].map((i) => (
                   <li key={i}>
                     <article className="rounded-lg overflow-hidden bg-secondary p-4">
-                      <h4 className="font-poppins font-semibold text-white text-base mb-2 line-clamp-2">
+                      <h4 className="font-libre font-semibold text-white text-base mb-2 line-clamp-2">
                         {HEADLINE}
                       </h4>
-                      <p className="font-poppins text-sm text-white/95 mb-3 line-clamp-2">{SHORT_DESC}</p>
+                      <p className="font-libre text-sm text-white/95 mb-3 line-clamp-2">{SHORT_DESC}</p>
                       <Link
                         href="/blog-detail"
-                        className="inline-flex items-center gap-2 font-poppins font-medium text-sm bg-primary text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity w-fit"
+                        className="inline-flex items-center gap-2 font-libre font-medium text-sm bg-primary text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity w-fit"
                         aria-label={`Read more article ${i}`}
                       >
                         Read more

@@ -142,7 +142,7 @@ export default function AboutAwards() {
         <div className="flex flex-col items-center mb-10 md:mb-12 lg:mb-14">
           <div className="flex items-center justify-center gap-4 md:gap-6">
             <LeafDecoration className="hidden sm:block shrink-0" />
-            <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-primary text-center">
+            <h2 className="font-libre text-3xl md:text-4xl lg:text-5xl font-bold text-primary text-center">
               Awards & Memberships
             </h2>
             <LeafDecoration className="hidden sm:block shrink-0 scale-x-[-1]" />

@@ -20,7 +20,7 @@ const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(SITE_C
 function ContactCard() {
   return (
     <div className="bg-secondary rounded-lg p-6 md:p-8 text-white">
-      <h3 className="font-playfair text-xl md:text-2xl font-semibold mb-4">
+      <h3 className="font-libre text-xl md:text-2xl font-semibold mb-4">
         {OFFICE.title}
       </h3>
       <ul className="font-poppins text-sm md:text-base space-y-2 text-white/95">
@@ -59,7 +59,7 @@ export default function OfficeContact() {
   return (
     <Section className="bg-white" id="office-contact">
       <Container>
-        <h2 className="font-playfair text-[26px] md:text-[32px] xl:text-[36px] font-semibold text-primary text-center mb-10 md:mb-12">
+        <h2 className="font-libre text-[26px] md:text-[32px] xl:text-[36px] font-semibold text-primary text-center mb-10 md:mb-12">
           24 hours{' '}
           <span className="relative inline-block">
             phone service

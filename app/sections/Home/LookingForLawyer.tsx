@@ -9,7 +9,7 @@ export default function LookingForLawyer() {
     <Section className="bg-white" id="looking-for-lawyer">
       <Container>
         <div className="text-center">
-          <h2 className="font-playfair text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             Looking for a Criminal Defense Lawyer?
             <span className="absolute left-0 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
           </h2>

@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Column 1: Areas serves */}
           <div>
-            <h3 className="font-playfair font-semibold text-lg lg:text-xl text-white mb-5">
+            <h3 className="font-libre font-semibold text-lg lg:text-xl text-white mb-5">
               Areas serves
             </h3>
             <ul className="space-y-3">
@@ -44,7 +44,7 @@ export default function Footer() {
 
           {/* Column 2: Shortcuts */}
           <div>
-            <h3 className="font-playfair font-semibold text-lg lg:text-xl text-white mb-5">
+            <h3 className="font-libre font-semibold text-lg lg:text-xl text-white mb-5">
               Shortcuts
             </h3>
             <ul className="space-y-3">
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Column 3: Locations - Map */}
           <div>
-            <h3 className="font-playfair font-semibold text-lg lg:text-xl text-white mb-5">
+            <h3 className="font-libre font-semibold text-lg lg:text-xl text-white mb-5">
               Locations
             </h3>
             <div className="rounded-lg overflow-hidden border border-white/10 shadow-lg aspect-4/3 max-h-[200px] bg-white/5">

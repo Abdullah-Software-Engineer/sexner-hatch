@@ -82,7 +82,7 @@ export default function PracticeAreaTableAndContent() {
             {/* Content blocks */}
             <div className="space-y-10 md:space-y-14">
               <article className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                <h2 className="font-playfair text-2xl md:text-3xl font-bold text-primary mb-5 pb-3 border-b-2 border-secondary/30">
+                <h2 className="font-libre text-2xl md:text-3xl font-bold text-primary mb-5 pb-3 border-b-2 border-secondary/30">
                   Heading 1
                 </h2>
                 <div className="space-y-4 font-poppins text-primary/85 leading-relaxed text-[15px] md:text-base">
@@ -102,7 +102,7 @@ export default function PracticeAreaTableAndContent() {
               </div>
 
               <article className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                <h2 className="font-playfair text-2xl md:text-3xl font-bold text-primary mb-5 pb-3 border-b-2 border-secondary/30">
+                <h2 className="font-libre text-2xl md:text-3xl font-bold text-primary mb-5 pb-3 border-b-2 border-secondary/30">
                   Heading 1
                 </h2>
                 <div className="space-y-4 font-poppins text-primary/85 leading-relaxed text-[15px] md:text-base">
@@ -115,7 +115,7 @@ export default function PracticeAreaTableAndContent() {
               </article>
 
               <article className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                <h2 className="font-playfair text-2xl md:text-3xl font-bold text-primary mb-5 pb-3 border-b-2 border-secondary/30">
+                <h2 className="font-libre text-2xl md:text-3xl font-bold text-primary mb-5 pb-3 border-b-2 border-secondary/30">
                   Heading 1
                 </h2>
                 <div className="space-y-4 font-poppins text-primary/85 leading-relaxed text-[15px] md:text-base">
@@ -134,7 +134,7 @@ export default function PracticeAreaTableAndContent() {
             <div className="lg:sticky lg:top-28">
               <div className="bg-primary rounded-2xl shadow-lg overflow-hidden border border-primary/20">
                 <div className="py-5 px-6 border-b border-white/10">
-                  <h2 className="font-playfair text-xl md:text-2xl font-semibold text-white text-center">
+                  <h2 className="font-libre text-xl md:text-2xl font-semibold text-white text-center">
                     Contact us for a free case evaluation
                   </h2>
                 </div>

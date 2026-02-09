@@ -71,7 +71,7 @@ export default function TestimonialsAndContactForm() {
                     key={item.id}
                     className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-100"
                   >
-                    <h3 className="text-base sm:text-lg font-poppins font-medium text-primary mb-1">
+                    <h3 className="text-base sm:text-lg font-medium text-primary mb-1">
                       {item.name}
                     </h3>
                     <p className="text-primary/70 text-xs sm:text-sm mb-1">{item.name}</p>
@@ -93,7 +93,7 @@ export default function TestimonialsAndContactForm() {
         {/* Right: Contact form - dark background */}
         <div className="shrink-0 w-full lg:w-[420px] xl:w-[480px] bg-[#28323C] py-[60px] md:py-[80px] xl:py-[100px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 h-200 rounded-3xl mr-10">
           <div className="max-w-md mx-auto lg:max-w-none">
-            <h2 className="font-playfair text-[22px] sm:text-[26px] md:text-[32px] font-semibold text-white mb-6 sm:mb-8">
+            <h2 className="font-libre text-[22px] sm:text-[26px] md:text-[32px] font-semibold text-white mb-6 sm:mb-8">
               Contact us for a free case evaluation
             </h2>
 

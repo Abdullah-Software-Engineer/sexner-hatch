@@ -39,7 +39,7 @@ export default function YourRightsContent() {
           <div className="lg:col-span-2 space-y-8">
             {/* Table of Contents Card */}
             <div className="bg-white rounded-lg shadow-sm p-6 md:p-8">
-              <h2 className="font-playfair text-[24px] md:text-[28px] font-semibold text-primary mb-6">
+              <h2 className="font-libre text-[24px] md:text-[28px] font-semibold text-primary mb-6">
                 Table of Content
               </h2>
               <ol className="space-y-3 font-poppins text-sm md:text-base text-primary">
@@ -55,7 +55,7 @@ export default function YourRightsContent() {
             {/* Content Sections */}
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((sectionNum) => (
               <div key={sectionNum} className="space-y-4">
-                <h3 className="font-playfair text-[22px] md:text-[26px] font-semibold text-primary">
+                <h3 className="font-libre text-[22px] md:text-[26px] font-semibold text-primary">
                   Heading {sectionNum}
                 </h3>
                 <p className="font-poppins text-sm md:text-base text-primary/80 leading-relaxed">
@@ -78,7 +78,7 @@ export default function YourRightsContent() {
           <div className="lg:col-span-1">
             <div className="sticky top-8">
               <div className="bg-primary rounded-lg shadow-lg p-6 md:p-8">
-                <h2 className="font-playfair text-[22px] md:text-[26px] font-semibold text-white mb-6">
+                <h2 className="font-libre text-[22px] md:text-[26px] font-semibold text-white mb-6">
                   Contact us for a free case evaluation
                 </h2>
 

@@ -19,7 +19,7 @@ export default function ContactForm() {
     <Section className="bg-[#28323C]" id="contact-form">
       <Container>
         <div className="max-w-[600px] mx-auto px-4 sm:px-0">
-          <h2 className="font-playfair text-[22px] sm:text-[26px] md:text-[36px] font-semibold text-white text-center mb-6 sm:mb-8 md:mb-10">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-white text-center mb-6 sm:mb-8 md:mb-10">
             <span className="relative inline-block">
               <span className="relative">Get</span>
               <span className="absolute left-0 bottom-0 w-full h-0.5 bg-secondary" aria-hidden="true" />

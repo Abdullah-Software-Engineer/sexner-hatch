@@ -57,7 +57,7 @@ export default function FAQ() {
   return (
     <Section className="bg-[#F5F5F5]" id="faq">
       <Container>
-        <h2 className="font-playfair text-[30px] md:text-[40px] font-normal text-[#333333] text-center mb-10 md:mb-12">
+        <h2 className="text-[30px] md:text-[48px] font-normal text-[#333333] text-center mb-10 md:mb-12">
           <span className="relative inline-block">
             Frequently
             <span

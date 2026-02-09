@@ -24,7 +24,7 @@ export default function LatestNews() {
       <Container>
         {/* Section header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 md:mb-10">
-          <h2 className="font-playfair text-[28px] md:text-[36px] font-normal text-primary">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-primary">
             <span className="relative inline-block">
               Latest
               <span
@@ -71,7 +71,7 @@ export default function LatestNews() {
               />
             </div>
             <div className="p-5 md:p-6 flex flex-col flex-1">
-              <h3 className="font-poppins text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
                 {HEADLINE}
               </h3>
               <p className="font-poppins text-sm text-white/90 mb-4 flex-1">
@@ -94,7 +94,7 @@ export default function LatestNews() {
               key={i}
               className="rounded-xl overflow-hidden bg-secondary flex flex-col p-5 md:p-6"
             >
-              <h3 className="font-poppins text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-2 line-clamp-2">
                 {HEADLINE}
               </h3>
               <p className="font-poppins text-sm text-white/95 mb-4 flex-1 line-clamp-4">

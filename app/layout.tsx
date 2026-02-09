@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Poppins } from 'next/font/google'
+import { Playfair_Display, Poppins, Libre_Baskerville } from 'next/font/google'
 import './globals.css'
 import SideButtons from './components/ui/SideButtons'
 import CallButton from './components/ui/CallButton'
@@ -15,6 +15,13 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-poppins',
+  display: 'swap',
+})
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-libre-baskerville',
   display: 'swap',
 })
 
@@ -78,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${playfairDisplay.variable} ${poppins.variable} ${libreBaskerville.variable}`}>
       <body>
         <SideButtons />
         <CallButton />

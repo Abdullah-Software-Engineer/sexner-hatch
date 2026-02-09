@@ -27,12 +27,12 @@ export default function Hero() {
             {/* Heading */}
             <div className="flex items-center justify-center flex-1 pt-12 sm:pt-16 md:pt-20 lg:pt-[120px] xl:pt-[200px]">
               <div className="text-center w-full px-4 sm:px-6">
-                <h1 className="text-[28px] leading-[34px] sm:text-[32px] sm:leading-[40px] md:text-[42px] md:leading-[52px] lg:text-[56px] lg:leading-[70px] xl:text-[74px] xl:leading-[98px] font-playfair font-light text-white mb-3 sm:mb-4 drop-shadow-lg">
+                <h1 className="text-[85px] font-playfair font-light text-white mb-3 sm:mb-4 drop-shadow-lg">
                   CHICAGO CRIMINAL DEFENSE
                 </h1>
-                <h2 className="text-[34px] leading-[42px] sm:text-[40px] sm:leading-[48px] md:text-[52px] md:leading-[60px] lg:text-[70px] lg:leading-[80px] xl:text-[98px] xl:leading-[106px] font-playfair font-bold text-secondary drop-shadow-lg">
+                <h1 className="text-[115px] font-playfair font-bold text-secondary drop-shadow-lg">
                   ATTORNEYS
-                </h2>
+                </h1>
               </div>
             </div>
 

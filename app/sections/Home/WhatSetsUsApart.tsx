@@ -32,7 +32,7 @@ export default function WhatSetsUsApart() {
       <Container>
         {/* Title */}
         <div className="text-center mb-10 md:mb-12 xl:mb-16">
-          <h2 className="font-playfair text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             What sets us apart?
             <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
           </h2>
@@ -55,7 +55,7 @@ export default function WhatSetsUsApart() {
                       <div className="flex-shrink-0">
                         <IconComponent className="w-6 h-6 md:w-7 md:h-7 text-secondary" />
                       </div>
-                      <h3 className="font-poppins text-xl md:text-2xl font-semibold text-black">
+                      <h3 className="text-xl md:text-2xl font-semibold text-black">
                         {feature.title}
                       </h3>
                     </div>

@@ -21,7 +21,7 @@ export default function PracticeAreas() {
     <Section className="bg-primary" id="practice-areas">
       <Container>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5 mb-10 md:mb-12">
-          <h2 className="font-playfair text-[30px] md:text-[48px] font-normal text-white relative inline-block">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-white relative inline-block">
             Our Practice Areas & Services
             <span className="absolute left-0 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
           </h2>
@@ -52,7 +52,7 @@ export default function PracticeAreas() {
                 >
                   <IconComponent className="w-6 h-6 md:w-[26px] md:h-[26px] xl:w-7 xl:h-7 text-white transition-colors group-hover:text-secondary" />
                 </div>
-                <h3 className="font-poppins text-xl font-semibold text-black mb-3 transition-colors group-hover:text-white">
+                <h3 className="text-xl font-semibold text-black mb-3 transition-colors group-hover:text-white">
                   {area.title}
                 </h3>
                 <p className="font-poppins text-sm font-normal text-black leading-relaxed transition-colors group-hover:text-white">

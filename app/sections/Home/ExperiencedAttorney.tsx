@@ -15,7 +15,7 @@ export default function ExperiencedAttorney() {
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 items-start">
             {/* Text Content - Left Side */}
             <div className="w-full lg:w-[60%] xl:w-[55%]">
-              <h2 className="font-playfair text-[28px] sm:text-[32px] md:text-[38px] lg:text-[42px] xl:text-[52px] leading-tight text-black mb-4 sm:mb-5 md:mb-6">
+              <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-4 sm:mb-5 md:mb-6">
                 Mitchell S. Sexner - <br className="hidden sm:block" />
                 <span className="sm:hidden"> </span>Experienced Criminal <br className="hidden sm:block" />
                 <span className="sm:hidden"> </span>Defense Attorney in Chicago
@@ -52,7 +52,7 @@ export default function ExperiencedAttorney() {
                 key={item}
                 className="bg-primary text-white p-10 sm:p-12 rounded-xl shadow-lg hover:translate-y-[-5px] transition-transform duration-300"
               >
-                <h3 className="font-poppins text-2xl font-medium mb-4">
+                <h3 className="text-2xl font-medium mb-4">
                   Traffic Violation
                 </h3>
                 <p className="font-poppins text-sm leading-relaxed text-gray-300">

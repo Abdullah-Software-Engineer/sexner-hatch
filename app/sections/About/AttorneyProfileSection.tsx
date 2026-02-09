@@ -58,7 +58,7 @@ export default function AttorneyProfileSection() {
               <div className="absolute bottom-0 left-0 right-0 bg-primary/95 px-5 py-4 md:px-6 md:py-5 flex items-center gap-3">
                 <span className="w-1 h-12 md:h-14 bg-secondary rounded-full shrink-0" aria-hidden />
                 <div>
-                  <h2 className="font-playfair font-bold text-white text-xl sm:text-2xl md:text-3xl">
+                  <h2 className="font-libre font-bold text-white text-xl sm:text-2xl md:text-3xl">
                     Mitchell S. Sexner
                   </h2>
                   <p className="font-poppins text-white/90 text-sm md:text-base mt-0.5">
@@ -93,7 +93,7 @@ export default function AttorneyProfileSection() {
 
             {/* Attorney profiles */}
             <div className="pt-2">
-              <h3 className="font-playfair font-semibold text-primary text-lg md:text-xl mb-3">
+              <h3 className="font-libre font-semibold text-primary text-lg md:text-xl mb-3">
                 ATTORNEY PROFILES FOR MITCHELL S. SEXNER
               </h3>
               <p className="text-sm text-[#3C3C3C]">
@@ -114,7 +114,7 @@ export default function AttorneyProfileSection() {
             <div className="rounded-xl overflow-hidden shadow-lg sticky top-24">
               {/* Form header */}
               <div className="bg-primary px-5 py-4 md:px-6 md:py-5">
-                <h3 className="font-playfair font-semibold text-white text-lg md:text-xl">
+                <h3 className="font-libre font-semibold text-white text-lg md:text-xl">
                   Contact us for a free case evaluation
                 </h3>
               </div>

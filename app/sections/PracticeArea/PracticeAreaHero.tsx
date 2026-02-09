@@ -33,7 +33,7 @@ export default function PracticeAreaHero() {
               <h1 className="font-playfair font-light text-white text-[32px] leading-tight sm:text-[38px] md:text-[48px] lg:text-[54px] xl:text-[60px] uppercase">
                 Criminal Law & Your
               </h1>
-              <h2 className="font-playfair font-bold text-secondary text-[40px] leading-tight sm:text-[48px] md:text-[58px] lg:text-[64px] xl:text-[72px] uppercase mt-1">
+              <h2 className="font-libre font-bold text-secondary text-[40px] leading-tight sm:text-[48px] md:text-[58px] lg:text-[64px] xl:text-[72px] uppercase mt-1">
                 Rights
               </h2>
               <Link

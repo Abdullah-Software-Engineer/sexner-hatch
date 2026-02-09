@@ -15,6 +15,7 @@ const config: Config = {
       fontFamily: {
         playfair: ["var(--font-playfair)", "serif"],
         poppins: ["var(--font-poppins)", "sans-serif"],
+        libre: ["var(--font-libre-baskerville)", "serif"],
       },
       keyframes: {
         "marquee-scroll": {

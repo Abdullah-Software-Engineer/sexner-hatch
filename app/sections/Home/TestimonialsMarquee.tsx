@@ -40,7 +40,7 @@ export default function TestimonialsMarquee() {
     <Section className="bg-white overflow-hidden" id="testimonials">
       <Container className="mb-10 md:mb-12 xl:mb-16">
         <div className="text-center">
-          <h2 className="font-playfair text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             Our clients
             <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
           </h2>
@@ -96,7 +96,7 @@ function Card({ item }: { item: typeof testimonials[0] }) {
       className="w-[280px] sm:w-[300px] md:w-[350px] lg:w-[510px] xl:w-[650px] flex-shrink-0 rounded-xl p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 text-center text-white flex flex-col items-center justify-center gap-3 sm:gap-4 transition-transform hover:scale-[1.02]"
       style={{ background: 'linear-gradient(90deg, #2C3E50 40%, #C8A24F 99%)' }}
     >
-      <h3 className="text-lg sm:text-xl font-poppins font-medium text-white">{item.name}</h3>
+      <h3 className="text-lg sm:text-xl font-medium text-white">{item.name}</h3>
       <p className="text-xs sm:text-sm font-poppins leading-relaxed text-white/90">
         "{item.text}"
       </p>

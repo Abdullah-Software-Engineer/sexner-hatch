@@ -95,7 +95,7 @@ export default function CaseResultsWithForm() {
                 )
                 const textBlock = (
                   <div className="min-w-0 flex-1 flex flex-col justify-center">
-                    <h3 className="font-playfair font-semibold text-primary text-lg md:text-xl mb-3">
+                    <h3 className="font-libre font-semibold text-primary text-lg md:text-xl mb-3">
                       {card.title}
                     </h3>
                     <p className="font-poppins text-gray-600 text-sm md:text-base leading-relaxed">
@@ -129,7 +129,7 @@ export default function CaseResultsWithForm() {
           <div className="lg:col-span-5">
             <div className="rounded-xl overflow-hidden shadow-md">
               <div className="bg-primary py-6 px-6 text-center">
-                <h2 className="font-playfair font-semibold text-white text-xl md:text-2xl">
+                <h2 className="font-libre font-semibold text-white text-xl md:text-2xl">
                   Contact us for a free case evaluation
                 </h2>
               </div>

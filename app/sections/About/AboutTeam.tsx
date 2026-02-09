@@ -23,7 +23,7 @@ export default function AboutTeam() {
   return (
     <Section className="bg-[#FDFDFC]" id="meet-our-team">
       <Container>
-        <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C3C3C] text-center mb-12 md:mb-14 lg:mb-16">
+        <h2 className="font-libre text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C3C3C] text-center mb-12 md:mb-14 lg:mb-16">
           Meet our{' '}
           <span className="relative inline-block">
             team

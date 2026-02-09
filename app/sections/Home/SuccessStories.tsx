@@ -11,7 +11,7 @@ export default function SuccessStories() {
   return (
     <Section className="bg-[#F8F8F8]" id="success-stories">
       <Container>
-        <h2 className="font-playfair text-[30px] md:text-[40px] font-normal text-[#333333] text-center mb-10 md:mb-12">
+        <h2 className="text-[30px] md:text-[48px] font-normal text-black text-center mb-10 md:mb-12">
           <span className="relative inline-block">
             Success
             <span
@@ -52,13 +52,13 @@ export default function SuccessStories() {
                 </Button>
               </div>
 
-              <h3 className="font-poppins text-xl sm:text-2xl md:text-3xl font-semibold text-[#333333] mb-2 pr-20 sm:pr-32 md:pr-[160px] lg:pr-[180px]">
+              <h3 className="font-libre text-xl sm:text-2xl md:text-3xl font-semibold text-black mb-2 pr-20 sm:pr-32 md:pr-[160px] lg:pr-[180px]">
                 Dismissed
               </h3>
-              <p className="font-poppins text-sm md:text-base font-medium text-[#5D6D8D] mb-3 md:mb-4">
+              <p className="font-poppins text-sm sm:text-base md:text-lg font-medium text-black/80 mb-3 md:mb-4">
                 Felony cannabis possession
               </p>
-              <p className="font-poppins text-sm md:text-base text-[#333333] leading-relaxed flex-1">
+              <p className="font-poppins text-sm sm:text-base md:text-lg text-black/80 leading-relaxed flex-1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
               </p>
               <div

@@ -18,19 +18,19 @@ export default function AboutContent() {
       <div className="border-y border-primary/10 bg-white py-4 md:py-5">
         <div className="overflow-hidden">
           <div className="flex animate-marquee-scroll whitespace-nowrap">
-            <span className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
+            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
               Looking for a Criminal Defense Lawyer?
             </span>
-            <span className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
+            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
               Looking for a Criminal Defense Lawyer?
             </span>
-            <span className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
+            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
               Looking for a Criminal Defense Lawyer?
             </span>
-            <span className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
+            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
               Looking for a Criminal Defense Lawyer?
             </span>
-            <span className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
+            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
               Looking for a Criminal Defense Lawyer?
             </span>
           </div>
@@ -41,7 +41,7 @@ export default function AboutContent() {
         {/* Row 1: Gold card + two dark stat cards */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
           <div className="lg:col-span-2 bg-secondary rounded-2xl p-6 md:p-8 flex flex-col justify-center">
-            <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight mb-4">
+            <h2 className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight mb-4">
               Heading will come here Heading will come here
             </h2>
             <p className="font-poppins text-white/95 text-sm md:text-base leading-relaxed">
@@ -53,7 +53,7 @@ export default function AboutContent() {
           </div>
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-between">
             <div>
-              <div className="font-playfair text-4xl md:text-5xl font-bold text-white">30+</div>
+              <div className="font-libre text-4xl md:text-5xl font-bold text-white">30+</div>
               <p className="font-poppins text-white/90 text-sm md:text-base mt-2">Years of experience</p>
             </div>
             <Link
@@ -66,7 +66,7 @@ export default function AboutContent() {
           </div>
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-between">
             <div>
-              <div className="font-playfair text-4xl md:text-5xl font-bold text-white">20,000+</div>
+              <div className="font-libre text-4xl md:text-5xl font-bold text-white">20,000+</div>
               <p className="font-poppins text-white/90 text-sm md:text-base mt-2">People we have helped</p>
             </div>
             <Link
@@ -92,7 +92,7 @@ export default function AboutContent() {
             />
           </div>
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-center">
-            <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
+            <h2 className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
               Heading will come here Heading will come here
             </h2>
           </div>
@@ -101,7 +101,7 @@ export default function AboutContent() {
         {/* Row 3: Heading with underline + two text columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mt-10 md:mt-12 lg:mt-14 pb-4">
           <div>
-            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-primary leading-tight">
+            <h2 className="font-libre text-2xl md:text-3xl lg:text-4xl font-bold text-primary leading-tight">
               Some text which is a bit long will be here{' '}
               <span className="relative inline-block">
                 like

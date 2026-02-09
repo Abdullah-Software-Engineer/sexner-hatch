@@ -32,7 +32,7 @@ export default function CourthouseLocations() {
   return (
     <Section className="bg-[#f5f5f5]">
       <Container>
-        <h2 className="font-playfair text-[26px] md:text-[32px] xl:text-[36px] font-semibold text-primary text-center mb-3">
+        <h2 className="font-libre text-[26px] md:text-[32px] xl:text-[36px] font-semibold text-primary text-center mb-3">
           Courthouse locations
         </h2>
         <div

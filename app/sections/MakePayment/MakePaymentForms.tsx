@@ -38,7 +38,7 @@ export default function MakePaymentForms() {
           {/* Left column: Payment */}
           <div className="space-y-6">
             <div className="bg-[#F7F9FA] rounded-2xl shadow-lg p-6 md:p-8">
-              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-primary mb-6">
+              <h2 className="font-libre text-2xl md:text-3xl font-semibold text-primary mb-6">
                 Payment
               </h2>
 
@@ -255,7 +255,7 @@ export default function MakePaymentForms() {
             )}
           >
             <div className="bg-primary rounded-2xl shadow-lg p-6 md:p-8">
-              <h2 className="font-playfair text-xl md:text-2xl font-semibold text-white mb-6">
+              <h2 className="font-libre text-xl md:text-2xl font-semibold text-white mb-6">
                 Contact us for a free case evaluation
               </h2>
 

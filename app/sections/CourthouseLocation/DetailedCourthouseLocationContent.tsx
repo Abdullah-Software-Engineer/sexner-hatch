@@ -55,7 +55,7 @@ export default function DetailedCourthouseLocationContent({
               Go back
             </Link>
 
-            <h2 className="font-playfair font-bold text-primary text-[26px] md:text-[32px] xl:text-[36px] mb-6">
+            <h2 className="font-libre font-bold text-primary text-[26px] md:text-[32px] xl:text-[36px] mb-6">
               Heading 1
             </h2>
             <div className="space-y-4 mb-8">
@@ -66,7 +66,7 @@ export default function DetailedCourthouseLocationContent({
               ))}
             </div>
 
-            <h3 className="font-playfair font-semibold text-primary text-[22px] md:text-[26px] mb-4">
+            <h3 className="font-libre font-semibold text-primary text-[22px] md:text-[26px] mb-4">
               Map to {locationName}
             </h3>
             <div className="rounded-lg overflow-hidden border border-gray-200 bg-gray-100 aspect-16/10 min-h-[240px] mb-6 flex items-center justify-center">
@@ -110,7 +110,7 @@ export default function DetailedCourthouseLocationContent({
                   />
                 </svg>
               </a>
-              <h2 className="font-playfair text-[22px] md:text-[26px] font-semibold text-white mb-6 pr-12">
+              <h2 className="font-libre text-[22px] md:text-[26px] font-semibold text-white mb-6 pr-12">
                 Contact us for a free case evaluation
               </h2>
 
