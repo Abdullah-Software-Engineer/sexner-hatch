@@ -59,16 +59,12 @@ export default function OfficeContact() {
   return (
     <Section className="bg-white" id="office-contact">
       <Container>
-        <h2 className="font-libre text-[26px] md:text-[32px] xl:text-[36px] font-semibold text-primary text-center mb-10 md:mb-12">
-          24 hours{' '}
-          <span className="relative inline-block">
-            phone service
-            <span
-              className="absolute left-0 bottom-0 w-full h-0.5 bg-secondary"
-              aria-hidden="true"
-            />
-          </span>
-        </h2>
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+            24 hours phone service
+            <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
+          </h2>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-10">
           <ContactCard />
           <ContactCard />

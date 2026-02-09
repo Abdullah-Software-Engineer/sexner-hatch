@@ -16,7 +16,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Section className="bg-primary" id="contact-form">
+    <Section className="bg-primary m-5 rounded-xl" id="contact-form">
       <Container>
         <div className="mb-6 sm:mb-8 md:mb-10">
           <h2 className="text-[30px] md:text-[48px] font-normal text-white mb-2.5 relative inline-block">
