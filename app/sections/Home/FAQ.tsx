@@ -57,18 +57,14 @@ export default function FAQ() {
   return (
     <Section className="bg-[#F5F5F5]" id="faq">
       <Container>
-        <h2 className="text-[30px] md:text-[48px] font-normal text-[#333333] text-center mb-10 md:mb-12">
-          <span className="relative inline-block">
-            Frequently
-            <span
-              className="absolute left-0 -bottom-1 w-full h-0.5 bg-secondary"
-              aria-hidden
-            />
-          </span>{' '}
-          asked questions
-        </h2>
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+            Frequently asked questions
+            <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
+          </h2>
+        </div>
 
-        <div className="max-w-4xl mx-auto space-y-3">
+        <div className="space-y-3">
           {faqItems.map((item) => {
             const isOpen = openId === item.id
             return (

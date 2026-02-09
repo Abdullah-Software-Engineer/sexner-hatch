@@ -24,15 +24,9 @@ export default function LatestNews() {
       <Container>
         {/* Section header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 md:mb-10">
-          <h2 className="text-[30px] md:text-[48px] font-normal text-primary">
-            <span className="relative inline-block">
-              Latest
-              <span
-                className="absolute left-0 -bottom-1 w-full h-0.5 bg-secondary"
-                aria-hidden
-              />
-            </span>{' '}
-            news
+          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+            Latest news
+            <span className="absolute left-0 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
           </h2>
           <Button
             href="/practice-areas"

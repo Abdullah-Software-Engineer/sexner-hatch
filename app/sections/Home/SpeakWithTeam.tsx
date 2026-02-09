@@ -10,16 +10,9 @@ export default function SpeakWithTeam() {
       <Container>
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-5 sm:gap-6 md:gap-8">
           <div className="flex-1">
-            <h2 className="text-[30px] md:text-[48px] font-normal text-[#1a1a1a] mb-3 sm:mb-4">
-              Speak with our experienced team and understand your legal{' '}
-              <span className="relative inline-block">
-                options
-                <span
-                  className="absolute left-0 bottom-0.5 w-full h-1 bg-secondary"
-                  aria-hidden="true"
-                />
-              </span>
-              .
+            <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+              Speak with our experienced team and understand your legal options
+              <span className="absolute left-0 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
             </h2>
             <p className="font-poppins text-sm md:text-base text-[#6b6b6b] leading-relaxed max-w-[720px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consecte.

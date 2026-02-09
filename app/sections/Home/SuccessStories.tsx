@@ -11,16 +11,12 @@ export default function SuccessStories() {
   return (
     <Section className="bg-[#F8F8F8]" id="success-stories">
       <Container>
-        <h2 className="text-[30px] md:text-[48px] font-normal text-black text-center mb-10 md:mb-12">
-          <span className="relative inline-block">
-            Success
-            <span
-              className="absolute left-0 -bottom-1 w-full h-0.5 bg-secondary"
-              aria-hidden
-            />
-          </span>{' '}
-          stories
-        </h2>
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+            Success Stories
+            <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
+          </h2>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           {/* Left column: 3 stacked image cards */}

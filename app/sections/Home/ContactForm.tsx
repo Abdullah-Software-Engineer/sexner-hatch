@@ -16,16 +16,14 @@ export default function ContactForm() {
   }
 
   return (
-    <Section className="bg-[#28323C]" id="contact-form">
+    <Section className="bg-primary" id="contact-form">
       <Container>
-        <div className="max-w-[600px] mx-auto px-4 sm:px-0">
-          <h2 className="text-[30px] md:text-[48px] font-normal text-white text-center mb-6 sm:mb-8 md:mb-10">
-            <span className="relative inline-block">
-              <span className="relative">Get</span>
-              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-secondary" aria-hidden="true" />
-            </span>
-            {' '}your confidential case evaluation
+        <div className="mb-6 sm:mb-8 md:mb-10">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-white mb-2.5 relative inline-block">
+            Get your confidential case evaluation
+            <span className="absolute left-0 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
           </h2>
+        </div>
 
           <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 md:space-y-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
@@ -34,7 +32,7 @@ export default function ContactForm() {
                 name="name"
                 placeholder="Name"
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-[#28323C] outline-none transition-shadow"
+                className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow"
                 disabled={status === 'submitting'}
               />
               <input
@@ -42,7 +40,7 @@ export default function ContactForm() {
                 name="phone"
                 placeholder="Phone number"
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-[#28323C] outline-none transition-shadow"
+                className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow"
                 disabled={status === 'submitting'}
               />
             </div>
@@ -52,7 +50,7 @@ export default function ContactForm() {
               name="email"
               placeholder="Email Address"
               required
-              className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-[#28323C] outline-none transition-shadow"
+              className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow"
               disabled={status === 'submitting'}
             />
 
@@ -61,14 +59,14 @@ export default function ContactForm() {
               placeholder="Message"
               rows={5}
               required
-              className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-[#28323C] outline-none transition-shadow resize-y min-h-[120px]"
+              className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow resize-y min-h-[120px]"
               disabled={status === 'submitting'}
             />
 
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="w-full py-3.5 rounded-lg bg-secondary text-white font-semibold hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#28323C] disabled:opacity-70 transition-opacity"
+              className="w-full py-3.5 rounded-lg bg-secondary text-white font-semibold hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary disabled:opacity-70 transition-opacity"
             >
               {status === 'submitting' ? 'Submitting...' : 'Submit'}
             </button>
@@ -77,7 +75,6 @@ export default function ContactForm() {
               By clicking SUBMIT you consent to receiving SMS messages. Message & data rates may apply. / Message frequency may vary. Reply Help to get more assistance / Reply Stop to opt-out of messaging.
             </p>
           </form>
-        </div>
       </Container>
     </Section>
   )
