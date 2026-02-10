@@ -10,7 +10,7 @@ export default function WhatSetsUsApartHero() {
       {/* Full-width background image - illuminated sign in archway */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/About%20us/hero.webp"
+          src="/About%20us/Hero.webp"
           alt="Sexner and Associates LLC - illuminated sign, Attorneys at Law"
           fill
           priority

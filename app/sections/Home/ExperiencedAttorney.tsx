@@ -31,7 +31,7 @@ export default function ExperiencedAttorney() {
             {/* Image - Right Side (Desktop) */}
             <div className="hidden lg:block w-[40%] xl:w-[45%] relative h-[450px] lg:h-[500px] xl:h-[600px] shrink-0">
               <Image
-                src="/Home/home-page/women-pc.webp"
+                src="/home/home-page/women-pc.webp"
                 alt="Lady Justice"
                 fill
                 className="object-contain object-right"
