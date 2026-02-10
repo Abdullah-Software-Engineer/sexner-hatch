@@ -64,9 +64,9 @@ export default function Header() {
               />
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - visible from md (tablet) up */}
             <nav
-              className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8 flex-1 justify-center"
+              className="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6 2xl:gap-8 flex-1 justify-center min-w-0"
               aria-label="Main navigation"
             >
               {NAVIGATION_LINKS.map((link) => (
@@ -82,19 +82,15 @@ export default function Header() {
 
             {/* Desktop Phone + Mobile Menu Button */}
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0">
-              {/* Phone button - visible on tablet and desktop, hidden on mobile (shown in mobile menu) */}
-              {/* Use smaller button on md screens, md size on lg+ */}
-              <div className="hidden md:block lg:hidden flex-shrink-0">
-                <PhoneButton size="sm" />
-              </div>
-              <div className="hidden lg:block flex-shrink-0">
+              {/* Phone button - visible from tablet (md) up */}
+              <div className="hidden md:block flex-shrink-0">
                 <PhoneButton size="md" />
               </div>
-              {/* Mobile menu toggle button */}
+              {/* Mobile menu toggle - only below md */}
               <button
                 type="button"
                 onClick={() => setIsMenuOpen((o) => !o)}
-                className="lg:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full text-white hover:bg-white/10 active:bg-white/20 focus:outline-none focus:ring-2 focus:ring-secondary transition-colors flex-shrink-0"
+                className="md:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full text-white hover:bg-white/10 active:bg-white/20 focus:outline-none focus:ring-2 focus:ring-secondary transition-colors flex-shrink-0"
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-controls="mobile-nav"
                 aria-expanded={isMenuOpen}
@@ -121,7 +117,7 @@ export default function Header() {
         aria-modal="true"
         aria-label="Mobile navigation"
         className={cn(
-          'lg:hidden fixed inset-0 z-[101] bg-black/50 backdrop-blur-sm transition-opacity duration-300',
+          'md:hidden fixed inset-0 z-[101] bg-black/50 backdrop-blur-sm transition-opacity duration-300',
           isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         )}
         onClick={() => setIsMenuOpen(false)}
@@ -129,10 +125,10 @@ export default function Header() {
       {/* Mobile menu panel */}
       <div
         className={cn(
-          'lg:hidden fixed z-[102] bg-primary rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ease-out',
+          'md:hidden fixed z-[102] bg-primary rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ease-out',
           'left-2 right-2 sm:left-4 sm:right-4',
           isMenuOpen 
-            ? 'top-[68px] sm:top-[76px] md:top-[80px] opacity-100 visible translate-y-0' 
+            ? 'top-[68px] sm:top-[76px] opacity-100 visible translate-y-0' 
             : 'top-[60px] opacity-0 invisible -translate-y-4'
         )}
       >
