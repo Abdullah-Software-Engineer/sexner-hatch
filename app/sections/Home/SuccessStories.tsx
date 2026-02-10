@@ -47,7 +47,7 @@ export default function SuccessStories() {
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             Success Stories
-            <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
+            <span className="absolute left-8 -translate-x-1/2 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
         </h2>
         </div>
 

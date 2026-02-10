@@ -23,7 +23,7 @@ export default function PracticeAreas() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5 mb-10 md:mb-12">
           <h2 className="text-[30px] md:text-[48px] font-normal text-white relative inline-block">
             Our Practice Areas & Services
-            <span className="absolute left-0 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
+            <span className="absolute left-0 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
           </h2>
           <Button
             href="/services"

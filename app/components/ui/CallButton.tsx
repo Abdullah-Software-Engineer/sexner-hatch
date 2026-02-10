@@ -7,7 +7,7 @@ export default function CallButton() {
   return (
     <a
       href={getPhoneLink(SITE_CONFIG.phoneRaw)}
-      className="fixed bottom-[30px] right-[30px] w-10 h-10 bg-primary rounded-full flex items-center justify-center z-[99] shadow-lg transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl no-underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+      className="fixed bottom-4 right-4 sm:bottom-[30px] sm:right-[30px] w-12 h-12 sm:w-10 sm:h-10 bg-primary rounded-full flex items-center justify-center z-99 shadow-lg transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl no-underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 touch-manipulation"
       aria-label={`Call us at ${SITE_CONFIG.phone}`}
     >
       <svg

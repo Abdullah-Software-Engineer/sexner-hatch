@@ -49,7 +49,7 @@ export default function PhoneButton({ className, size = 'md' }: PhoneButtonProps
       </span>
       <div
         className={cn(
-          'rounded-full bg-white flex items-center justify-center flex-shrink-0',
+          'rounded-full bg-primary flex items-center justify-center shrink-0',
           sizeConfig.icon
         )}
       >
@@ -59,7 +59,7 @@ export default function PhoneButton({ className, size = 'md' }: PhoneButtonProps
           viewBox="0 0 24 24"
           strokeWidth={2.5}
           stroke="currentColor"
-          className={cn('text-secondary', sizeConfig.svg)}
+          className={cn('text-white', sizeConfig.svg)}
           aria-hidden="true"
         >
           <path

@@ -34,7 +34,7 @@ export default function WhatSetsUsApart() {
         <div className="text-center mb-10 md:mb-12 xl:mb-16">
           <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             What sets us apart?
-            <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
+            <span className="absolute left-9 -translate-x-1/2 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
           </h2>
         </div>
 
@@ -47,13 +47,13 @@ export default function WhatSetsUsApart() {
               return (
                 <div key={feature.id} className="flex gap-4 md:gap-5">
                   {/* Vertical Line */}
-                  <div className="flex-shrink-0 w-0.5 bg-secondary"></div>
+                  <div className="flex-shrink-0 w-1 bg-secondary"></div>
                   
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-3 md:mb-4">
                       <div className="flex-shrink-0">
-                        <IconComponent className="w-6 h-6 md:w-7 md:h-7 text-secondary" />
+                        <IconComponent className="w-7 h-6 md:w-7 md:h-7 text-secondary" />
                       </div>
                       <h3 className="text-xl md:text-2xl font-semibold text-black">
                         {feature.title}
