@@ -12,12 +12,12 @@ export default function MeetOurTeamHero() {
       {/* Blurred city skyline background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/home/home-page/hero-bg.webp"
+          src="/meet-our team/Group.webp"
           alt=""
           fill
           priority
           quality={85}
-          className="object-cover object-center scale-105 blur-[2px] md:blur-[3px]"
+          className="object-cover object-center "
           sizes="100vw"
           aria-hidden
         />
@@ -27,19 +27,6 @@ export default function MeetOurTeamHero() {
         />
       </div>
 
-      {/* Foreground: team photo - lower half */}
-      <div className="absolute inset-0 z-1 flex items-end justify-center pt-[20vh]">
-        <div className="relative w-full max-w-5xl h-[45vh] min-h-[280px] md:h-[50vh] md:min-h-[320px] lg:h-[55vh]">
-          <Image
-            src="/About%20us/team.webp"
-            alt="Our team of legal professionals"
-            fill
-            className="object-contain object-bottom"
-            sizes="(max-width: 768px) 100vw, 1024px"
-            priority
-          />
-        </div>
-      </div>
 
       {/* Content overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full flex-1 min-h-0">
