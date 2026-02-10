@@ -18,12 +18,9 @@ export const SITE_CONFIG = {
 export const NAVIGATION_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
-  { href: '/meet-our-team', label: 'Meet Our Team' },
-  { href: '/practice-areas', label: 'Practice Areas' },
+  { href: '/practice-area', label: 'Practice Areas' },
   { href: '/resources', label: 'Resources' },
   { href: '/results', label: 'Results' },
-  { href: '/testimonial', label: 'Testimonial' },
-  { href: '/make-payment', label: 'Make Payment' },
   { href: '/contact', label: 'Contact' },
 ] as const
 
