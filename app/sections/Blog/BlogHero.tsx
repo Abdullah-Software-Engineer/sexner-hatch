@@ -24,12 +24,12 @@ export default function BlogHero() {
       <div className="relative z-10 w-full py-12 sm:py-16 md:py-20 lg:py-24">
         <Container>
           <div className="max-w-2xl px-4 sm:px-6 md:px-0">
-            <h1 className="font-playfair font-bold text-white text-[28px] leading-tight sm:text-[32px] sm:leading-tight md:text-[42px] md:leading-tight lg:text-[52px] lg:leading-tight xl:text-[58px] xl:leading-tight 2xl:text-[64px] 2xl:leading-tight uppercase drop-shadow-lg">
+            <h1 className="font-playfair font-bold text-white text-[30px] md:text-[48px] leading-tight uppercase drop-shadow-lg">
               CHICAGO CRIMINAL DEFENSE BLOG
             </h1>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 sm:gap-3 px-5 py-3 sm:px-6 sm:py-3.5 rounded-full bg-secondary text-white font-poppins text-sm sm:text-base font-medium hover:bg-secondary/90 transition-colors w-full sm:w-fit mt-4 sm:mt-6 justify-center sm:justify-start"
+              className="inline-flex items-center gap-2 sm:gap-3 px-5 py-3 sm:px-6 sm:py-3.5 rounded-full bg-secondary text-white font-poppins text-[14px] font-medium hover:bg-secondary/90 transition-colors w-full sm:w-fit mt-4 sm:mt-6 justify-center sm:justify-start"
               aria-label="Contact us today"
             >
               Contact us today

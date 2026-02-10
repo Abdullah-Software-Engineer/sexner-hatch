@@ -24,7 +24,7 @@ export default function ResourcesExperiencedAttorney() {
 
             {/* Text Content - Right Side (replacing image) */}
             <div className="w-full lg:w-[40%] xl:w-[45%]">
-              <p className="font-poppins text-sm sm:text-base md:text-lg text-black/80 leading-relaxed">
+              <p className="font-poppins text-[14px] md:text-[16px] text-black/80 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum
                 dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur.
@@ -43,10 +43,10 @@ export default function ResourcesExperiencedAttorney() {
                 key={item}
                 className="bg-primary text-white p-10 sm:p-12 rounded-xl shadow-lg hover:translate-y-[-5px] transition-transform duration-300"
               >
-                <h3 className="text-2xl font-medium mb-4">
+                <h3 className="text-[20px] font-medium mb-4">
                   Traffic Violation
                 </h3>
-                <p className="font-poppins text-sm leading-relaxed text-gray-300">
+                <p className="font-poppins text-[14px] leading-relaxed text-gray-300">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
                   Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet,
                   consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet,

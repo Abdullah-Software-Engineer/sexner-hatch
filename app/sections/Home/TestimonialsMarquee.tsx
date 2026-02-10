@@ -96,8 +96,8 @@ function Card({ item }: { item: typeof testimonials[0] }) {
       className="w-[280px] sm:w-[300px] md:w-[350px] lg:w-[510px] xl:w-[650px] flex-shrink-0 rounded-xl p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 text-center text-white flex flex-col items-center justify-center gap-3 sm:gap-4 transition-transform hover:scale-[1.02]"
       style={{ background: 'linear-gradient(90deg, #2C3E50 40%, #C8A24F 99%)' }}
     >
-      <h3 className="text-lg sm:text-xl font-medium text-white">{item.name}</h3>
-      <p className="text-xs sm:text-sm font-poppins leading-relaxed text-white/90">
+      <h3 className="text-[20px] font-medium text-white">{item.name}</h3>
+      <p className="text-[14px] font-poppins leading-relaxed text-white/90">
         "{item.text}"
       </p>
       <div className="flex gap-1.5 text-[#FFC300]">

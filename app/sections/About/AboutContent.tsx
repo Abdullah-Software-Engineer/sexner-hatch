@@ -41,24 +41,24 @@ export default function AboutContent() {
         {/* Row 1: Gold card + two dark stat cards */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
           <div className="lg:col-span-2 bg-secondary rounded-2xl p-6 md:p-8 flex flex-col justify-center">
-            <h2 className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight mb-4">
+            <h2 className="font-libre text-[20px] font-bold text-white leading-tight mb-4">
               Heading will come here Heading will come here
             </h2>
-            <p className="font-poppins text-white/95 text-sm md:text-base leading-relaxed">
+            <p className="font-poppins text-white/95 text-[14px] md:text-[16px] leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
             </p>
-            <p className="font-poppins text-white/95 text-sm md:text-base leading-relaxed mt-3">
+            <p className="font-poppins text-white/95 text-[14px] md:text-[16px] leading-relaxed mt-3">
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
             </p>
           </div>
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-between">
             <div>
               <div className="font-libre text-4xl md:text-5xl font-bold text-white">30+</div>
-              <p className="font-poppins text-white/90 text-sm md:text-base mt-2">Years of experience</p>
+              <p className="font-poppins text-white/90 text-[14px] mt-2">Years of experience</p>
             </div>
             <Link
               href="#"
-              className="inline-flex items-center gap-2 mt-6 px-4 py-3 bg-white text-primary rounded-xl font-poppins font-medium text-sm hover:bg-white/90 transition-colors w-fit"
+              className="inline-flex items-center gap-2 mt-6 px-4 py-3 bg-white text-primary rounded-xl font-poppins font-medium text-[16px] hover:bg-white/90 transition-colors w-fit"
             >
               Any button link here
               <ArrowIcon />
@@ -67,11 +67,11 @@ export default function AboutContent() {
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-between">
             <div>
               <div className="font-libre text-4xl md:text-5xl font-bold text-white">20,000+</div>
-              <p className="font-poppins text-white/90 text-sm md:text-base mt-2">People we have helped</p>
+              <p className="font-poppins text-white/90 text-[14px] mt-2">People we have helped</p>
             </div>
             <Link
               href="/result#testimonials"
-              className="inline-flex items-center gap-2 mt-6 px-4 py-3 bg-white text-primary rounded-xl font-poppins font-medium text-sm hover:bg-white/90 transition-colors w-fit"
+              className="inline-flex items-center gap-2 mt-6 px-4 py-3 bg-white text-primary rounded-xl font-poppins font-medium text-[16px] hover:bg-white/90 transition-colors w-fit"
             >
               What our clients say
               <ArrowIcon />
@@ -92,7 +92,7 @@ export default function AboutContent() {
             />
           </div>
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-center">
-            <h2 className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
+            <h2 className="font-libre text-[20px] font-bold text-white leading-tight">
               Heading will come here Heading will come here
             </h2>
           </div>
@@ -111,12 +111,12 @@ export default function AboutContent() {
             </h2>
           </div>
           <div>
-            <p className="font-poppins text-primary/90 text-sm md:text-base leading-relaxed">
+            <p className="font-poppins text-primary/90 text-[14px] md:text-[16px] leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
           <div>
-            <p className="font-poppins text-primary/90 text-sm md:text-base leading-relaxed">
+            <p className="font-poppins text-primary/90 text-[14px] md:text-[16px] leading-relaxed">
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>

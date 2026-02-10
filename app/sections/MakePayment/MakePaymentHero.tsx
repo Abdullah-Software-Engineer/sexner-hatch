@@ -26,17 +26,17 @@ export default function MakePaymentHero() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             {/* Left: Headline + CTA */}
             <div className="flex flex-col gap-6">
-              <h1 className="font-playfair font-light text-white text-[36px] leading-tight sm:text-[42px] md:text-[52px] lg:text-[58px] xl:text-[64px] drop-shadow-lg">
+              <h1 className="font-playfair font-light text-white text-[30px] md:text-[48px] leading-tight drop-shadow-lg">
                 MAKE A
                 <br />
                 <span className="text-secondary">PAYMENT</span>
               </h1>
-              <p className="font-poppins text-white text-base md:text-lg leading-relaxed max-w-md">
+              <p className="font-poppins text-white text-[16px] leading-relaxed max-w-md">
                 Pay your invoice online securely.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-lg border-2 border-secondary bg-primary/80 text-white font-medium hover:bg-primary hover:border-secondary transition-colors w-fit"
+                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-lg border-2 border-secondary bg-primary/80 text-white font-medium text-[14px] hover:bg-primary hover:border-secondary transition-colors w-fit"
                 aria-label="Contact us today"
               >
                 Contact us today

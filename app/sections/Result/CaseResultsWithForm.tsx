@@ -58,7 +58,7 @@ export default function CaseResultsWithForm() {
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-12">
           {/* Left: Intro + Filters + Result Cards */}
           <div className="flex-1 lg:w-[58.33%] space-y-6 min-w-0">
-            <p className="font-poppins text-primary text-base md:text-lg leading-relaxed">
+            <p className="font-poppins text-primary text-[14px] md:text-[16px] leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris.
@@ -95,10 +95,10 @@ export default function CaseResultsWithForm() {
                 )
                 const textBlock = (
                   <div className="min-w-0 flex-1 flex flex-col justify-center">
-                    <h3 className="font-libre font-semibold text-primary text-lg md:text-xl mb-3">
+                    <h3 className="font-libre font-semibold text-primary text-[20px] mb-3">
                       {card.title}
                     </h3>
-                    <p className="font-poppins text-gray-600 text-sm md:text-base leading-relaxed">
+                    <p className="font-poppins text-gray-600 text-[14px] leading-relaxed">
                       {card.summary}
                     </p>
                   </div>

@@ -33,7 +33,7 @@ export default function MeetOurTeamHero() {
         {/* Title: MEET OUR TEAM */}
         <h2
           id="meet-our-team-heading"
-          className="font-playfair font-light text-[36px] leading-tight sm:text-[44px] md:text-[52px] lg:text-[64px] xl:text-[72px] text-center text-white drop-shadow-lg px-4"
+          className="font-playfair font-light text-[30px] md:text-[48px] leading-tight text-center text-white drop-shadow-lg px-4"
         >
           MEET OUR <span className="text-secondary font-semibold">TEAM</span>
         </h2>
@@ -43,7 +43,7 @@ export default function MeetOurTeamHero() {
       <div className="relative z-10 flex justify-center pt-6 md:pt-8">
         <Link
           href="/contact"
-          className="inline-flex items-center gap-3 px-6 py-3.5 md:px-8 md:py-4 rounded-full bg-[#2A3F53]/90 border border-white/20 text-white font-poppins font-medium text-base md:text-lg hover:bg-primary hover:border-secondary/50 transition-all duration-300 group"
+          className="inline-flex items-center gap-3 px-6 py-3.5 md:px-8 md:py-4 rounded-full bg-[#2A3F53]/90 border border-white/20 text-white font-poppins font-medium text-[14px] hover:bg-primary hover:border-secondary/50 transition-all duration-300 group"
           aria-label="Contact us today"
         >
           <span>Contact us today</span>

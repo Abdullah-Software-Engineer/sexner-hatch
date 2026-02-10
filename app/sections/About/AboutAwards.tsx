@@ -142,7 +142,7 @@ export default function AboutAwards() {
         <div className="flex flex-col items-center mb-10 md:mb-12 lg:mb-14">
           <div className="flex items-center justify-center gap-4 md:gap-6">
             <LeafDecoration className="hidden sm:block shrink-0" />
-            <h2 className="font-libre text-3xl md:text-4xl lg:text-5xl font-bold text-primary text-center">
+            <h2 className="font-libre text-[30px] md:text-[48px] font-bold text-primary text-center">
               Awards & Memberships
             </h2>
             <LeafDecoration className="hidden sm:block shrink-0 scale-x-[-1]" />
@@ -169,12 +169,12 @@ export default function AboutAwards() {
                   className="object-contain object-center max-h-full w-auto"
                 />
               </div>
-              <p className="font-poppins text-primary/90 text-sm leading-relaxed flex-1 line-clamp-5">
+              <p className="font-poppins text-primary/90 text-[14px] leading-relaxed flex-1 line-clamp-5">
                 {award.description}
               </p>
               <Link
                 href={award.profileUrl}
-                className="mt-4 inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-[#E8DCC8] border border-[#C8A24F] text-primary font-poppins font-medium text-sm hover:bg-[#DDD0BC] transition-colors w-fit"
+                className="mt-4 inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-[#E8DCC8] border border-[#C8A24F] text-primary font-poppins font-medium text-[16px] hover:bg-[#DDD0BC] transition-colors w-fit"
               >
                 View profile
               </Link>

@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FaChevronDown } from 'react-icons/fa'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
+import { FadeUp, StaggerChildren, staggerItemVariants } from '../../components/ui/AnimateOnScroll'
 
 const faqItems = [
   {
@@ -57,24 +59,24 @@ export default function FAQ() {
   return (
     <Section className="bg-[#F5F5F5]" id="faq">
       <Container>
-        <div className="text-center mb-10 md:mb-12">
+        <FadeUp className="text-center mb-10 md:mb-12">
           <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             Frequently asked questions
             <span className="absolute left-8 -translate-x-1/2 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
-        </h2>
-        </div>
+          </h2>
+        </FadeUp>
 
-        <div className="space-y-3">
+        <StaggerChildren className="space-y-3" stagger={0.06} amount={0.05}>
           {faqItems.map((item) => {
             const isOpen = openId === item.id
             return (
-              <div
+              <motion.div
                 key={item.id}
+                variants={staggerItemVariants}
                 className="rounded-lg overflow-hidden"
                 role="group"
                 aria-expanded={isOpen}
               >
-                {/* Question row */}
                 <button
                   type="button"
                   onClick={() => setOpenId(isOpen ? 0 : item.id)}
@@ -89,42 +91,49 @@ export default function FAQ() {
                   >
                     {item.id}
                   </span>
-                  <span className="flex-1 font-poppins text-base md:text-lg font-medium text-[#333333]">
+                  <span className="flex-1 font-poppins text-[14px] md:text-[16px] font-medium text-[#333333]">
                     {item.question}
                   </span>
-                  <span className="shrink-0 text-[#333333]" aria-hidden>
-                    {isOpen ? (
-                      <FaChevronUp className="w-5 h-5" />
-                    ) : (
-                      <FaChevronDown className="w-5 h-5" />
-                    )}
-                  </span>
+                  <motion.span
+                    className="shrink-0 text-[#333333] flex items-center justify-center"
+                    aria-hidden
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    <FaChevronDown className="w-5 h-5" />
+                  </motion.span>
                 </button>
 
-                {/* Answer panel */}
-                <div
-                  id={`faq-answer-${item.id}`}
-                  role="region"
-                  aria-labelledby={`faq-question-${item.id}`}
-                  hidden={!isOpen}
-                  className={isOpen ? 'block' : 'hidden'}
-                >
-                  <div className="flex gap-4 px-4 py-4 md:px-5 md:py-5 bg-primary rounded-b-lg">
-                    <span
-                      className="shrink-0 w-8 h-8 text-secondary mt-0.5"
-                      aria-hidden
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      id={`faq-answer-${item.id}`}
+                      role="region"
+                      aria-labelledby={`faq-question-${item.id}`}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      className="overflow-hidden"
                     >
-                      <SpeechBubbleIcon className="w-8 h-8" />
-                    </span>
-                    <p className="font-poppins text-sm md:text-base text-white leading-relaxed">
-                      {item.answer}
-                    </p>
-                  </div>
-                </div>
-              </div>
+                      <div className="flex gap-4 px-4 py-4 md:px-5 md:py-5 bg-primary rounded-b-lg">
+                        <span
+                          className="shrink-0 w-8 h-8 text-secondary mt-0.5"
+                          aria-hidden
+                        >
+                          <SpeechBubbleIcon className="w-8 h-8" />
+                        </span>
+                        <p className="font-poppins text-[14px] md:text-[16px] text-white leading-relaxed">
+                          {item.answer}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             )
           })}
-        </div>
+        </StaggerChildren>
       </Container>
     </Section>
   )

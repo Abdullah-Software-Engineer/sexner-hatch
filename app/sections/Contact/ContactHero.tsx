@@ -30,7 +30,7 @@ export default function ContactHero() {
             {/* Left: Headline */}
             <div className="text-left">
               <h1 
-                className="font-playfair font-medium text-white text-[42px] leading-tight sm:text-[56px] md:text-[64px] lg:text-[74px]"
+                className="font-playfair font-medium text-white text-[30px] md:text-[48px] leading-tight"
                 style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}
               >
                 GET IN TOUCH WITH
@@ -41,7 +41,7 @@ export default function ContactHero() {
 
             {/* Right: Contact info + CTA */}
             <div className="flex flex-col gap-5 lg:pl-12 max-w-xl lg:ml-auto">
-              <p className="font-poppins text-white text-base md:text-lg leading-relaxed drop-shadow-md text-left lg:text-right">
+              <p className="font-poppins text-white text-[16px] leading-relaxed drop-shadow-md text-left lg:text-right">
                 Call us at{' '}
                 <a
                   href={getPhoneLink(SITE_CONFIG.phoneRaw)}
@@ -60,7 +60,7 @@ export default function ContactHero() {
                   <div className="flex items-center justify-center w-11 h-11 rounded-full bg-secondary text-white shrink-0 group-hover:scale-105 transition-transform">
                     <FaPhone className="w-5 h-5" />
                   </div>
-                  <span className="text-lg font-medium tracking-wide">Call us now</span>
+                  <span className="text-[14px] font-medium tracking-wide">Call us now</span>
                 </Link>
               </div>
             </div>

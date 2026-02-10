@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
 import Button from '../../components/ui/Button'
+import { FadeUp } from '../../components/ui/AnimateOnScroll'
 
 const IMAGE_PATH = '/home/sucess-stories/Group.webp'
 
@@ -44,16 +45,15 @@ export default function SuccessStories() {
         }
       `}</style>
       <Container>
-        <div className="text-center mb-10 md:mb-12">
+        <FadeUp className="text-center mb-10 md:mb-12">
           <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             Success Stories
             <span className="absolute left-8 -translate-x-1/2 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
-        </h2>
-        </div>
+          </h2>
+        </FadeUp>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-          {/* Left column: 3 stacked image cards */}
-          <div className="lg:col-span-5 flex flex-col gap-3 md:gap-4">
+          <FadeUp delay={0.08} className="lg:col-span-5 flex flex-col gap-3 md:gap-4">
             <div className="relative aspect-[4/3] min-h-[300px] h-full rounded-xl overflow-hidden bg-[#333] flex-1">
               <Image
                 src={IMAGE_PATH}
@@ -63,11 +63,9 @@ export default function SuccessStories() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>
-           
-          </div>
+          </FadeUp>
 
-          {/* Right column: content card */}
-          <div className="lg:col-span-7">
+          <FadeUp delay={0.15} className="lg:col-span-7">
             <div className="relative rounded-xl border-2 border-secondary bg-white h-[500px] flex flex-col overflow-hidden">
               <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-10">
                 <Button
@@ -75,7 +73,6 @@ export default function SuccessStories() {
                   variant="primary"
                   size="sm"
                   ariaLabel="View all victories"
-                  className="text-xs sm:text-sm"
                 >
                   View all victories
                 </Button>
@@ -86,13 +83,13 @@ export default function SuccessStories() {
                  <div className="animate-marquee-vertical w-full">
                   {displayStories.map((story, index) => (
                     <div key={index} className="p-4 sm:p-6 md:p-8 lg:p-10 border-b border-dashed border-secondary last:border-b-0">
-                      <h3 className="font-libre text-xl sm:text-2xl md:text-3xl font-semibold text-black mb-2 pr-20 sm:pr-32 md:pr-[160px] lg:pr-[180px]">
+                      <h3 className="font-libre text-[20px] font-semibold text-black mb-2 pr-20 sm:pr-32 md:pr-[160px] lg:pr-[180px]">
                         {story.title}
               </h3>
-                      <p className="font-poppins text-sm sm:text-base md:text-lg font-medium text-black/80 mb-3 md:mb-4">
+                      <p className="font-poppins text-[14px] md:text-[16px] font-medium text-black/80 mb-3 md:mb-4">
                         {story.subtitle}
               </p>
-                      <p className="font-poppins text-sm sm:text-base md:text-lg text-black/80 leading-relaxed">
+                      <p className="font-poppins text-[14px] md:text-[16px] text-black/80 leading-relaxed">
                         {story.description}
               </p>
                     </div>
@@ -100,7 +97,7 @@ export default function SuccessStories() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeUp>
         </div>
       </Container>
     </Section>

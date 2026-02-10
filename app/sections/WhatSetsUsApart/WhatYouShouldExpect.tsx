@@ -45,14 +45,14 @@ export default function WhatYouShouldExpect() {
     <Section className="bg-[#F7F9FA]" id="what-you-should-expect">
       <Container>
         {/* Upper text block */}
-        <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-full mb-10 md:mb-12 xl:mb-16">
+        <p className="text-gray-600 text-[14px] md:text-[16px] leading-relaxed max-w-full mb-10 md:mb-12 xl:mb-16">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-start">
           {/* Left column: heading, accent, paragraph, button */}
           <div className="order-2 lg:order-1">
-            <h2 className="font-playfair font-semibold text-primary text-[32px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[52px] leading-tight">
+            <h2 className="font-playfair font-semibold text-primary text-[30px] md:text-[48px] leading-tight">
               What you should
               <br />
               expect
@@ -66,7 +66,7 @@ export default function WhatYouShouldExpect() {
             </p>
             <Link
               href="/practice-area"
-              className="inline-block mt-8 px-6 py-3.5 rounded-lg bg-secondary text-white font-poppins font-medium text-base hover:bg-secondary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 transition-colors"
+              className="inline-block mt-8 px-6 py-3.5 rounded-lg bg-secondary text-white font-poppins font-medium text-[14px] hover:bg-secondary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 transition-colors"
             >
               View more
             </Link>
@@ -90,12 +90,12 @@ export default function WhatYouShouldExpect() {
                   >
                     <ChartLineIcon className="w-6 h-6 md:w-7 md:h-7" />
                   </span>
-                  <h3 className="font-libre font-semibold text-lg md:text-xl leading-tight">
+                  <h3 className="font-libre font-semibold text-[20px] leading-tight">
                     {card.title}
                   </h3>
                 </div>
                 <p
-                  className={`text-sm md:text-base leading-relaxed ${
+                  className={`text-[14px] leading-relaxed ${
                     card.highlighted ? 'text-white/90' : 'text-gray-600'
                   }`}
                 >

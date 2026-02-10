@@ -29,15 +29,15 @@ export default function WhatSetsUsApartHero() {
       <div className="relative z-10 flex items-center min-h-[85vh] md:min-h-[90vh] w-full lg:max-w-[50%]">
         <Container className="py-12 md:py-16 lg:py-24">
           <div className="max-w-2xl">
-            <h1 className="font-playfair font-light text-[36px] leading-tight sm:text-[42px] md:text-[52px] lg:text-[58px] xl:text-[64px] text-white/95 uppercase">
+            <h1 className="font-playfair font-light text-[30px] md:text-[48px] leading-tight text-white/95 uppercase">
               What sets us <span className="text-secondary">apart</span>
             </h1>
-            <p className="font-poppins text-white/80 text-base md:text-lg leading-relaxed mt-6">
+            <p className="font-poppins text-white/80 text-[16px] leading-relaxed mt-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 mt-8 px-6 py-3.5 rounded-full border-2 border-secondary bg-primary/80 text-white font-medium hover:bg-secondary/10 transition-colors w-fit group"
+              className="inline-flex items-center gap-3 mt-8 px-6 py-3.5 rounded-full border-2 border-secondary bg-primary/80 text-white font-medium text-[14px] hover:bg-secondary/10 transition-colors w-fit group"
               aria-label="Book an appointment"
             >
               <span>Book an appointment</span>

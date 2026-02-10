@@ -20,10 +20,10 @@ const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(SITE_C
 function ContactCard() {
   return (
     <div className="bg-secondary rounded-lg p-6 md:p-8 text-white">
-      <h3 className="font-libre text-xl md:text-2xl font-semibold mb-4">
+      <h3 className="font-libre text-[20px] font-semibold mb-4">
         {OFFICE.title}
       </h3>
-      <ul className="font-poppins text-sm md:text-base space-y-2 text-white/95">
+      <ul className="font-poppins text-[14px] space-y-2 text-white/95">
         <li>
           <span className="font-medium">Address: </span>
           {OFFICE.address}

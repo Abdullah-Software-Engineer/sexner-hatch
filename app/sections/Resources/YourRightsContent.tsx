@@ -38,10 +38,10 @@ export default function YourRightsContent() {
           <div className="flex-1 lg:w-[58.33%] space-y-6 min-w-0">
             {/* Table of Contents Card */}
             <div className="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
-              <h2 className="font-libre text-[24px] md:text-[28px] font-semibold text-primary mb-6">
+              <h2 className="font-libre text-[20px] font-semibold text-primary mb-6">
                 Table of Content
               </h2>
-              <ol className="space-y-3 font-poppins text-sm md:text-base text-primary">
+              <ol className="space-y-3 font-poppins text-[14px] text-primary">
                 {TABLE_OF_CONTENTS.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-secondary font-semibold shrink-0">{index + 1}.</span>
@@ -58,13 +58,13 @@ export default function YourRightsContent() {
                   <h3 className="font-libre text-[22px] md:text-[26px] font-semibold text-primary">
                   Heading {sectionNum}
                 </h3>
-                <p className="font-poppins text-sm md:text-base text-primary/80 leading-relaxed">
+                <p className="font-poppins text-[14px] md:text-[16px] text-primary/80 leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                   dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                   aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                   dolore eu fugiat nulla pariatur.
                 </p>
-                <p className="font-poppins text-sm md:text-base text-primary/80 leading-relaxed">
+                <p className="font-poppins text-[14px] md:text-[16px] text-primary/80 leading-relaxed">
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                   laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                   laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto

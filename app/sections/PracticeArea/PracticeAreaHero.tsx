@@ -30,15 +30,15 @@ export default function PracticeAreaHero() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left: Headline + CTA */}
             <div className="lg:col-span-6 max-w-xl">
-              <h1 className="font-playfair font-light text-white text-[32px] leading-tight sm:text-[38px] md:text-[48px] lg:text-[54px] xl:text-[60px] uppercase">
+              <h1 className="font-playfair font-light text-white text-[30px] md:text-[48px] leading-tight uppercase">
                 Criminal Law & Your
               </h1>
-              <h2 className="font-libre font-bold text-secondary text-[40px] leading-tight sm:text-[48px] md:text-[58px] lg:text-[64px] xl:text-[72px] uppercase mt-1">
+              <h2 className="font-libre font-bold text-secondary text-[30px] md:text-[48px] leading-tight uppercase mt-1">
                 Rights
               </h2>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 mt-8 px-6 py-3.5 rounded-xl bg-[#B8953E] text-white font-poppins font-medium hover:bg-[#A68536] transition-colors w-fit group"
+                className="inline-flex items-center gap-3 mt-8 px-6 py-3.5 rounded-xl bg-[#B8953E] text-white font-poppins font-medium text-[14px] hover:bg-[#A68536] transition-colors w-fit group"
                 aria-label="Book an appointment"
               >
                 <span>Book an appointment</span>

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
+import { FadeUp } from '../../components/ui/AnimateOnScroll'
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -18,13 +19,14 @@ export default function ContactForm() {
   return (
     <Section className="bg-primary m-5 rounded-xl" id="contact-form">
       <Container>
-        <div className="mb-6 sm:mb-8 md:mb-10">
+        <FadeUp className="mb-6 sm:mb-8 md:mb-10">
           <h2 className="text-[30px] md:text-[48px] font-normal text-white mb-2.5 relative inline-block">
             Get your confidential case evaluation
             <span className="absolute left-0 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
           </h2>
-        </div>
+        </FadeUp>
 
+        <FadeUp delay={0.1} amount={0.15}>
           <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 md:space-y-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
               <input
@@ -66,7 +68,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="w-full py-3.5 rounded-lg bg-secondary text-white font-semibold hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary disabled:opacity-70 transition-opacity"
+              className="w-full py-3.5 rounded-lg bg-secondary text-white font-semibold text-[14px] hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary disabled:opacity-70 transition-opacity"
             >
               {status === 'submitting' ? 'Submitting...' : 'Submit'}
             </button>
@@ -75,6 +77,7 @@ export default function ContactForm() {
               By clicking SUBMIT you consent to receiving SMS messages. Message & data rates may apply. / Message frequency may vary. Reply Help to get more assistance / Reply Stop to opt-out of messaging.
             </p>
           </form>
+        </FadeUp>
       </Container>
     </Section>
   )

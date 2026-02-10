@@ -23,7 +23,7 @@ export default function AboutTeam() {
   return (
     <Section className="bg-[#FDFDFC]" id="meet-our-team">
       <Container>
-        <h2 className="font-libre text-3xl md:text-4xl lg:text-5xl font-bold text-[#3C3C3C] text-center mb-12 md:mb-14 lg:mb-16">
+        <h2 className="font-libre text-[30px] md:text-[48px] font-bold text-[#3C3C3C] text-center mb-12 md:mb-14 lg:mb-16">
           Meet our{' '}
           <span className="relative inline-block">
             team
@@ -36,13 +36,13 @@ export default function AboutTeam() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           <div className="lg:col-span-5 space-y-5">
-            <p className="font-poppins text-[#5A5A5A] text-base md:text-lg leading-relaxed">
+            <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
               At Mitchell S. Sexner & Associates LLC, our lawyers work as a team to determine the best legal strategy for every client. With many skilled and experienced attorneys under our umbrella, you can trust that whichever lawyer handles your case will be knowledgeable, dedicated, and focused on achieving the best outcome.
             </p>
-            <p className="font-poppins text-[#5A5A5A] text-base md:text-lg leading-relaxed">
+            <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
               Since 1990, we&apos;ve served over 20,000 clients by tailoring our approach to each person&apos;s unique circumstances—because no two cases are ever the same.
             </p>
-            <p className="font-poppins text-[#5A5A5A] text-base md:text-lg leading-relaxed">
+            <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
               When you hire us, you&apos;re not just getting a lawyer— you&apos;re gaining a full legal team committed to guiding you toward a successful result.
             </p>
             <Link
@@ -106,7 +106,7 @@ export default function AboutTeam() {
                         style={{ opacity: isExpanded ? 1 : 0 }}
                       >
                         <span className="w-0.5 h-5 bg-[#D4AF37] rounded-full shrink-0 mr-2.5" aria-hidden="true" />
-                        <span className="font-poppins text-white text-base font-medium truncate">
+                        <span className="font-poppins text-white text-[20px] font-medium truncate">
                           {member.name}
                         </span>
                       </div>

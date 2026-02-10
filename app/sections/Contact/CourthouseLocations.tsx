@@ -41,7 +41,7 @@ export default function CourthouseLocations() {
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
           {COURTHOUSE_LOCATIONS.map((name) => (
             <li key={name} className="flex">
-              <div className="bg-white rounded-lg border border-gray-200 shadow-sm py-5 px-4 text-center font-poppins text-primary text-sm md:text-base hover:shadow-md hover:border-secondary transition-all w-full">
+              <div className="bg-white rounded-lg border border-gray-200 shadow-sm py-5 px-4 text-center font-poppins text-primary text-[14px] hover:shadow-md hover:border-secondary transition-all w-full">
                 {name}
               </div>
             </li>

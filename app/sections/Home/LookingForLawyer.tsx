@@ -1,7 +1,9 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
+import { FadeUp, StaggerChildren, staggerItemVariants } from '../../components/ui/AnimateOnScroll'
 import { STATS } from '@/lib/constants'
 
 export default function LookingForLawyer() {
@@ -9,18 +11,23 @@ export default function LookingForLawyer() {
     <Section className="bg-white" id="looking-for-lawyer">
       <Container>
         <div className="text-center">
-          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
-            Looking for a Criminal Defense Lawyer?
-            <span className="absolute left-0 -bottom-1.5 w-[70px] h-1 bg-secondary " aria-hidden="true"></span>
-          </h2>
-          <p className="font-poppins text-sm md:text-base text-black leading-relaxed max-w-[900px] md:max-w-[1000px] mx-auto my-8 md:my-10">
-            With over 30 years of experience defending clients in Chicago, our dedicated team of criminal defense attorneys has successfully helped over 20,000 individuals navigate complex legal challenges. We understand the stress and uncertainty of facing criminal charges, and we're committed to providing aggressive, compassionate representation to protect your rights and your future.
-          </p>
-          
-          <div className="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-6 xl:gap-6 max-w-[900px] mx-auto mt-10 md:mt-12 xl:mt-12">
+          <FadeUp>
+            <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+              Looking for a Criminal Defense Lawyer?
+              <span className="absolute left-0 -bottom-1.5 w-[70px] h-1 bg-secondary " aria-hidden="true"></span>
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="font-poppins text-[14px] md:text-[16px] text-black leading-relaxed max-w-[900px] md:max-w-[1000px] mx-auto my-8 md:my-10">
+              With over 30 years of experience defending clients in Chicago, our dedicated team of criminal defense attorneys has successfully helped over 20,000 individuals navigate complex legal challenges. We understand the stress and uncertainty of facing criminal charges, and we're committed to providing aggressive, compassionate representation to protect your rights and your future.
+            </p>
+          </FadeUp>
+
+          <StaggerChildren className="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-6 xl:gap-6 max-w-[900px] mx-auto mt-10 md:mt-12 xl:mt-12" stagger={0.1}>
             {STATS.map((stat, index) => (
-              <article
+              <motion.article
                 key={stat.id}
+                variants={staggerItemVariants}
                 className="bg-primary rounded-xl p-3 md:p-3.5 xl:p-3.5 flex items-center gap-4 w-full max-w-[400px] md:max-w-[420px]"
               >
                 <div
@@ -48,9 +55,9 @@ export default function LookingForLawyer() {
                     {stat.value}
                   </div>
                 </div>
-              </article>
+              </motion.article>
             ))}
-          </div>
+          </StaggerChildren>
         </div>
       </Container>
     </Section>
