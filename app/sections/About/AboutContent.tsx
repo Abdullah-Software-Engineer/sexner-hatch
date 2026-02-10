@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
+import { AnimatedCounter } from '../../components/ui/AnimateOnScroll'
 
 const ArrowIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0" aria-hidden="true">
@@ -53,7 +54,9 @@ export default function AboutContent() {
           </div>
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-between">
             <div>
-              <div className="font-libre text-4xl md:text-5xl font-bold text-white">30+</div>
+              <div className="font-libre text-4xl md:text-5xl font-bold text-white">
+              <AnimatedCounter value="30+" duration={1800} />
+            </div>
               <p className="font-poppins text-white/90 text-[14px] mt-2">Years of experience</p>
             </div>
             <Link
@@ -66,7 +69,9 @@ export default function AboutContent() {
           </div>
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-between">
             <div>
-              <div className="font-libre text-4xl md:text-5xl font-bold text-white">20,000+</div>
+              <div className="font-libre text-4xl md:text-5xl font-bold text-white">
+              <AnimatedCounter value="20,000+" duration={1800} />
+            </div>
               <p className="font-poppins text-white/90 text-[14px] mt-2">People we have helped</p>
             </div>
             <Link

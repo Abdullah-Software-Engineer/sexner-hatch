@@ -24,6 +24,15 @@ export const NAVIGATION_LINKS = [
   { href: '/contact', label: 'Contact' },
 ] as const
 
+// Resources dropdown sub-links (shown under Resources in header)
+export const RESOURCES_DROPDOWN_LINKS = [
+  { href: '/resources', label: 'Your Rights' },
+  { href: '/courthouse-location', label: 'Courthouse Location' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/make-payment', label: 'Make a Payment' },
+  { href: '/courthouse-location', label: 'Detailed Courthouse Location' },
+] as const
+
 // ============================================
 // Practice Areas Data
 // ============================================

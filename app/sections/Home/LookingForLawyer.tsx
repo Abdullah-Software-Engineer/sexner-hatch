@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
-import { FadeUp, StaggerChildren, staggerItemVariants } from '../../components/ui/AnimateOnScroll'
+import { AnimatedCounter, FadeUp, StaggerChildren, staggerItemVariants } from '../../components/ui/AnimateOnScroll'
 import { STATS } from '@/lib/constants'
 
 export default function LookingForLawyer() {
@@ -52,7 +52,7 @@ export default function LookingForLawyer() {
                     {stat.label}
                   </div>
                   <div className="font-poppins text-2xl md:text-[28px] font-semibold text-white">
-                    {stat.value}
+                    <AnimatedCounter value={stat.value} />
                   </div>
                 </div>
               </motion.article>
