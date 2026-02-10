@@ -35,80 +35,84 @@ export default function Header() {
   }, [isMenuOpen])
 
   return (
-    <header
-      className={cn(
-        'fixed left-1/2 -translate-x-1/2 z-[100] bg-primary transition-all duration-300',
-        'w-[calc(100%-16px)] sm:w-[calc(100%-32px)] md:w-[calc(100%-48px)] lg:w-[1470px] lg:max-w-[calc(100%-64px)] xl:max-w-[calc(100%-140px)]',
-        'rounded-xl sm:rounded-2xl md:rounded-3xl lg:rounded-[60px]',
-        isScrolled ? 'top-2 sm:top-[10px] lg:top-[10px]' : 'top-2 sm:top-4 md:top-5 lg:top-[30px]'
-      )}
-      role="banner"
-    >
-      <div className="w-full overflow-hidden">
-        <div className="max-w-[1390px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-10 py-2 sm:py-2.5 lg:py-3 xl:py-3 min-h-[52px] sm:min-h-[60px]">
-            {/* Logo */}
-            <Link
-              href="/"
-              className="flex-shrink-0 min-w-0"
-              aria-label={`${SITE_CONFIG.name} Home`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Image
-                src="/home/header/sexner-white.png"
-                alt={SITE_CONFIG.name}
-                width={140}
-                height={50}
-                priority
-                className="h-7 w-auto sm:h-9 md:h-10 lg:h-[50px] lg:w-[140px] max-w-full"
-              />
-            </Link>
-
-            {/* Desktop Navigation - visible from md (tablet) up */}
-            <nav
-              className="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6 2xl:gap-8 flex-1 justify-center min-w-0"
-              aria-label="Main navigation"
-            >
-              {NAVIGATION_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-white text-sm lg:text-[15px] xl:text-base font-poppins hover:text-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded px-2 py-1 whitespace-nowrap"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-
-            {/* Desktop Phone + Mobile Menu Button */}
-            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0">
-              {/* Phone button - visible from tablet (md) up */}
-              <div className="hidden md:block flex-shrink-0">
-                <PhoneButton size="md" />
-              </div>
-              {/* Mobile menu toggle - only below md */}
-              <button
-                type="button"
-                onClick={() => setIsMenuOpen((o) => !o)}
-                className="md:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full text-white hover:bg-white/10 active:bg-white/20 focus:outline-none focus:ring-2 focus:ring-secondary transition-colors flex-shrink-0"
-                aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-                aria-controls="mobile-nav"
-                aria-expanded={isMenuOpen}
+    <>
+      <header
+        className={cn(
+          'fixed left-1/2 -translate-x-1/2 z-[100] bg-primary transition-all duration-300',
+          'w-[calc(100%-16px)] sm:w-[calc(100%-32px)] md:w-[calc(100%-48px)] lg:w-[1470px] lg:max-w-[calc(100%-64px)] xl:max-w-[calc(100%-140px)]',
+          'rounded-xl sm:rounded-2xl md:rounded-3xl lg:rounded-[60px]',
+          isScrolled ? 'top-2 sm:top-[10px] lg:top-[10px]' : 'top-2 sm:top-4 md:top-5 lg:top-[30px]'
+        )}
+        role="banner"
+      >
+        <div className="w-full overflow-hidden">
+          <div className="max-w-[1390px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div className="flex items-center justify-between gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-10 py-2 sm:py-2.5 lg:py-3 xl:py-3 min-h-[52px] sm:min-h-[60px]">
+              {/* Logo */}
+              <Link
+                href="/"
+                className="flex-shrink-0 min-w-0"
+                aria-label={`${SITE_CONFIG.name} Home`}
+                onClick={() => setIsMenuOpen(false)}
               >
-                {isMenuOpen ? (
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                ) : (
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                )}
-              </button>
+                <Image
+                  src="/home/header/sexner-white.png"
+                  alt={SITE_CONFIG.name}
+                  width={140}
+                  height={50}
+                  priority
+                  className="h-7 w-auto sm:h-9 md:h-10 lg:h-[50px] lg:w-[140px] max-w-full"
+                />
+              </Link>
+
+              {/* Desktop Navigation - visible from md (tablet) up */}
+              <nav
+                className="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6 2xl:gap-8 flex-1 justify-center min-w-0"
+                aria-label="Main navigation"
+              >
+                {NAVIGATION_LINKS.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-white text-sm lg:text-[15px] xl:text-base font-poppins hover:text-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded px-2 py-1 whitespace-nowrap"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Desktop Phone + Mobile Menu Button */}
+              <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0">
+                {/* Phone button - visible from tablet (md) up */}
+                <div className="hidden md:block flex-shrink-0">
+                  <PhoneButton size="md" />
+                </div>
+                {/* Mobile menu toggle - only below md */}
+                <button
+                  type="button"
+                  onClick={() => setIsMenuOpen((o) => !o)}
+                  className="md:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full text-white hover:bg-white/10 active:bg-white/20 focus:outline-none focus:ring-2 focus:ring-secondary transition-colors flex-shrink-0"
+                  aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                  aria-controls="mobile-nav"
+                  aria-expanded={isMenuOpen}
+                >
+                  {isMenuOpen ? (
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  ) : (
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
+
+      </header>
 
       {/* Mobile menu overlay - above header so it covers page */}
       <div
@@ -117,7 +121,7 @@ export default function Header() {
         aria-modal="true"
         aria-label="Mobile navigation"
         className={cn(
-          'md:hidden fixed inset-0 z-[101] bg-black/50 backdrop-blur-sm transition-opacity duration-300',
+          'md:hidden fixed inset-0 z-[101] bg-black/50 h-[100vh] w-[100vw] backdrop-blur-2xl transition-opacity duration-300',
           isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         )}
         onClick={() => setIsMenuOpen(false)}
@@ -127,8 +131,8 @@ export default function Header() {
         className={cn(
           'md:hidden fixed z-[102] bg-primary rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ease-out',
           'left-2 right-2 sm:left-4 sm:right-4',
-          isMenuOpen 
-            ? 'top-[68px] sm:top-[76px] opacity-100 visible translate-y-0' 
+          isMenuOpen
+            ? 'top-[68px] sm:top-[76px] opacity-100 visible translate-y-0'
             : 'top-[60px] opacity-0 invisible -translate-y-4'
         )}
       >
@@ -148,7 +152,6 @@ export default function Header() {
             <PhoneButton size="md" className="w-full justify-center" />
           </div>
         </nav>
-      </div>
-    </header>
+      </div></>
   )
 }
