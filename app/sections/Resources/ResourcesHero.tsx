@@ -11,7 +11,7 @@ export default function ResourcesHero() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/results-page-hero.webp"
+          src="/sitemap/hero.webp"
           alt="Criminal Law & Your Rights"
           fill
           priority
@@ -19,7 +19,6 @@ export default function ResourcesHero() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/40 z-1" aria-hidden="true" />
       </div>
 
       <div className="relative z-10 w-full py-16 md:py-24">
