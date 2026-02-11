@@ -14,28 +14,12 @@ const ArrowIcon = () => (
 
 export default function AboutContent() {
   return (
-    <Section className="bg-[#f5f5f5] overflow-hidden" id="about-content">
+    <Section className="bg-white overflow-hidden" id="about-content">
       {/* Top: Repeating marquee heading */}
-      <div className="border-y border-primary/10 bg-white py-4 md:py-5">
-        <div className="overflow-hidden">
-          <div className="flex animate-marquee-scroll whitespace-nowrap">
-            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
-              Looking for a Criminal Defense Lawyer?
-            </span>
-            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
-              Looking for a Criminal Defense Lawyer?
-            </span>
-            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
-              Looking for a Criminal Defense Lawyer?
-            </span>
-            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
-              Looking for a Criminal Defense Lawyer?
-            </span>
-            <span className="font-libre text-xl md:text-2xl lg:text-3xl font-bold text-primary px-8">
-              Looking for a Criminal Defense Lawyer?
-            </span>
-          </div>
-        </div>
+      <div className="bg-white py-4 md:py-5">
+        <Container>
+          <p className="font-poppins text-primary/90 text-[18px] md:text-[16px] leading-relaxed text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+        </Container>
       </div>
 
       <Container className="pt-8 md:pt-10 lg:pt-12">

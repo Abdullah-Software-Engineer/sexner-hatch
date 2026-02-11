@@ -154,7 +154,7 @@ export default function AboutAwards() {
         </div>
 
         {/* Grid of award cards - same size for all including Client Champion */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 text-center">
           {awards.map((award) => (
             <article
               key={award.id}

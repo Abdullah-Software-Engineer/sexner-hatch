@@ -6,6 +6,7 @@ import AboutAwards from '../sections/About/AboutAwards'
 import OfficeContact from '../sections/Contact/OfficeContact'
 import SpeakWithTeam from '../sections/Home/SpeakWithTeam'
 import ContactForm from '../sections/Home/ContactForm'
+import AboutTeam from '../sections/About/AboutTeam'
 
 export const metadata = {
   title: 'About Us',
@@ -19,6 +20,7 @@ export default function AboutPage() {
       <AboutHero />
       <AboutContent />
       <AboutVideo />
+      <AboutTeam />
       <AboutAwards />
       <OfficeContact />
       <ContactForm />
