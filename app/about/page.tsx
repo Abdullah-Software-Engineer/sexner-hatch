@@ -2,6 +2,7 @@ import Layout from '../components/layout/Layout'
 import AboutHero from '../sections/About/AboutHero'
 import AboutContent from '../sections/About/AboutContent'
 import AboutVideo from '../sections/About/AboutVideo'
+import AboutTeam from '../sections/About/AboutTeam'
 import AboutAwards from '../sections/About/AboutAwards'
 import OfficeContact from '../sections/Contact/OfficeContact'
 import SpeakWithTeam from '../sections/Home/SpeakWithTeam'
@@ -19,6 +20,7 @@ export default function AboutPage() {
       <AboutHero />
       <AboutContent />
       <AboutVideo />
+      <AboutTeam />
       <AboutAwards />
       <OfficeContact />
       <ContactForm />

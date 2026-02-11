@@ -5,6 +5,7 @@
 export interface NavLink {
   href: string
   label: string
+  items?: NavLink[]
 }
 
 export interface PracticeArea {

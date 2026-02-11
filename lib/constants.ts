@@ -18,12 +18,19 @@ export const SITE_CONFIG = {
 export const NAVIGATION_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
-  { href: '/meet-our-team', label: 'Meet Our Team' },
   { href: '/practice-areas', label: 'Practice Areas' },
-  { href: '/resources', label: 'Resources' },
-  { href: '/results', label: 'Results' },
-  { href: '/testimonial', label: 'Testimonial' },
-  { href: '/make-payment', label: 'Make Payment' },
+  {
+    href: '/resources',
+    label: 'Resources',
+    items: [
+      { href: '/resources', label: 'Your Rights' }, // Using /resources for "Your Rights" as that seems to be the main resources page content based on previous turns
+      { href: '/courthouse-locations', label: 'Courthouse Location' },
+      { href: '/blog', label: 'Blog' },
+      { href: '/make-payment', label: 'Make a Payment' },
+      { href: '/courthouse-locations#detailed', label: 'Detailed Courthouse Location' }, // Assuming a hash or separate route
+    ],
+  },
+  { href: '/result', label: 'Results' },
   { href: '/contact', label: 'Contact' },
 ] as const
 

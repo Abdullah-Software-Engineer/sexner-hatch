@@ -44,7 +44,7 @@ export default function Header() {
       )}
       role="banner"
     >
-      <div className="w-full overflow-hidden">
+      <div className="w-full">
         <div className="max-w-[1390px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-10 py-2 sm:py-2.5 lg:py-3 xl:py-3 min-h-[52px] sm:min-h-[60px]">
             {/* Logo */}
@@ -70,13 +70,45 @@ export default function Header() {
               aria-label="Main navigation"
             >
               {NAVIGATION_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-white text-sm lg:text-[15px] xl:text-base font-poppins hover:text-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded px-2 py-1 whitespace-nowrap"
-                >
-                  {link.label}
-                </Link>
+                <div key={link.href} className="relative group">
+                  <Link
+                    href={link.href}
+                    className="flex items-center gap-1 text-white text-sm lg:text-[15px] xl:text-base font-poppins hover:text-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded px-2 py-1 whitespace-nowrap"
+                  >
+                    {link.label}
+                    {link.items && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    )}
+                  </Link>
+
+                  {/* Dropdown Menu */}
+                  {link.items && (
+                    <div className="absolute left-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+                      <div className="bg-[#1A2633] rounded-lg shadow-xl overflow-hidden border border-white/10">
+                        {link.items.map((subItem) => (
+                          <Link
+                            key={subItem.href}
+                            href={subItem.href}
+                            className="block px-4 py-3 text-sm text-white hover:bg-white/10 hover:text-secondary transition-colors border-b border-white/5 last:border-0"
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </nav>
 
@@ -138,14 +170,29 @@ export default function Header() {
       >
         <nav className="flex flex-col py-2 sm:py-4" aria-label="Mobile navigation">
           {NAVIGATION_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white font-poppins text-sm sm:text-base md:text-lg py-2.5 sm:py-3.5 px-4 sm:px-6 hover:bg-white/10 hover:text-secondary active:bg-white/15 transition-colors border-b border-white/10 last:border-0"
-            >
-              {link.label}
-            </Link>
+            <div key={link.href}>
+              <Link
+                href={link.href}
+                onClick={() => !link.items && setIsMenuOpen(false)}
+                className="block text-white font-poppins text-sm sm:text-base md:text-lg py-2.5 sm:py-3.5 px-4 sm:px-6 hover:bg-white/10 hover:text-secondary active:bg-white/15 transition-colors border-b border-white/10 last:border-0"
+              >
+                {link.label}
+              </Link>
+              {link.items && (
+                <div className="bg-black/20">
+                  {link.items.map((subItem) => (
+                    <Link
+                      key={subItem.href}
+                      href={subItem.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block text-white/90 font-poppins text-sm sm:text-base py-2.5 pl-8 sm:pl-10 pr-4 hover:text-secondary hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+                    >
+                      {subItem.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
           {/* Phone button in mobile menu - visible on mobile and tablet */}
           <div className="p-3 sm:p-4 pt-2 sm:pt-3 md:hidden">

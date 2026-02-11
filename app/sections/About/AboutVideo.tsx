@@ -13,7 +13,7 @@ export default function AboutVideo({ videoUrl }: AboutVideoProps) {
     <Section className="bg-white" id="about-video">
       <Container>
         <div className="flex justify-center">
-          <div className="relative w-full max-w-5xl rounded-xl overflow-hidden bg-[#e0e0e0] aspect-video flex items-center justify-center">
+          <div className="relative w-full rounded-xl overflow-hidden bg-[#e0e0e0] aspect-video flex items-center justify-center">
             {videoUrl ? (
               <iframe
                 src={videoUrl}

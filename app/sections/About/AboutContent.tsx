@@ -101,9 +101,9 @@ export default function AboutContent() {
         {/* Row 3: Heading with underline + two text columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mt-10 md:mt-12 lg:mt-14 pb-4">
           <div>
-            <h2 className="font-libre text-2xl md:text-3xl lg:text-4xl font-bold text-primary leading-tight">
+            <h2 className="font-libre text-2xl md:text-3xl lg:text-4xl font-normal text-black leading-tight">
               Some text which is a bit long will be here{' '}
-              <span className="relative inline-block">
+              <span className="relative inline-block font-libre">
                 like
                 <span className="absolute left-0 bottom-0.5 w-full h-0.5 bg-secondary" aria-hidden="true" />
               </span>{' '}

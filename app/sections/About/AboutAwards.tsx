@@ -138,19 +138,12 @@ export default function AboutAwards() {
   return (
     <Section className="bg-[#F5F0E8]" id="awards-memberships">
       <Container>
-        {/* Section title with decorations */}
-        <div className="flex flex-col items-center mb-10 md:mb-12 lg:mb-14">
-          <div className="flex items-center justify-center gap-4 md:gap-6">
-            <LeafDecoration className="hidden sm:block shrink-0" />
-            <h2 className="font-libre text-3xl md:text-4xl lg:text-5xl font-bold text-primary text-center">
-              Awards & Memberships
-            </h2>
-            <LeafDecoration className="hidden sm:block shrink-0 scale-x-[-1]" />
-          </div>
-          <span
-            className="mt-3 w-20 h-0.5 bg-[#C8A24F] rounded-full"
-            aria-hidden
-          />
+        {/* Section title */}
+        <div className="text-center mb-10 md:mb-12 xl:mb-16">
+          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+            Awards & Memberships
+            <span className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
+          </h2>
         </div>
 
         {/* Grid of award cards - same size for all including Client Champion */}

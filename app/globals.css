@@ -46,6 +46,10 @@
   h1 span {
     font-family: inherit;
   }
+
+  h2 span, h3 span, h4 span, h5 span, h6 span {
+    font-family: inherit;
+  }
 }
 
 @layer utilities {

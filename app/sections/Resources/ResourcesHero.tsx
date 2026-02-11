@@ -33,9 +33,6 @@ export default function ResourcesHero() {
               <span className="text-secondary" style={{ fontFamily: 'var(--font-playfair), serif' }}>YOUR RIGHTS</span>
             </h1>
             <div className="flex flex-col gap-5">
-              <p className="font-poppins text-white text-base md:text-lg leading-relaxed drop-shadow-md text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
               <div className="flex justify-start">
                 <Link
                   href="/contact"
