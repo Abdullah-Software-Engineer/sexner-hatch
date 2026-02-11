@@ -147,6 +147,38 @@
     }
   }
   
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(16px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .modal-form-enter {
+    animation: fadeInUp 0.3s ease-out forwards;
+  }
+  
+  @media (min-width: 640px) {
+    .modal-form-enter {
+      animation: fadeInRight 0.3s ease-out forwards;
+    }
+  }
+  
   .animate-marquee-scroll {
     animation: marquee-scroll 60s linear infinite;
   }
