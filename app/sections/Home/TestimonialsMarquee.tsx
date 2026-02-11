@@ -77,7 +77,7 @@ export default function TestimonialsMarquee() {
       <Container className="mt-10 md:mt-12 xl:mt-16">
         <div className="flex justify-center">
           <Button
-            href="/testimonials"
+            href="/testimonial"
             variant="primary"
             size="sm"
             ariaLabel="See more testimonials"

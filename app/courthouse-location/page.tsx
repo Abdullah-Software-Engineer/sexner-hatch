@@ -14,7 +14,7 @@ export default function CourthouseLocationPage() {
   return (
     <Layout>
       <CourthouseLocationHero />
-      <DetailedCourthouseLocationContent locationName="111th Street Branch Court" />
+      <DetailedCourthouseLocationContent />
       <OfficeContact />
       <SpeakWithTeam />
     </Layout>
