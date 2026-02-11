@@ -2,12 +2,14 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { NAVIGATION_LINKS, RESOURCES_DROPDOWN_LINKS, SITE_CONFIG } from '@/lib/constants'
 import { cn, throttle } from '@/lib/utils'
 import PhoneButton from '../ui/PhoneButton'
 
 export default function Header() {
+  const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isResourcesOpen, setIsResourcesOpen] = useState(false)
@@ -72,8 +74,19 @@ export default function Header() {
                 className="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6 2xl:gap-8 flex-1 justify-center min-w-0"
                 aria-label="Main navigation"
               >
-                {NAVIGATION_LINKS.map((link) =>
-                  link.label === 'Resources' ? (
+                {NAVIGATION_LINKS.map((link) => {
+                  let isActive = link.href === '/' 
+                    ? pathname === '/' 
+                    : pathname === link.href || pathname.startsWith(link.href + '/')
+                  
+                  // For Resources, also check if any sub-link is active
+                  if (link.label === 'Resources') {
+                    isActive = isActive || RESOURCES_DROPDOWN_LINKS.some(
+                      subLink => pathname === subLink.href || pathname.startsWith(subLink.href + '/')
+                    )
+                  }
+                  
+                  return link.label === 'Resources' ? (
                     <div
                       key={link.href}
                       className="relative"
@@ -83,8 +96,9 @@ export default function Header() {
                       <button
                         type="button"
                         className={cn(
-                          'text-sm lg:text-[15px] xl:text-base font-poppins font-medium tracking-wide transition-colors focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary rounded-lg px-3 py-2 whitespace-nowrap flex items-center gap-1.5',
-                          isResourcesOpen ? 'text-secondary' : 'text-white hover:text-secondary'
+                          'text-sm lg:text-[15px] xl:text-base font-poppins font-medium tracking-wide transition-colors focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary rounded-lg px-3 py-2 whitespace-nowrap flex items-center gap-1.5 relative',
+                          isResourcesOpen ? 'text-secondary' : 'text-white hover:text-secondary',
+                          isActive && 'border-b-2 border-secondary pb-1'
                         )}
                         aria-expanded={isResourcesOpen}
                         aria-haspopup="true"
@@ -121,12 +135,15 @@ export default function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-white text-sm lg:text-[15px] xl:text-base font-poppins hover:text-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded px-2 py-1 whitespace-nowrap"
+                      className={cn(
+                        'text-white text-sm lg:text-[15px] xl:text-base font-poppins hover:text-secondary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded px-2 py-1 whitespace-nowrap relative',
+                        isActive && 'border-b-2 border-secondary pb-0'
+                      )}
                     >
                       {link.label}
                     </Link>
                   )
-                )}
+                })}
               </nav>
 
               {/* Desktop Phone + Mobile Menu Button */}
@@ -185,15 +202,27 @@ export default function Header() {
         )}
       >
         <nav className="flex flex-col py-2 sm:py-4" aria-label="Mobile navigation">
-          {NAVIGATION_LINKS.map((link) =>
-            link.label === 'Resources' ? (
+          {NAVIGATION_LINKS.map((link) => {
+            let isActive = link.href === '/' 
+              ? pathname === '/' 
+              : pathname === link.href || pathname.startsWith(link.href + '/')
+            
+            // For Resources, also check if any sub-link is active
+            if (link.label === 'Resources') {
+              isActive = isActive || RESOURCES_DROPDOWN_LINKS.some(
+                subLink => pathname === subLink.href || pathname.startsWith(subLink.href + '/')
+              )
+            }
+            
+            return link.label === 'Resources' ? (
               <div key={link.href} className="border-b border-white/10">
                 <button
                   type="button"
                   onClick={() => setIsResourcesMobileOpen((o) => !o)}
                   className={cn(
-                    'w-full text-left font-poppins font-medium text-sm sm:text-base py-3 sm:py-3.5 px-4 sm:px-6 transition-colors flex items-center justify-between rounded-lg mx-2',
-                    isResourcesMobileOpen ? 'text-secondary bg-white/10' : 'text-white hover:bg-white/10 hover:text-secondary active:bg-white/15'
+                    'w-full text-left font-poppins font-medium text-sm sm:text-base py-3 sm:py-3.5 px-4 sm:px-6 transition-colors flex items-center justify-between rounded-lg mx-2 relative',
+                    isResourcesMobileOpen ? 'text-secondary bg-white/10' : 'text-white hover:bg-white/10 hover:text-secondary active:bg-white/15',
+                    isActive && 'border-b-2 border-secondary'
                   )}
                   aria-expanded={isResourcesMobileOpen}
                 >
@@ -223,12 +252,15 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-white font-poppins text-sm sm:text-base md:text-lg py-2.5 sm:py-3.5 px-4 sm:px-6 hover:bg-white/10 hover:text-secondary active:bg-white/15 transition-colors border-b border-white/10"
+                className={cn(
+                  'text-white font-poppins text-sm sm:text-base md:text-lg py-2.5 sm:py-3.5 px-4 sm:px-6 hover:bg-white/10 hover:text-secondary active:bg-white/15 transition-colors border-b border-white/10 relative',
+                  isActive && 'border-b-2 border-secondary'
+                )}
               >
                 {link.label}
               </Link>
             )
-          )}
+          })}
           {/* Phone button in mobile menu - visible on mobile and tablet */}
           <div className="p-3 sm:p-4 pt-2 sm:pt-3 md:hidden">
             <PhoneButton size="md" className="w-full justify-center" />
