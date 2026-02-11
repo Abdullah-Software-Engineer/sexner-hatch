@@ -75,8 +75,8 @@ export default function YourRightsContent() {
             </div>
           </div>
 
-          {/* Right: Contact Form - Sticky Sidebar */}
-          <aside className="w-full lg:w-[41.67%] lg:flex-shrink-0 lg:sticky lg:top-32 lg:self-start" style={{ position: '-webkit-sticky' } as any}>
+          {/* Right: Contact Form */}
+          <aside className="w-full lg:w-[41.67%] lg:flex-shrink-0">
               <div className="bg-gradient-to-b from-[#1a2b3c] to-[#b89553] p-8 rounded-xl shadow-2xl border border-white/10">
                 <h3 className="font-libre text-white text-[28px] text-center mb-6 leading-tight">
                   Contact us for a free case evaluation
