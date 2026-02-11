@@ -1,8 +1,8 @@
 import Layout from '../components/layout/Layout'
 import TestimonialHero from '../sections/Testimonial/TestimonialHero'
-import TestimonialsAndContactForm from '../sections/Testimonial/TestimonialsAndContactForm'
-import SpeakWithTeam from '../sections/Home/SpeakWithTeam'
+import TestimonialsContent from '../sections/Testimonial/TestimonialsContent'
 import PartnersMarquee from '../sections/Home/PartnersMarquee'
+import SpeakWithTeam from '../sections/Home/SpeakWithTeam'
 
 export const metadata = {
   title: 'Testimonials',
@@ -14,7 +14,7 @@ export default function TestimonialPage() {
   return (
     <Layout>
       <TestimonialHero />
-      <TestimonialsAndContactForm />
+      <TestimonialsContent />
       <PartnersMarquee />
       <SpeakWithTeam />
     </Layout>

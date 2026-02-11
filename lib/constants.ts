@@ -137,6 +137,7 @@ export const FOOTER_SHORTCUTS = [
   { href: '/meet-our-team', label: 'Meet our team' },
   { href: '/practice-areas', label: 'Practice areas' },
   { href: '/results', label: 'Results' },
+  { href: '/testimonial', label: 'Testimonials' },
   { href: '/contact', label: 'Contact us' },
 ] as const
 
