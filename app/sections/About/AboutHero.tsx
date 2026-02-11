@@ -2,56 +2,53 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaArrowRight } from 'react-icons/fa'
 import Container from '../../components/ui/Container'
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden">
-      {/* Full-width background image */}
+    <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden flex items-center">
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/About%20us/Hero.webp"
-          alt="Sexner and Associates LLC, Attorneys at Law - office exterior"
+          alt="About Us"
           fill
           priority
           quality={90}
-          className="object-cover object-center "
+          className="object-cover object-center"
           sizes="100vw"
         />
+        <div className="absolute inset-0 bg-black/40 z-1" aria-hidden="true" />
       </div>
 
-      {/* Left: Dark content panel overlay */}
-      <div className="relative z-10 flex items-center min-h-[85vh] md:min-h-[90vh] w-full lg:max-w-[50%] bg-transparent">
-        <Container className="py-12 md:py-16 lg:py-24">
-          <div className="max-w-xl">
-            <h1 className="font-playfair font-light text-[30px] md:text-[48px] leading-tight text-white/95">
-              ABOUT <span className="text-secondary">US</span>
+      <div className="relative z-10 w-full py-16 md:py-24">
+        <Container>
+          <div className="max-w-2xl">
+            <h1 
+              className="font-playfair font-medium text-white text-[42px] leading-tight sm:text-[56px] md:text-[64px] lg:text-[74px] mb-5"
+              style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}
+            >
+              ABOUT{' '}
+              <span className="text-secondary" style={{ fontFamily: 'var(--font-playfair), serif' }}>US</span>
             </h1>
-            <p className="font-poppins text-white/80 text-[16px] leading-relaxed mt-6">
+            <p className="font-poppins text-white text-lg md:text-xl mb-6 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-3 mt-8 px-6 py-3.5 rounded-full border-2 border-secondary text-white font-medium text-[14px] hover:bg-secondary/10 transition-colors w-fit group"
-              aria-label="Book an appointment"
-            >
-              <span>Book an appointment</span>
-              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-primary shrink-0 group-hover:bg-secondary/90 transition-colors">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                  aria-hidden="true"
+            <div className="flex flex-col gap-5">
+              <div className="flex justify-start">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-4 pl-8 pr-1.5 py-1.5 rounded-full bg-secondary text-white font-medium hover:bg-secondary/90 transition-colors w-fit shadow-lg group h-14"
+                  aria-label="Book an appointment"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-            </Link>
+                  <span className="text-lg font-medium tracking-wide">Book an appointment</span>
+                  <div className="flex items-center justify-center w-11 h-11 rounded-full bg-primary text-white shrink-0 group-hover:translate-x-1 transition-transform">
+                    <FaArrowRight className="w-5 h-5" />
+                  </div>
+                </Link>
+              </div>
+            </div>
           </div>
         </Container>
       </div>

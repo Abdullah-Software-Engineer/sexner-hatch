@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
+import ScrollFollowingForm from '../../components/ScrollFollowingForm'
 
 const TABLE_OF_CONTENTS = [
   'Chicago criminal procedures',
@@ -27,21 +28,13 @@ const LOREM_2 =
 
 export default function PracticeAreaTableAndContent() {
   const [tocOpen, setTocOpen] = useState(true)
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setStatus('submitting')
-    await new Promise((r) => setTimeout(r, 800))
-    setStatus('success')
-  }
 
   return (
-    <Section className="bg-gray-50 py-14 md:py-20">
+    <Section className="bg-white py-14 md:py-20">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
-          {/* Left column: TOC + content (wider) */}
-          <div className="lg:col-span-7 xl:col-span-8 space-y-8">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-10">
+          {/* Left column: TOC + content */}
+          <div className="flex-1 lg:w-[58.33%] space-y-8">
             {/* Table of content */}
             <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
               <button
@@ -129,65 +122,8 @@ export default function PracticeAreaTableAndContent() {
             </div>
           </div>
 
-          {/* Right column: sticky contact form */}
-          <aside className="lg:col-span-5 xl:col-span-4">
-            <div className="lg:sticky lg:top-28">
-              <div className="bg-primary rounded-2xl shadow-lg overflow-hidden border border-primary/20">
-                <div className="py-5 px-6 border-b border-white/10">
-                  <h2 className="font-libre text-xl md:text-2xl font-semibold text-white text-center">
-                    Contact us for a free case evaluation
-                  </h2>
-                </div>
-                <div className="p-6">
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Name"
-                      required
-                      className="w-full px-4 py-3.5 rounded-xl bg-white/95 text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow"
-                      disabled={status === 'submitting'}
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email address"
-                      required
-                      className="w-full px-4 py-3.5 rounded-xl bg-white/95 text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow"
-                      disabled={status === 'submitting'}
-                    />
-                    <input
-                      type="tel"
-                      name="phone"
-                      placeholder="Phone number"
-                      required
-                      className="w-full px-4 py-3.5 rounded-xl bg-white/95 text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow"
-                      disabled={status === 'submitting'}
-                    />
-                    <textarea
-                      name="message"
-                      placeholder="How can we help?"
-                      rows={4}
-                      required
-                      className="w-full px-4 py-3.5 rounded-xl bg-white/95 text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow resize-y min-h-[100px]"
-                      disabled={status === 'submitting'}
-                    />
-                    <button
-                      type="submit"
-                      disabled={status === 'submitting'}
-                      className="w-full py-4 rounded-xl bg-secondary text-white font-poppins font-semibold hover:bg-secondary/90 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary disabled:opacity-70 transition-colors shadow-md"
-                    >
-                      {status === 'submitting' ? 'Submitting...' : 'Submit'}
-                    </button>
-                  </form>
-                  <p className="mt-4 py-3.5 px-4 rounded-xl bg-primary/80 text-white/90 text-xs leading-relaxed">
-                    By clicking SUBMIT you consent to receiving SMS messages. Message & data rates may apply. / Message
-                    frequency may vary. Reply Help to get more assistance / Reply Stop to opt-out of messaging.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </aside>
+          {/* Right column: Contact form - Sticky */}
+          <ScrollFollowingForm />
         </div>
       </Container>
     </Section>

@@ -13,7 +13,7 @@
   html,
   body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     scroll-behavior: smooth;
   }
 
@@ -52,6 +52,10 @@
 
   h1 span {
     font-family: inherit;
+  }
+
+  h2 span, h3 span, h4 span, h5 span, h6 span {
+    font-family: inherit !important;
   }
 }
 

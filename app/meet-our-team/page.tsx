@@ -1,10 +1,7 @@
 import Layout from '../components/layout/Layout'
 import MeetOurTeamHero from '../sections/About/MeetOurTeamHero'
-import AboutTeam from '../sections/About/AboutTeam'
 import AttorneyProfileSection from '../sections/About/AttorneyProfileSection'
-import OfficeContact from '../sections/Contact/OfficeContact'
-import ContactForm from '../sections/Home/ContactForm'
-import SpeakWithTeam from '../sections/Home/SpeakWithTeam'
+import TeamCTA from '../sections/About/TeamCTA'
 
 export const metadata = {
   title: 'Meet Our Team',
@@ -16,11 +13,8 @@ export default function MeetOurTeamPage() {
   return (
     <Layout>
       <MeetOurTeamHero />
-      <AboutTeam />
       <AttorneyProfileSection />
-      <OfficeContact />
-      <ContactForm />
-      <SpeakWithTeam />
+      <TeamCTA />
     </Layout>
   )
 }

@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
+import ScrollFollowingForm from '../../components/ScrollFollowingForm'
 import { cn } from '@/lib/utils'
 
 type PaymentMethod = 'paypal' | 'venmo' | 'card' | 'paylater' | null
@@ -12,18 +14,11 @@ const inputClass =
 
 export default function MakePaymentForms() {
   const [activePayment, setActivePayment] = useState<PaymentMethod>(null)
-  const [contactStatus, setContactStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const [amount, setAmount] = useState('')
   const [deliverToBilling, setDeliverToBilling] = useState(true)
 
   const handlePaymentSelect = (method: PaymentMethod) => {
     setActivePayment((prev) => (prev === method ? null : method))
-  }
-
-  const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setContactStatus('submitting')
-    setTimeout(() => setContactStatus('success'), 800)
   }
 
   const handlePaySubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -32,103 +27,124 @@ export default function MakePaymentForms() {
   }
 
   return (
-    <Section className="bg-[#F7F9FA] overflow-hidden" id="payment-forms">
+    <Section className="bg-white" id="payment-forms">
       <Container className="py-8 md:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-10">
           {/* Left column: Payment */}
-          <div className="space-y-6">
-            <div className="bg-[#F7F9FA] rounded-2xl shadow-lg p-6 md:p-8">
-              <h2 className="font-libre text-2xl md:text-3xl font-semibold text-primary mb-6">
+          <div className="flex-1 lg:w-[58.33%] space-y-6">
+            <div className="bg-[#F9F9F9] rounded-xl shadow-md p-6 md:p-8 border border-gray-100">
+              <h2 className="font-libre text-xl font-medium text-black mb-6">
                 Payment
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div className="flex flex-col gap-4 mb-8">
                 <input
                   type="text"
                   placeholder="Client name"
-                  className="w-full px-4 py-3 rounded-lg bg-[#D4AF37]/20 text-primary placeholder:text-primary/70 border border-secondary/40 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow"
+                  className="w-full px-4 py-3.5 rounded-md bg-[#C5A059] text-white placeholder:text-white/90 border-none outline-none focus:ring-2 focus:ring-primary/20 transition-shadow"
                 />
                 <input
                   type="text"
                   placeholder="Amount in USD"
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-[#D4AF37]/20 text-primary placeholder:text-primary/70 border border-secondary/40 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow"
+                  className="w-full px-4 py-3.5 rounded-md bg-[#C5A059] text-white placeholder:text-white/90 border-none outline-none focus:ring-2 focus:ring-primary/20 transition-shadow"
                 />
                 <input
                   type="text"
                   placeholder="Office file number"
-                  className="w-full px-4 py-3 rounded-lg bg-[#D4AF37]/20 text-primary placeholder:text-primary/70 border border-secondary/40 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow"
+                  className="w-full px-4 py-3.5 rounded-md bg-[#C5A059] text-white placeholder:text-white/90 border-none outline-none focus:ring-2 focus:ring-primary/20 transition-shadow"
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-2 gap-4 mb-8">
                 <button
                   type="button"
                   onClick={() => handlePaymentSelect('paypal')}
                   className={cn(
-                    'flex items-center justify-center gap-2 py-3.5 px-4 rounded-lg border-2 transition-all',
-                    activePayment === 'paypal'
-                      ? 'border-primary bg-primary/5 text-primary'
-                      : 'border-primary/40 bg-[#F7F9FA] text-primary hover:border-primary hover:bg-primary/5'
+                    'flex items-center justify-center py-4 px-4 rounded-lg border bg-white transition-all h-20 hover:shadow-md relative overflow-hidden',
+                    activePayment === 'paypal' ? 'border-[#003087] ring-1 ring-[#003087]' : 'border-[#003087]'
                   )}
-                  aria-pressed={activePayment === 'paypal'}
+                  aria-label="Pay with PayPal"
                 >
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                    <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 3.72a.77.77 0 0 1 .76-.646h6.38c2.02 0 3.58.54 4.55 1.61.88 1 1.32 2.42 1.24 4.25-.15 2.87-1.5 4.7-4.08 5.47-.42.12-.85.2-1.28.24h-.12c-.28.02-.55.03-.82.03H8.28c-.27 0-.5.2-.55.46l-.24 1.54-.45 2.87-.17 1.08a.64.64 0 0 1-.63.54z" />
-                  </svg>
-                  <span className="font-medium">PayPal</span>
+                  <div className="relative w-28 h-8">
+                    <Image 
+                      src="/payment/paypal.png" 
+                      alt="PayPal" 
+                      fill 
+                      className="object-contain" 
+                      sizes="112px"
+                    />
+                  </div>
                 </button>
+                
                 <button
                   type="button"
                   onClick={() => handlePaymentSelect('venmo')}
                   className={cn(
-                    'flex items-center justify-center gap-2 py-3.5 px-4 rounded-lg border-2 transition-all',
-                    activePayment === 'venmo'
-                      ? 'border-primary bg-primary/5 text-primary'
-                      : 'border-primary/40 bg-[#F7F9FA] text-primary hover:border-primary hover:bg-primary/5'
+                    'flex items-center justify-center py-4 px-4 rounded-lg border bg-white transition-all h-20 hover:shadow-md relative overflow-hidden',
+                    activePayment === 'venmo' ? 'border-[#008CFF] ring-1 ring-[#008CFF]' : 'border-[#008CFF]'
                   )}
-                  aria-pressed={activePayment === 'venmo'}
+                  aria-label="Pay with Venmo"
                 >
-                  <span className="text-xl font-bold text-[#008CFF]">V</span>
-                  <span className="font-medium">venmo</span>
+                  <div className="relative w-24 h-8">
+                    <Image 
+                      src="/payment/venmo.png" 
+                      alt="Venmo" 
+                      fill 
+                      className="object-contain" 
+                      sizes="96px"
+                    />
+                  </div>
                 </button>
+                
                 <button
                   type="button"
                   onClick={() => handlePaymentSelect('card')}
                   className={cn(
-                    'flex items-center justify-center gap-2 py-3.5 px-4 rounded-lg border-2 transition-all',
-                    activePayment === 'card'
-                      ? 'border-secondary bg-secondary/10 text-primary'
-                      : 'border-secondary/60 bg-[#F7F9FA] text-primary hover:border-secondary hover:bg-secondary/5'
+                    'flex items-center justify-center py-4 px-4 rounded-lg border bg-white transition-all h-20 hover:shadow-md relative overflow-hidden',
+                    activePayment === 'card' ? 'border-[#FFC439] ring-1 ring-[#FFC439]' : 'border-[#FFC439]'
                   )}
-                  aria-pressed={activePayment === 'card'}
+                  aria-label="Pay with Debit or Credit Card"
                 >
-                  <svg className="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-                    <line x1="1" y1="10" x2="23" y2="10" />
-                  </svg>
-                  <span className="font-medium">Debit or Credit card</span>
+                   <div className="flex items-center gap-3">
+                    <div className="relative w-8 h-5">
+                       <Image 
+                        src="/payment/debit-or-credit.png" 
+                        alt="" 
+                        fill 
+                        className="object-contain" 
+                        sizes="32px"
+                      />
+                    </div>
+                    <span className="font-poppins text-sm font-medium text-black">Debit or Credit card</span>
+                  </div>
                 </button>
+                
                 <button
                   type="button"
                   onClick={() => handlePaymentSelect('paylater')}
                   className={cn(
-                    'flex items-center justify-center gap-2 py-3.5 px-4 rounded-lg border-2 transition-all',
-                    activePayment === 'paylater'
-                      ? 'border-primary bg-primary/5 text-primary'
-                      : 'border-primary/40 bg-[#F7F9FA] text-primary hover:border-primary hover:bg-primary/5'
+                    'flex items-center justify-center py-4 px-4 rounded-lg border bg-white transition-all h-20 hover:shadow-md relative overflow-hidden',
+                    activePayment === 'paylater' ? 'border-[#003087] ring-1 ring-[#003087]' : 'border-[#003087]'
                   )}
-                  aria-pressed={activePayment === 'paylater'}
+                  aria-label="Pay Later"
                 >
-                  <span className="text-lg font-bold text-[#008CFF]">P</span>
-                  <span className="font-medium">Pay Later</span>
+                  <div className="relative w-28 h-8">
+                    <Image 
+                      src="/payment/paypal-paylater.png" 
+                      alt="PayPal Pay Later" 
+                      fill 
+                      className="object-contain" 
+                      sizes="112px"
+                    />
+                  </div>
                 </button>
               </div>
 
               {/* Expanded payment form - shown when any payment button is clicked */}
               {activePayment && (
-                <div className="relative rounded-xl border border-amber-200/60 bg-[#F7F9FA] p-6 md:p-8 mt-6 shadow-inner">
+                <div className="relative rounded-xl border border-gray-200 bg-white p-6 md:p-8 mb-8 shadow-sm">
                   <button
                     type="button"
                     onClick={() => setActivePayment(null)}
@@ -234,76 +250,18 @@ export default function MakePaymentForms() {
                       Pay {amount ? `$${amount}` : '(amount)'}
                     </button>
                   </form>
-
-                  <p className="text-center text-gray-500 text-sm mt-4">Powered by PayPal</p>
                 </div>
               )}
 
-              <p className="text-center text-gray-500 text-sm mt-6">
-                Powered by PayPal
-              </p>
+              <div className="flex items-center justify-center gap-1.5 text-gray-500 text-sm">
+                <span>Powered by</span> 
+                <span className="font-bold italic text-[#003087] text-lg">PayPal</span>
+              </div>
             </div>
           </div>
 
-          {/* Right column: Contact form - sticky when a payment form is open */}
-          <div
-            className={cn(
-              'lg:transition-[top] duration-200',
-              activePayment
-                ? 'lg:sticky lg:top-6'
-                : ''
-            )}
-          >
-            <div className="bg-primary rounded-2xl shadow-lg p-6 md:p-8">
-              <h2 className="font-libre text-xl md:text-2xl font-semibold text-white mb-6">
-                Contact us for a free case evaluation
-              </h2>
-
-              <form onSubmit={handleContactSubmit} className="space-y-4">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow"
-                  disabled={contactStatus === 'submitting'}
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow"
-                  disabled={contactStatus === 'submitting'}
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone number"
-                  className="w-full px-4 py-3 rounded-lg bg-[#F7F9FA] text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow"
-                  disabled={contactStatus === 'submitting'}
-                />
-                <textarea
-                  name="message"
-                  placeholder="How can we help?"
-                  rows={4}
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-[#F7F9FA] text-primary placeholder:text-gray-500 border-0 focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary outline-none transition-shadow resize-y min-h-[100px]"
-                  disabled={contactStatus === 'submitting'}
-                />
-                <button
-                  type="submit"
-                  disabled={contactStatus === 'submitting'}
-                  className="w-full py-3.5 rounded-lg bg-secondary text-[#F7F9FA] font-semibold hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary disabled:opacity-70 transition-opacity"
-                >
-                  {contactStatus === 'submitting' ? 'Submitting...' : 'Submit'}
-                </button>
-                <p className="text-white/80 text-xs leading-relaxed">
-                  By clicking SUBMIT you consent to receiving SMS messages. Message & data rates may apply. / Message frequency may vary. Reply Help to get more assistance / Reply Stop to opt-out of messaging.
-                </p>
-              </form>
-            </div>
-          </div>
+          {/* Right column: Contact form - Sticky */}
+          <ScrollFollowingForm />
         </div>
       </Container>
     </Section>

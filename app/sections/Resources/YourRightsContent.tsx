@@ -1,9 +1,6 @@
-'use client'
-
-import { useState, useRef, useEffect } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
+import ScrollFollowingForm from '../../components/ScrollFollowingForm'
 
 const TABLE_OF_CONTENTS = [
   'Chicago criminal procedures',
@@ -22,52 +19,12 @@ const TABLE_OF_CONTENTS = [
 ]
 
 export default function YourRightsContent() {
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
-
-  const containerRef = useRef<HTMLDivElement>(null)
-  const leftRef = useRef<HTMLDivElement>(null)
-  const formRef = useRef<HTMLDivElement>(null)
-  const [travelDistance, setTravelDistance] = useState(0)
-
-  // Calculate how far the form needs to travel to stay alongside the left content
-  useEffect(() => {
-    function calcTravel() {
-      // Only apply on lg screens (side-by-side layout)
-      if (leftRef.current && formRef.current && window.innerWidth >= 1024) {
-        const leftHeight = leftRef.current.offsetHeight
-        const formHeight = formRef.current.offsetHeight
-        setTravelDistance(Math.max(0, leftHeight - formHeight))
-      } else {
-        setTravelDistance(0)
-      }
-    }
-    calcTravel()
-    window.addEventListener('resize', calcTravel)
-    return () => window.removeEventListener('resize', calcTravel)
-  }, [])
-
-  // Track how far the container has scrolled through the viewport
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end'],
-  })
-
-  // Map scroll progress (0→1) to form Y translation (0→travelDistance) - immediate response
-  const y = useTransform(scrollYProgress, [0, 1], [0, travelDistance])
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setStatus('submitting')
-    await new Promise((r) => setTimeout(r, 800))
-    setStatus('success')
-  }
-
   return (
     <Section className="bg-white">
       <Container>
-        <div ref={containerRef} className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-12">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-12">
           {/* Left: Table of Contents and Content */}
-          <div ref={leftRef} className="flex-1 lg:w-[58.33%] space-y-6 min-w-0">
+          <div className="flex-1 lg:w-[58.33%] space-y-6 min-w-0">
             {/* Table of Contents Card */}
             <div className="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
               <h2 className="font-libre text-[20px] font-semibold text-primary mb-6">
@@ -107,62 +64,8 @@ export default function YourRightsContent() {
             </div>
           </div>
 
-          {/* Right: Contact Form - Follows scroll with framer-motion */}
-          <motion.aside
-            ref={formRef}
-            style={{ y }}
-            className="w-full lg:w-[41.67%] lg:flex-shrink-0"
-          >
-              <div className="bg-gradient-to-b from-[#1a2b3c] to-[#b89553] p-8 rounded-xl shadow-2xl border border-white/10">
-                <h3 className="font-libre text-white text-[28px] text-center mb-6 leading-tight">
-                  Contact us for a free case evaluation
-                </h3>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    required
-                    className="w-full bg-[#f8f9fa] border-0 rounded px-4 py-3.5 text-primary placeholder:text-[#555] focus:ring-2 focus:ring-secondary outline-none transition-shadow"
-                    disabled={status === 'submitting'}
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email address"
-                    required
-                    className="w-full bg-[#f8f9fa] border-0 rounded px-4 py-3.5 text-primary placeholder:text-[#555] focus:ring-2 focus:ring-secondary outline-none transition-shadow"
-                    disabled={status === 'submitting'}
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone number"
-                    required
-                    className="w-full bg-[#f8f9fa] border-0 rounded px-4 py-3.5 text-primary placeholder:text-[#555] focus:ring-2 focus:ring-secondary outline-none transition-shadow"
-                    disabled={status === 'submitting'}
-                  />
-                  <textarea
-                    name="message"
-                    placeholder="How can we help?"
-                    rows={4}
-                    required
-                    className="w-full bg-[#f8f9fa] border-0 rounded px-4 py-3.5 text-primary placeholder:text-[#555] focus:ring-2 focus:ring-secondary outline-none resize-none"
-                    disabled={status === 'submitting'}
-                  />
-                  <button
-                    type="submit"
-                    disabled={status === 'submitting'}
-                    className="w-full bg-[#c5a059] text-white font-medium text-lg py-3.5 rounded hover:bg-[#b89553] transition-colors mt-2 disabled:opacity-70"
-                  >
-                    {status === 'submitting' ? 'Submitting...' : 'Submit'}
-                  </button>
-                  <p className="text-white/80 text-[11px] leading-relaxed text-center mt-4">
-                    By clicking Submit you consent to receiving SMS messages. Message &amp; data rates may apply. Message frequency may vary. Reply Help for assistance. Reply Stop to opt-out.
-                  </p>
-                </form>
-              </div>
-          </motion.aside>
+          {/* Right: Contact Form - Sticky */}
+          <ScrollFollowingForm />
         </div>
       </Container>
     </Section>
