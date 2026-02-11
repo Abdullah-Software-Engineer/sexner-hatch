@@ -212,7 +212,7 @@ export default function Header() {
               isActive = isActive || RESOURCES_DROPDOWN_LINKS.some(
                 subLink => pathname === subLink.href || pathname.startsWith(subLink.href + '/')
               )
-            }
+            } 
             
             return link.label === 'Resources' ? (
               <div key={link.href} className="border-b border-white/10">
