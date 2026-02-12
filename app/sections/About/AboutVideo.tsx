@@ -23,9 +23,17 @@ export default function AboutVideo({ videoUrl }: AboutVideoProps) {
                 allowFullScreen
               />
             ) : (
-              <span className="font-poppins text-primary/70 text-lg md:text-xl">
-                video of them
-              </span>
+              <video
+                src="/About%20us/video/sexner-about-us-video.webm"
+                title="About us video"
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
             )}
           </div>
         </div>
