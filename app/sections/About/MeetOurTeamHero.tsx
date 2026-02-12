@@ -42,7 +42,7 @@ export default function MeetOurTeamHero() {
         <Container className="px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="max-w-2xl mx-auto text-center pl-4 sm:pl-6 md:pl-8 lg:pl-10">
             <h1 
-              className="font-playfair font-medium text-white text-[42px] leading-tight sm:text-[56px] md:text-[64px] lg:text-[74px]"
+              className="font-playfair font-medium text-white text-[42px] leading-tight sm:text-[56px] md:text-[64px] lg:text-[74px] mt-10"
               style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}
             >
               MEET OUR{' '}
@@ -53,7 +53,7 @@ export default function MeetOurTeamHero() {
       </div>
 
       {/* Button at bottom */}
-      <div className="relative z-10 w-full mb-[10px]">
+      <div className="relative z-10 w-full mb-[50px]">
         <Container className="px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="flex justify-center">
             <Link
