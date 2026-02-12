@@ -24,7 +24,7 @@ const PAGES_COL1 = [
 ]
 
 const PAGES_COL2 = [
-  { label: 'Criminal Law And Your Rights', href: '/practice-area' },
+  { label: 'Criminal Law And Your Rights', href: '/practice-areas' },
   { label: 'Payments', href: '/make-payment' },
   { label: 'Zoom Court Information', href: '/resources' },
   { label: 'Blogs', href: '/blog' },
@@ -34,27 +34,27 @@ const PAGES_COL2 = [
 ]
 
 const PRACTICE_AREAS_COL1 = [
-  { label: 'Arson', href: '/practice-area' },
+  { label: 'Arson', href: '/practice-areas/arson' },
   {
     label: 'Assault & Battery',
-    href: '/practice-area',
+    href: '/practice-areas/assault-battery',
     children: [
       'Aggravated Domestic Battery Defense Attorney in Chicago',
       'First Degree Murder',
       'Chicago Criminal Defense Attorney',
     ],
   },
-  { label: 'Child Endangerment', href: '/practice-area' },
-  { label: 'Contributing to the Delinquency of a Minor', href: '/practice-area' },
+  { label: 'Child Endangerment', href: '/practice-areas/child-endangerment' },
+  { label: 'Contributing to the Delinquency of a Minor', href: '/practice-areas/contributing-to-delinquency' },
   {
     label: 'Crimes by a Minor',
-    href: '/practice-area',
+    href: '/practice-areas/crimes-by-a-minor',
     children: ['Drug Crime', 'DUI', 'Minor In Possession', 'Minor Property Crimes'],
   },
-  { label: 'Disorderly Conduct', href: '/practice-area' },
+  { label: 'Disorderly Conduct', href: '/practice-areas/disorderly-conduct' },
   {
     label: 'DUI',
-    href: '/practice-area',
+    href: '/practice-areas/dui-defense',
     children: [
       'Alcohol Evaluation',
       'Breath Test',
@@ -72,24 +72,24 @@ const PRACTICE_AREAS_COL1 = [
 ]
 
 const PRACTICE_AREAS_COL2 = [
-  { label: 'Domestic Violence', href: '/practice-area' },
+  { label: 'Domestic Violence', href: '/practice-areas/domestic-violence' },
   {
     label: 'Drug Crimes',
-    href: '/practice-area',
+    href: '/practice-areas/drug-crimes',
     children: ['Marijuana Possession', 'Medical Marijuana FAQs', 'Transportation and Use of Cannabis', 'Methamphetamine'],
   },
-  { label: 'Guns & Weapons', href: '/practice-area' },
-  { label: 'Harassing And Obscene Communications', href: '/practice-area' },
-  { label: 'Identity Theft', href: '/practice-area' },
-  { label: 'Kidnapping', href: '/practice-area' },
-  { label: 'Murder, Manslaughter, And Homicide', href: '/practice-area' },
-  { label: 'Petty Offenses, Misdemeanors, and Felonies', href: '/practice-area' },
-  { label: 'Police Brutality', href: '/practice-area' },
-  { label: 'Property Crimes', href: '/practice-area' },
-  { label: 'Resisting Arrest / Obstruction Of Justice', href: '/practice-area' },
+  { label: 'Guns & Weapons', href: '/practice-areas/guns-weapons' },
+  { label: 'Harassing And Obscene Communications', href: '/practice-areas/harassment' },
+  { label: 'Identity Theft', href: '/practice-areas/identity-theft' },
+  { label: 'Kidnapping', href: '/practice-areas/kidnapping' },
+  { label: 'Murder, Manslaughter, And Homicide', href: '/practice-areas/murder-reckless-homicide' },
+  { label: 'Petty Offenses, Misdemeanors, and Felonies', href: '/practice-areas/pleas-sentencing' },
+  { label: 'Police Brutality', href: '/practice-areas/police-brutality' },
+  { label: 'Property Crimes', href: '/practice-areas/property-crimes' },
+  { label: 'Resisting Arrest / Obstruction Of Justice', href: '/practice-areas/resisting-obstructing-arrest' },
   {
     label: 'Sex Crimes',
-    href: '/practice-area',
+    href: '/practice-areas/solicitation',
     children: [
       'Aggravated Sexual Assault',
       'Chicago Attorneys for Indecent Solicitation of a Child Defense',
@@ -100,15 +100,15 @@ const PRACTICE_AREAS_COL2 = [
 ]
 
 const PRACTICE_AREAS_COL3 = [
-  { label: 'Solicitation and Prostitution', href: '/practice-area' },
+  { label: 'Solicitation and Prostitution', href: '/practice-areas/solicitation' },
   {
     label: 'Theft, Robbery & Burglary',
-    href: '/practice-area',
+    href: '/practice-areas/theft-burglary-robbery',
     children: ['Carjacking', 'Retail Theft'],
   },
   {
     label: 'Traffic Violation',
-    href: '/practice-area',
+    href: '/practice-areas/traffic-violation',
     children: [
       'Aggravated Speeding',
       'Car Insurance Violations',

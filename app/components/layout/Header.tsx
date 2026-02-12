@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { NAVIGATION_LINKS, RESOURCES_DROPDOWN_LINKS, SITE_CONFIG } from '@/lib/constants'
+import { NAVIGATION_LINKS, RESOURCES_DROPDOWN_LINKS, PRACTICE_AREAS_FULL, SITE_CONFIG } from '@/lib/constants'
 import { cn, throttle } from '@/lib/utils'
 import PhoneButton from '../ui/PhoneButton'
 
@@ -14,6 +14,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isResourcesOpen, setIsResourcesOpen] = useState(false)
   const [isResourcesMobileOpen, setIsResourcesMobileOpen] = useState(false)
+  const [isPracticeAreasOpen, setIsPracticeAreasOpen] = useState(false)
+  const [isPracticeAreasMobileOpen, setIsPracticeAreasMobileOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -85,8 +87,64 @@ export default function Header() {
                       subLink => pathname === subLink.href || pathname.startsWith(subLink.href + '/')
                     )
                   }
+                  // For Practice Areas, check if on practice-areas or any practice area slug
+                  if (link.label === 'Practice Areas') {
+                    isActive = pathname === '/practice-areas' || pathname.startsWith('/practice-areas/')
+                  }
                   
-                  return link.label === 'Resources' ? (
+                  return link.label === 'Practice Areas' ? (
+                    <div
+                      key={link.href}
+                      className="relative"
+                      onMouseEnter={() => setIsPracticeAreasOpen(true)}
+                      onMouseLeave={() => setIsPracticeAreasOpen(false)}
+                    >
+                      <Link
+                        href={link.href}
+                        className={cn(
+                          'text-sm lg:text-[15px] xl:text-base font-poppins font-medium tracking-wide transition-colors focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary rounded-lg px-3 py-2 whitespace-nowrap flex items-center gap-1.5 relative',
+                          isPracticeAreasOpen ? 'text-secondary' : 'text-white hover:text-secondary',
+                          isActive && 'border-b-2 border-secondary pb-1'
+                        )}
+                      >
+                        Practice Areas
+                        <svg className={cn('w-4 h-4 transition-transform duration-200', isPracticeAreasOpen && 'rotate-180')} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </Link>
+                      <div
+                        className={cn(
+                          'absolute left-1/2 -translate-x-1/2 top-full pt-2 z-[110] transition-all duration-200 ease-out',
+                          isPracticeAreasOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible pointer-events-none -translate-y-1'
+                        )}
+                      >
+                        <div className="bg-primary text-white rounded-xl shadow-[0_10px_40px_rgba(42,63,83,0.5)] border border-white/10 overflow-hidden">
+                          <div className="grid grid-cols-4 gap-0 min-w-[720px] max-w-[900px]">
+                            {[0, 1, 2, 3].map((colIndex) => {
+                              const start = colIndex === 0 ? 0 : colIndex === 1 ? 8 : colIndex === 2 ? 16 : 24
+                              const end = colIndex === 3 ? 30 : start + 8
+                              const colItems = PRACTICE_AREAS_FULL.slice(start, end)
+                              return (
+                                <div key={colIndex} className="flex flex-col">
+                                  {colItems.map((area) => (
+                                    <Link
+                                      key={area.slug}
+                                      href={`/practice-areas/${area.slug}`}
+                                      className="block bg-primary px-4 py-3.5 border-b border-white/20 last:border-b-0 hover:bg-white/10 hover:text-secondary transition-colors text-white"
+                                    >
+                                      <span className="font-poppins text-sm font-semibold uppercase tracking-wide">
+                                        {area.title}
+                                      </span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : link.label === 'Resources' ? (
                     <div
                       key={link.href}
                       className="relative"
@@ -211,8 +269,53 @@ export default function Header() {
                 subLink => pathname === subLink.href || pathname.startsWith(subLink.href + '/')
               )
             }
+            if (link.label === 'Practice Areas') {
+              isActive = pathname === '/practice-areas' || pathname.startsWith('/practice-areas/')
+            }
             
-            return link.label === 'Resources' ? (
+            return link.label === 'Practice Areas' ? (
+              <div key={link.href} className="border-b border-white/10">
+                <button
+                  type="button"
+                  onClick={() => setIsPracticeAreasMobileOpen((o) => !o)}
+                  className={cn(
+                    'w-full text-left font-poppins font-medium text-sm sm:text-base py-3 sm:py-3.5 px-4 sm:px-6 transition-colors flex items-center justify-between rounded-lg mx-2 relative',
+                    isPracticeAreasMobileOpen ? 'text-secondary bg-white/10' : 'text-white hover:bg-white/10 hover:text-secondary active:bg-white/15',
+                    isActive && 'border-b-2 border-secondary'
+                  )}
+                  aria-expanded={isPracticeAreasMobileOpen}
+                >
+                  Practice Areas
+                  <svg className={cn('w-5 h-5 transition-transform duration-200', isPracticeAreasMobileOpen && 'rotate-180')} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isPracticeAreasMobileOpen && (
+                  <ul className="py-2 pb-3 max-h-[60vh] overflow-y-auto">
+                    <li>
+                      <Link
+                        href="/practice-areas"
+                        onClick={() => { setIsMenuOpen(false); setIsPracticeAreasMobileOpen(false); }}
+                        className="block font-poppins text-[15px] text-white/90 hover:text-secondary py-2.5 pl-8 pr-4 border-l-2 border-transparent hover:border-secondary hover:bg-white/5 ml-2 mr-2 rounded-r transition-colors duration-150"
+                      >
+                        All Practice Areas
+                      </Link>
+                    </li>
+                    {PRACTICE_AREAS_FULL.map((area) => (
+                      <li key={area.slug}>
+                        <Link
+                          href={`/practice-areas/${area.slug}`}
+                          onClick={() => { setIsMenuOpen(false); setIsPracticeAreasMobileOpen(false); }}
+                          className="block font-poppins text-[15px] text-white/90 hover:text-secondary py-2.5 pl-8 pr-4 border-l-2 border-transparent hover:border-secondary hover:bg-white/5 ml-2 mr-2 rounded-r transition-colors duration-150"
+                        >
+                          {area.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : link.label === 'Resources' ? (
               <div key={link.href} className="border-b border-white/10">
                 <button
                   type="button"

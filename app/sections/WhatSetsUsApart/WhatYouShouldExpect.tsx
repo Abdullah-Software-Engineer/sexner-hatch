@@ -65,7 +65,7 @@ export default function WhatYouShouldExpect() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <Link
-              href="/practice-area"
+              href="/practice-areas"
               className="inline-block mt-8 px-6 py-3.5 rounded-lg bg-secondary text-white font-poppins font-medium text-[14px] hover:bg-secondary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 transition-colors"
             >
               View more
