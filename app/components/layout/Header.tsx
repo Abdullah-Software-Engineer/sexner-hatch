@@ -115,8 +115,6 @@ export default function Header() {
                           isResourcesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible pointer-events-none -translate-y-1'
                         )}
                       >
-                        {/* Arrow nub */}
-                        <div className="absolute left-1/2 -translate-x-1/2 -top-1.5 w-0 h-0 border-l-[7px] border-r-[7px] border-b-[7px] border-l-transparent border-r-transparent border-b-[#1e2d3d]" />
                         <ul className="bg-[#1e2d3d] text-white rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.25)] border border-white/10 min-w-[240px] overflow-hidden py-1.5">
                           {RESOURCES_DROPDOWN_LINKS.map((item) => (
                             <li key={`${item.href}-${item.label}`} className="border-b border-white/5 last:border-0">
