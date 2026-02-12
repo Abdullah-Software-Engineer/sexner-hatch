@@ -69,7 +69,7 @@ export default function SuccessStories() {
             <div className="relative rounded-xl border-2 border-secondary bg-white h-[500px] flex flex-col overflow-hidden">
               <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-10">
                 <Button
-                  href="/victories"
+                  href="/results"
                   variant="primary"
                   size="sm"
                   ariaLabel="View all victories"

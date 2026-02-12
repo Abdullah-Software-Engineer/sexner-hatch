@@ -2,7 +2,6 @@ import Layout from './components/layout/Layout'
 import Hero from './sections/Home/Hero'
 import LookingForLawyer from './sections/Home/LookingForLawyer'
 import PartnersMarquee from './sections/Home/PartnersMarquee'
-import PracticeAreas from './sections/Home/PracticeAreas'
 import WhatSetsUsApart from './sections/Home/WhatSetsUsApart'
 import TestimonialsMarquee from './sections/Home/TestimonialsMarquee'
 import ExperiencedAttorney from './sections/Home/ExperiencedAttorney'
@@ -19,7 +18,6 @@ export default function Home() {
         <Hero />
         <LookingForLawyer />
         <PartnersMarquee />
-        <PracticeAreas />
         <WhatSetsUsApart />
         <TestimonialsMarquee />
         <ExperiencedAttorney />

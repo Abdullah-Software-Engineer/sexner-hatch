@@ -6,7 +6,7 @@ import Container from '../../components/ui/Container'
 
 export default function WhatSetsUsApartHero() {
   return (
-    <section className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
       {/* Full-width background image - illuminated sign in archway */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -26,9 +26,9 @@ export default function WhatSetsUsApartHero() {
       </div>
 
       {/* Left: Content panel */}
-      <div className="relative z-10 flex items-center min-h-[85vh] md:min-h-[90vh] w-full lg:max-w-[50%]">
-        <Container className="py-12 md:py-16 lg:py-24">
-          <div className="max-w-2xl">
+      <div className="relative z-10 flex items-center min-h-screen w-full lg:max-w-[50%]">
+        <Container className="pt-20 pb-16 md:pt-28 md:pb-24 px-6 sm:px-10 md:px-12 lg:px-16">
+          <div className="max-w-2xl pl-4 sm:pl-6 md:pl-8 lg:pl-10">
             <h1 className="font-playfair font-light text-[30px] md:text-[48px] leading-tight text-white/95 uppercase">
               What sets us <span className="text-secondary">apart</span>
             </h1>

@@ -174,7 +174,7 @@ export default function AboutAwards() {
               </p>
               <Link
                 href={award.profileUrl}
-                className="mt-4 inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-[#E8DCC8] border border-[#C8A24F] text-primary font-poppins font-medium text-[16px] hover:bg-[#DDD0BC] transition-colors w-fit"
+                className="mt-4 self-center inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-[#E8DCC8] border border-[#C8A24F] text-primary font-poppins font-medium text-[16px] hover:bg-[#DDD0BC] transition-colors w-fit"
               >
                 View profile
               </Link>

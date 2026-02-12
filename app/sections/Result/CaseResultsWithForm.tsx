@@ -84,7 +84,7 @@ export default function CaseResultsWithForm() {
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 mt-16">
               {RESULT_CARDS.map((card, index) => {
                 const imageLeft = index % 2 === 0
                 const imagePlaceholder = (

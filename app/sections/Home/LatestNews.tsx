@@ -31,12 +31,12 @@ export default function LatestNews() {
             <span className="absolute left-0 -bottom-1.5 w-[60px] h-0.5 bg-secondary" aria-hidden="true"></span>
           </h2>
           <Button
-            href="/practice-areas"
+            href="/blog"
             variant="primary"
             size="sm"
-            ariaLabel="View all services"
+            ariaLabel="View all blogs"
           >
-            View all services
+            View all blogs
           </Button>
         </FadeUp>
 

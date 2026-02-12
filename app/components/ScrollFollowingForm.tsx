@@ -12,7 +12,7 @@ export default function ScrollFollowingForm({
   onSubmit,
 }: ScrollFollowingFormProps) {
   return (
-    <aside className="w-full lg:w-[41.67%] lg:flex-shrink-0 lg:sticky lg:top-32 lg:self-start">
+    <aside className="w-full lg:w-[100.67%] lg:flex-shrink-0 lg:sticky lg:top-32 lg:self-start">
       <ContactForm heading={heading} onSubmit={onSubmit} />
     </aside>
   )

@@ -18,7 +18,7 @@ export const SITE_CONFIG = {
 export const NAVIGATION_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
-  { href: '/practice-area', label: 'Practice Areas' },
+  { href: '/practice-areas', label: 'Practice Areas' },
   { href: '/resources', label: 'Resources' },
   { href: '/results', label: 'Results' },
   { href: '/contact', label: 'Contact' },
@@ -33,45 +33,49 @@ export const RESOURCES_DROPDOWN_LINKS = [
 ] as const
 
 // ============================================
-// Practice Areas Data
+// Practice Areas Data (full list for dropdown & service cards)
 // ============================================
+export const PRACTICE_AREAS_FULL = [
+  { title: 'Arson', slug: 'arson' },
+  { title: 'Assault & Battery', slug: 'assault-battery' },
+  { title: 'Carjacking', slug: 'carjacking' },
+  { title: 'Cannabis', slug: 'cannabis' },
+  { title: 'Child Endangerment', slug: 'child-endangerment' },
+  { title: 'Contributing to Delinquency', slug: 'contributing-to-delinquency' },
+  { title: 'Crimes by a Minor', slug: 'crimes-by-a-minor' },
+  { title: 'Disorderly Conduct', slug: 'disorderly-conduct' },
+  { title: 'Domestic Violence', slug: 'domestic-violence' },
+  { title: 'Drug Crimes', slug: 'drug-crimes' },
+  { title: 'DUI Defense', slug: 'dui-defense' },
+  { title: 'Expungements', slug: 'expungements' },
+  { title: 'Guns & Weapons', slug: 'guns-weapons' },
+  { title: 'Harassment', slug: 'harassment' },
+  { title: 'Identity Theft', slug: 'identity-theft' },
+  { title: 'Kidnapping', slug: 'kidnapping' },
+  { title: 'License Reinstatement', slug: 'license-reinstatement' },
+  { title: "Murder & Reckless Homicide", slug: 'murder-reckless-homicide' },
+  { title: 'Pleas & Sentencing', slug: 'pleas-sentencing' },
+  { title: 'Police Brutality', slug: 'police-brutality' },
+  { title: 'Property Crimes', slug: 'property-crimes' },
+  { title: 'Resisting / Obstructing Arrest', slug: 'resisting-obstructing-arrest' },
+  { title: 'Retail Theft', slug: 'retail-theft' },
+  { title: "Scott's Law", slug: 'scotts-law' },
+  { title: 'Search Warrants', slug: 'search-warrants' },
+  { title: 'Solicitation', slug: 'solicitation' },
+  { title: 'Speeding / Aggravated', slug: 'speeding-aggravated' },
+  { title: 'Suspended / Revoked License', slug: 'suspended-revoked-license' },
+  { title: 'Theft, Burglary, Robbery', slug: 'theft-burglary-robbery' },
+  { title: 'Traffic Violation', slug: 'traffic-violation' },
+] as const
+
+// Legacy list (kept for any existing references; prefer PRACTICE_AREAS_FULL)
 export const PRACTICE_AREAS = [
-  {
-    id: '1',
-    title: 'Criminal Defense',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
-    slug: 'criminal-defense',
-  },
-  {
-    id: '2',
-    title: 'DUI Defense',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
-    slug: 'dui-defense',
-  },
-  {
-    id: '3',
-    title: 'Drug Crimes',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
-    slug: 'drug-crimes',
-  },
-  {
-    id: '4',
-    title: 'Violent Crimes',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
-    slug: 'violent-crimes',
-  },
-  {
-    id: '5',
-    title: 'White Collar Crimes',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
-    slug: 'white-collar-crimes',
-  },
-  {
-    id: '6',
-    title: 'Domestic Violence',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
-    slug: 'domestic-violence',
-  },
+  { id: '1', title: 'Criminal Defense', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'criminal-defense' },
+  { id: '2', title: 'DUI Defense', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'dui-defense' },
+  { id: '3', title: 'Drug Crimes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'drug-crimes' },
+  { id: '4', title: 'Violent Crimes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'violent-crimes' },
+  { id: '5', title: 'White Collar Crimes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'white-collar-crimes' },
+  { id: '6', title: 'Domestic Violence', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'domestic-violence' },
 ] as const
 
 // ============================================
@@ -173,3 +177,41 @@ export const THEME = {
     maxWidth: '1390px',
   },
 } as const
+
+// ============================================
+// Team Members (for About team section, /team, and /team/[slug])
+// ============================================
+export const TEAM_MEMBERS = [
+  {
+    id: 1,
+    name: 'Mitchell S. Sexner',
+    slug: 'mitchell-s-sexner',
+    title: 'Founding Attorney',
+    image: '/About%20us/member.png',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
+  },
+  {
+    id: 2,
+    name: 'Mitchell S. Sexner',
+    slug: 'mitchell-s-sexner-2',
+    title: 'Attorney',
+    image: '/About%20us/member.png',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
+  },
+  {
+    id: 3,
+    name: 'Mitchell S. Sexner',
+    slug: 'mitchell-s-sexner-3',
+    title: 'Attorney',
+    image: '/About%20us/member.png',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
+  },
+  {
+    id: 4,
+    name: 'Mitchell S. Sexner',
+    slug: 'mitchell-s-sexner-4',
+    title: 'Attorney',
+    image: '/About%20us/member.png',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
+  },
+] as const

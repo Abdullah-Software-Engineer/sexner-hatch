@@ -7,7 +7,7 @@ import Container from '../../components/ui/Container'
 
 export default function CourthouseLocationHero() {
   return (
-    <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden flex items-center">
+    <section className="relative min-h-screen overflow-hidden flex items-center">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -22,11 +22,11 @@ export default function CourthouseLocationHero() {
         <div className="absolute inset-0 bg-black/40 z-1" aria-hidden="true" />
       </div>
 
-      <div className="relative z-10 w-full py-16 md:py-24">
-        <Container>
+      <div className="relative z-10 w-full pt-20 pb-16 md:pt-28 md:pb-24">
+        <Container className="px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-10 lg:gap-20">
             {/* Left: Heading */}
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 pl-4 sm:pl-6 md:pl-8 lg:pl-10">
               <h1 
                 className="font-playfair font-medium text-white text-[42px] leading-tight sm:text-[56px] md:text-[64px] lg:text-[74px]"
                 style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}
@@ -37,7 +37,7 @@ export default function CourthouseLocationHero() {
             </div>
 
             {/* Right: Content & Button */}
-            <div className="lg:w-1/2 flex flex-col items-start gap-8 lg:pl-10">
+            <div className="lg:w-1/2 flex flex-col items-start gap-8 pl-4 sm:pl-6 md:pl-8 lg:pl-10">
               <p className="font-poppins text-white text-lg md:text-xl leading-relaxed max-w-xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
               </p>
