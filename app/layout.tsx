@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Playfair_Display, Poppins, Libre_Baskerville } from 'next/font/google'
 import './globals.css'
 import SideButtons from './components/ui/SideButtons'
@@ -88,8 +89,23 @@ export default function RootLayout({
     <html lang="en" className={`${playfairDisplay.variable} ${poppins.variable} ${libreBaskerville.variable}`}>
       <body>
         <SideButtons />
-        <CallButton />
+        {/* <CallButton /> */}
         {children}
+
+        {/* Tawk.to Chat Widget */}
+        <Script id="tawk-to" strategy="afterInteractive">
+          {`
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/6931766ef66a4c198b4266f5/1jbkjd8dj';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+            })();
+          `}
+        </Script>
       </body>
     </html>
   )
