@@ -29,7 +29,7 @@ export function ContactForm({ heading = 'Contact us for a free case evaluation',
   }
 
   return (
-    <div className="relative bg-[#2C3E50] p-5 md:p-6 rounded-xl shadow-2xl border border-[#34495e]">
+    <div className="relative bg-[#2C3E50] pt-6 pb-5 px-5 md:pt-7 md:pb-6 md:px-6 rounded-xl shadow-2xl border border-[#34495e] overflow-visible">
       {/* Phone icon - top right corner */}
       <div className="absolute top-4 right-4 flex items-center justify-center w-9 h-9 rounded-full bg-white/10" aria-hidden>
         <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -37,7 +37,7 @@ export function ContactForm({ heading = 'Contact us for a free case evaluation',
         </svg>
       </div>
 
-      <h3 className="font-libre text-white text-[22px] md:text-[24px] text-center mb-4 leading-tight pr-10">
+      <h3 className="font-libre text-white text-[22px] md:text-[24px] text-center mb-4 leading-snug pr-10 pl-1 min-h-[2.5em] flex items-center justify-center">
         {heading}
       </h3>
       <form onSubmit={handleSubmit} className="space-y-3">

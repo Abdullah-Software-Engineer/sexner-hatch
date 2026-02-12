@@ -3,22 +3,24 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
-
-const teamMembers = [
-  { id: 1, name: 'Mitchell S. Sexner', image: '/About%20us/member.png', link: '#' },
-  { id: 2, name: 'Mitchell S. Sexner', image: '/About%20us/member.png', link: '#' },
-  { id: 3, name: 'Mitchell S. Sexner', image: '/About%20us/member.png', link: '#' },
-  { id: 4, name: 'Mitchell S. Sexner', image: '/About%20us/member.png', link: '#' },
-]
+import { TEAM_MEMBERS } from '@/lib/constants'
 
 const CARD_HEIGHT = 420
 const COLLAPSED_WIDTH = 72
 const EXPANDED_WIDTH = 240
 
+const contentVariants = {
+  enter: { opacity: 0, y: 16 },
+  center: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -12 },
+}
+
 export default function AboutTeam() {
   const [expandedIndex, setExpandedIndex] = useState(0)
+  const selectedMember = TEAM_MEMBERS[expandedIndex]
 
   return (
     <Section className="bg-[#FDFDFC]" id="meet-our-team">
@@ -35,18 +37,43 @@ export default function AboutTeam() {
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          {/* Left column: intro text + animated member bio */}
           <div className="lg:col-span-5 space-y-5">
-            <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
-              At Mitchell S. Sexner & Associates LLC, our lawyers work as a team to determine the best legal strategy for every client. With many skilled and experienced attorneys under our umbrella, you can trust that whichever lawyer handles your case will be knowledgeable, dedicated, and focused on achieving the best outcome.
-            </p>
-            <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
-              Since 1990, we&apos;ve served over 20,000 clients by tailoring our approach to each person&apos;s unique circumstances—because no two cases are ever the same.
-            </p>
-            <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
-              When you hire us, you&apos;re not just getting a lawyer— you&apos;re gaining a full legal team committed to guiding you toward a successful result.
-            </p>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={expandedIndex}
+                variants={contentVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.35, ease: [0.25, 0.4, 0.25, 1] }}
+                className="space-y-5"
+              >
+                <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
+                  At Mitchell S. Sexner & Associates LLC, our lawyers work as a team to determine the best legal strategy for every client. With many skilled and experienced attorneys under our umbrella, you can trust that whichever lawyer handles your case will be knowledgeable, dedicated, and focused on achieving the best outcome.
+                </p>
+                <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
+                  Since 1990, we&apos;ve served over 20,000 clients by tailoring our approach to each person&apos;s unique circumstances—because no two cases are ever the same.
+                </p>
+                <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
+                  When you hire us, you&apos;re not just getting a lawyer— you&apos;re gaining a full legal team committed to guiding you toward a successful result.
+                </p>
+                {/* Selected member bio - animates when card changes */}
+                <div className="pt-2 border-t border-[#e5e7eb]">
+                  <h3 className="font-poppins font-bold text-[#3C3C3C] text-base mb-2">
+                    {selectedMember.name}
+                    {selectedMember.title && (
+                      <span className="font-normal text-[#5A5A5A]"> — {selectedMember.title}</span>
+                    )}
+                  </h3>
+                  <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
+                    {selectedMember.bio}
+                  </p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
             <Link
-              href="/contact"
+              href="/team"
               className="inline-flex items-center justify-center px-6 py-3.5 rounded-md bg-[#CBA86B] text-white font-poppins font-medium text-base hover:opacity-90 transition-opacity"
             >
               View more
@@ -56,7 +83,7 @@ export default function AboutTeam() {
           {/* Expandable team cards */}
           <div className="lg:col-span-7 flex justify-end overflow-visible">
             <div className="flex items-end gap-0">
-              {teamMembers.map((member, index) => {
+              {TEAM_MEMBERS.map((member, index) => {
                 const isExpanded = expandedIndex === index
                 return (
                   <div
@@ -91,7 +118,7 @@ export default function AboutTeam() {
                         sizes="(max-width: 1024px) 240px, 240px"
                       />
                       <Link
-                        href={member.link}
+                        href={`/team/${member.slug}`}
                         onClick={(e) => e.stopPropagation()}
                         className="absolute top-2 right-2 w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center z-10 shadow hover:opacity-90 transition-opacity"
                         aria-label={`View full profile: ${member.name}`}
