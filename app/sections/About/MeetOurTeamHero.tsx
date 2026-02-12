@@ -7,7 +7,7 @@ import Container from '../../components/ui/Container'
 
 export default function MeetOurTeamHero() {
   return (
-    <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden flex flex-col justify-between">
+    <section className="relative min-h-screen overflow-hidden flex flex-col justify-between">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -38,9 +38,9 @@ export default function MeetOurTeamHero() {
         </div>
       </div>
 
-      <div className="relative z-10 w-full pt-[120px] flex-1 flex items-start">
-        <Container>
-          <div className="max-w-2xl mx-auto text-center">
+      <div className="relative z-10 w-full pt-20 md:pt-28 flex-1 flex items-start">
+        <Container className="px-6 sm:px-10 md:px-12 lg:px-16">
+          <div className="max-w-2xl mx-auto text-center pl-4 sm:pl-6 md:pl-8 lg:pl-10">
             <h1 
               className="font-playfair font-medium text-white text-[42px] leading-tight sm:text-[56px] md:text-[64px] lg:text-[74px]"
               style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}
@@ -54,7 +54,7 @@ export default function MeetOurTeamHero() {
 
       {/* Button at bottom */}
       <div className="relative z-10 w-full mb-[10px]">
-        <Container>
+        <Container className="px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="flex justify-center">
             <Link
               href="/contact"

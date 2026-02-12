@@ -8,7 +8,7 @@ export default function BlogDetailHero() {
   return (
     <section
       role="banner"
-      className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden flex items-center"
+      className="relative min-h-screen overflow-hidden flex items-center"
     >
       {/* Background: dark cityscape */}
       <div className="absolute inset-0 z-0">
@@ -28,10 +28,10 @@ export default function BlogDetailHero() {
         />
       </div>
 
-      <div className="relative z-10 w-full py-12 md:py-16 lg:py-24">
-        <Container className="w-full">
+      <div className="relative z-10 w-full pt-20 pb-16 md:pt-28 md:pb-24">
+        <Container className="w-full px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-6 max-w-xl">
+            <div className="lg:col-span-6 max-w-xl pl-4 sm:pl-6 md:pl-8 lg:pl-10">
               <h1 className="font-playfair font-bold text-white text-[30px] md:text-[48px] leading-tight uppercase">
                 CHICAGO CRIMINAL DEFENSE{' '}
                 <span className="text-secondary">BLOG</span>

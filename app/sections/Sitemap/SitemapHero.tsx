@@ -6,7 +6,7 @@ import Container from '../../components/ui/Container'
 
 export default function SitemapHero() {
   return (
-    <section role="banner" className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden">
+    <section role="banner" className="relative min-h-screen overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="/sitemap/hero.webp"
@@ -24,10 +24,10 @@ export default function SitemapHero() {
         />
       </div>
 
-      <div className="relative z-10 flex items-center min-h-[85vh] md:min-h-[90vh] w-full">
-        <Container className="py-12 md:py-16 lg:py-24 w-full">
+      <div className="relative z-10 flex items-center min-h-screen w-full">
+        <Container className="pt-20 pb-16 md:pt-28 md:pb-24 w-full px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-6 max-w-xl">
+            <div className="lg:col-span-6 max-w-xl pl-4 sm:pl-6 md:pl-8 lg:pl-10">
               <h1 className="font-playfair font-bold text-secondary text-[30px] md:text-[48px] leading-tight uppercase">
                 Sitemap
               </h1>

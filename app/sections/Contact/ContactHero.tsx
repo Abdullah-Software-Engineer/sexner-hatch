@@ -9,7 +9,7 @@ import { SITE_CONFIG } from '@/lib/constants'
 
 export default function ContactHero() {
   return (
-    <section className="relative min-h-[50vh] md:min-h-[60vh] overflow-hidden flex items-center">
+    <section className="relative min-h-screen overflow-hidden flex items-center">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -24,11 +24,11 @@ export default function ContactHero() {
         <div className="absolute inset-0 bg-black/40 z-1" aria-hidden="true" />
       </div>
 
-      <div className="relative z-10 w-full py-16 md:py-24">
-        <Container>
+      <div className="relative z-10 w-full pt-20 pb-16 md:pt-28 md:pb-24">
+        <Container className="px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left: Headline */}
-            <div className="text-left">
+            <div className="text-left pl-4 sm:pl-6 md:pl-8 lg:pl-10">
               <h1 
                 className="font-playfair font-medium text-white text-[30px] md:text-[48px] leading-tight"
                 style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}
@@ -40,7 +40,7 @@ export default function ContactHero() {
             </div>
 
             {/* Right: Contact info + CTA */}
-            <div className="flex flex-col gap-5 lg:pl-12 max-w-xl lg:ml-auto">
+            <div className="flex flex-col gap-5 pl-4 sm:pl-6 md:pl-8 lg:pl-12 max-w-xl lg:ml-auto">
               <p className="font-poppins text-white text-[16px] leading-relaxed drop-shadow-md text-left lg:text-right">
                 Call us at{' '}
                 <a
