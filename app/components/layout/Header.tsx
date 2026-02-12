@@ -71,7 +71,7 @@ export default function Header() {
 
               {/* Desktop Navigation - visible from md (tablet) up */}
               <nav
-                className="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6 2xl:gap-8 flex-1 justify-center min-w-0"
+                className="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6 2xl:gap-8 flex-1 justify-center min-w-0 ml-6 lg:ml-10 xl:ml-14"
                 aria-label="Main navigation"
               >
                 {NAVIGATION_LINKS.map((link) => {
@@ -147,7 +147,7 @@ export default function Header() {
               </nav>
 
               {/* Desktop Phone + Mobile Menu Button */}
-              <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0">
+              <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0 ml-6 lg:ml-10 xl:ml-14">
                 {/* Phone button - visible from tablet (md) up */}
                 <div className="hidden md:block flex-shrink-0">
                   <PhoneButton size="md" />
