@@ -58,7 +58,7 @@ export default function BlogGrid() {
                 <div className="absolute bottom-5 right-5 md:bottom-6 md:right-6">
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-3 font-poppins font-medium text-[16px] bg-primary group-hover:bg-secondary text-white pl-5 pr-1.5 py-1.5 rounded-full hover:opacity-90 transition-all duration-300 shadow-md group-hover:text-white"
+                    className="inline-flex items-center gap-3 font-poppins font-medium text-[16px] md:text-[16px] lg:text-[16px] xl:text-[16px] bg-primary group-hover:bg-secondary text-white pl-5 pr-1.5 py-1.5 rounded-full hover:opacity-90 transition-all duration-300 shadow-md group-hover:text-white"
                     aria-label={`Read more article ${i}`}
                   >
                     <span>Read more</span>
@@ -109,7 +109,7 @@ export default function BlogGrid() {
                 <div className="absolute bottom-5 right-5 md:bottom-6 md:right-6">
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-3 font-poppins font-medium text-[16px] bg-primary group-hover:bg-secondary text-white pl-5 pr-1.5 py-1.5 rounded-full hover:opacity-90 transition-all duration-300 shadow-md group-hover:text-white"
+                    className="inline-flex items-center gap-3 font-poppins font-medium text-[16px] md:text-[16px] lg:text-[16px] xl:text-[16px] bg-primary group-hover:bg-secondary text-white pl-5 pr-1.5 py-1.5 rounded-full hover:opacity-90 transition-all duration-300 shadow-md group-hover:text-white"
                     aria-label={`Read more article ${i}`}
                   >
                     <span>Read more</span>
@@ -160,7 +160,7 @@ export default function BlogGrid() {
                 <div className="absolute bottom-5 right-5 md:bottom-6 md:right-6">
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-3 font-poppins font-medium text-[16px] bg-primary group-hover:bg-secondary text-white pl-5 pr-1.5 py-1.5 rounded-full hover:opacity-90 transition-all duration-300 shadow-md group-hover:text-white"
+                    className="inline-flex items-center gap-3 font-poppins font-medium text-[16px] md:text-[16px] lg:text-[16px] xl:text-[16px] bg-primary group-hover:bg-secondary text-white pl-5 pr-1.5 py-1.5 rounded-full hover:opacity-90 transition-all duration-300 shadow-md group-hover:text-white"
                     aria-label={`Read more article ${i}`}
                   >
                     <span>Read more</span>

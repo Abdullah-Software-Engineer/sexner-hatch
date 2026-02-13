@@ -32,14 +32,14 @@ export default function BlogDetailHero() {
         <Container className="w-full px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 max-w-xl pl-4 sm:pl-6 md:pl-8 lg:pl-10">
-              <h1 className="font-playfair font-bold text-white text-[30px] md:text-[48px] leading-tight uppercase">
+              <h1 className="font-playfair font-bold text-white text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] leading-tight uppercase">
                 CHICAGO CRIMINAL DEFENSE{' '}
                 <span className="text-secondary">BLOG</span>
               </h1>
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 mt-8 px-6 py-3.5 rounded-lg bg-primary border-2 border-secondary text-white font-poppins font-medium text-[14px] hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-primary transition-colors w-fit group"
+                className="inline-flex items-center gap-3 mt-8 px-6 py-3.5 rounded-lg bg-primary border-2 border-secondary text-white font-poppins font-medium text-[14px] md:text-[14px] lg:text-[14px] xl:text-[16px] hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-primary transition-colors w-fit group"
                 aria-label="Contact us today"
               >
                 <span>Contact us today</span>

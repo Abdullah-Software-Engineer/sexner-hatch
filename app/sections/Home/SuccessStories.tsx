@@ -46,7 +46,7 @@ export default function SuccessStories() {
       `}</style>
       <Container>
         <FadeUp className="text-center mb-10 md:mb-12">
-          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+          <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             Success Stories
             <span className="absolute left-8 -translate-x-1/2 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
           </h2>
@@ -86,10 +86,10 @@ export default function SuccessStories() {
                       <h3 className="font-libre text-[20px] font-semibold text-black mb-2 pr-20 sm:pr-32 md:pr-[160px] lg:pr-[180px]">
                         {story.title}
               </h3>
-                      <p className="font-poppins text-[14px] md:text-[16px] font-medium text-black/80 mb-3 md:mb-4">
+                      <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-medium text-black/80 mb-3 md:mb-4">
                         {story.subtitle}
               </p>
-                      <p className="font-poppins text-[14px] md:text-[16px] text-black/80 leading-relaxed">
+                      <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] text-black/80 leading-relaxed">
                         {story.description}
               </p>
                     </div>

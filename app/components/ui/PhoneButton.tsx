@@ -16,11 +16,11 @@ export default function PhoneButton({ className, size = 'md' }: PhoneButtonProps
       svg: 'w-3.5 h-3.5',
     },
     md: {
-      padding: 'px-5 py-2 lg:px-6 lg:py-2 xl:px-7 xl:py-2',
-      gap: 'gap-3',
-      text: 'text-sm lg:text-[15px] xl:text-base',
-      icon: 'w-9 h-9 lg:w-10 lg:h-10 xl:w-11 xl:h-11 min-w-[36px] min-h-[36px] lg:min-w-[40px] lg:min-h-[40px] xl:min-w-[44px] xl:min-h-[44px]',
-      svg: 'w-4 h-4 lg:w-[18px] lg:h-[18px] xl:w-5 xl:h-5',
+      padding: 'px-4 py-1.5 lg:px-4 lg:py-2 xl:px-7 xl:py-2',
+      gap: 'gap-2 lg:gap-2.5 xl:gap-3',
+      text: 'text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px]',
+      icon: 'w-8 h-8 lg:w-9 lg:h-9 xl:w-11 xl:h-11 min-w-[32px] min-h-[32px] lg:min-w-[36px] lg:min-h-[36px] xl:min-w-[44px] xl:min-h-[44px]',
+      svg: 'w-3.5 h-3.5 lg:w-4 lg:h-4 xl:w-5 xl:h-5',
     },
     lg: {
       padding: 'px-7 py-3',

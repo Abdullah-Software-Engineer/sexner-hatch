@@ -29,7 +29,7 @@ export default function ContactHero() {
             {/* Left: Headline */}
             <div className="text-left pl-4 sm:pl-6 md:pl-8 lg:pl-10">
               <h1 
-                className="font-playfair font-medium text-white text-[30px] md:text-[48px] leading-tight"
+                className="font-playfair font-medium text-white text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] leading-tight"
                 style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}
               >
                 GET IN TOUCH WITH
@@ -41,7 +41,7 @@ export default function ContactHero() {
             {/* Right: White card - Contact info + CTA (aligned with design) */}
             <div className="pl-4 sm:pl-6 md:pl-8 lg:pl-0 lg:max-w-xl">
               <div className=" rounded-lg shadow-lg p-6 md:p-8 flex flex-col gap-5 text-left">
-                <p className=" text-white font-poppins  text-[16px] leading-relaxed">
+                <p className=" text-white font-poppins text-[16px] md:text-[16px] lg:text-[16px] xl:text-[16px] leading-relaxed">
                   Call us at{' '}
                   <a
                     href={getPhoneLink(SITE_CONFIG.phoneRaw)}
@@ -60,7 +60,7 @@ export default function ContactHero() {
                     <div className="flex items-center justify-center w-11 h-11 rounded-full bg-secondary text-white shrink-0 group-hover:scale-105 transition-transform">
                       <FaPhone className="w-5 h-5 scale-x-[-1]" aria-hidden />
                     </div>
-                    <span className="text-[14px] font-medium tracking-wide">Call us now</span>
+                    <span className="text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] font-medium tracking-wide">Call us now</span>
                   </Link>
                 </div>
               </div>
