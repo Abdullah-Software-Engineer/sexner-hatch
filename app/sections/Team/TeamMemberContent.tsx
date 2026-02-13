@@ -23,7 +23,7 @@ export default function TeamMemberContent({
   currentSlug,
 }: TeamMemberContentProps) {
   return (
-    <Section className="bg-white" id="team-member-profile">
+    <Section className="bg-white " id="team-member-profile">
       <Container>
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-12">
           <div className="flex-1 lg:w-[58.33%] space-y-8">
@@ -95,7 +95,6 @@ export default function TeamMemberContent({
                 </Link>
               </div>
             </div>
-            <ScrollFollowingForm heading="Contact us for a free case evaluation" />
           </aside>
         </div>
       </Container>

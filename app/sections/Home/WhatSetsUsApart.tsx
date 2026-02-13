@@ -33,7 +33,7 @@ export default function WhatSetsUsApart() {
     <Section className="bg-white" id="what-sets-us-apart">
       <Container>
         <FadeUp className="text-center mb-10 md:mb-12 xl:mb-16">
-          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+          <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             What sets us apart?
             <span className="absolute left-9 -translate-x-1/2 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
           </h2>
@@ -55,7 +55,7 @@ export default function WhatSetsUsApart() {
                         {feature.title}
                       </h3>
                     </div>
-                    <p className="font-poppins text-[14px] md:text-[16px] text-black leading-relaxed">
+                    <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] text-black leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

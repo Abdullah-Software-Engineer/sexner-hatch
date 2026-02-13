@@ -28,15 +28,15 @@ export default function SitemapHero() {
         <Container className="pt-20 pb-16 md:pt-28 md:pb-24 w-full px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 max-w-xl pl-4 sm:pl-6 md:pl-8 lg:pl-10">
-              <h1 className="font-playfair font-bold text-secondary text-[30px] md:text-[48px] leading-tight uppercase">
+              <h1 className="font-playfair font-bold text-secondary text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] leading-tight uppercase">
                 Sitemap
               </h1>
-              <p className="font-poppins text-white/90 text-[16px] mt-4 max-w-md">
+              <p className="font-poppins text-white/90 text-[16px] md:text-[16px] lg:text-[16px] xl:text-[18px] mt-4 max-w-md">
                 A complete index of our site: practice areas, courthouse locations, your rights, and resources. Find what you need quickly.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 mt-8 px-6 py-3.5 rounded-xl bg-primary border-2 border-secondary text-white font-poppins font-medium text-[14px] hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-primary transition-colors w-fit group"
+                className="inline-flex items-center gap-3 mt-8 px-6 py-3.5 rounded-xl bg-primary border-2 border-secondary text-white font-poppins font-medium text-[14px] md:text-[14px] lg:text-[14px] xl:text-[16px] hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-primary transition-colors w-fit group"
                 aria-label="Book an appointment"
               >
                 <span>Book an appointment</span>

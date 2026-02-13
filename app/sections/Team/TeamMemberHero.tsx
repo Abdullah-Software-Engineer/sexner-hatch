@@ -29,7 +29,7 @@ export default function TeamMemberHero({ name }: TeamMemberHeroProps) {
         <Container className="px-6 sm:px-10 md:px-12 lg:px-16">
           <div className="max-w-2xl pl-4 sm:pl-6 md:pl-8 lg:pl-10">
             <h1
-              className="font-playfair font-medium text-white text-[36px] leading-tight sm:text-[48px] md:text-[56px] lg:text-[64px] mb-5"
+              className="font-playfair font-medium text-white text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] leading-tight mb-5"
               style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}
             >
               {name.toUpperCase()}
@@ -40,7 +40,7 @@ export default function TeamMemberHero({ name }: TeamMemberHeroProps) {
                 className="inline-flex items-center gap-4 pl-8 pr-1.5 py-1.5 rounded-full bg-secondary text-white font-medium hover:bg-secondary/90 transition-colors w-fit shadow-lg group h-14"
                 aria-label="Book an appointment"
               >
-                <span className="text-lg font-medium tracking-wide">Book an appointment</span>
+                <span className="text-[14px] md:text-[14px] lg:text-[14px] xl:text-[16px] font-medium tracking-wide">Book an appointment</span>
                 <div className="flex items-center justify-center w-11 h-11 rounded-full bg-primary text-white shrink-0 group-hover:translate-x-1 transition-transform">
                   <FaArrowRight className="w-5 h-5" />
                 </div>

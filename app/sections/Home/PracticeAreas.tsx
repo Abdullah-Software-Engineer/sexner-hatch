@@ -23,7 +23,7 @@ export default function PracticeAreas() {
     <Section className="bg-primary" id="practice-areas">
       <Container>
         <FadeUp className="flex flex-col md:flex-row md:items-center md:justify-between gap-5 mb-10 md:mb-12">
-          <h2 className="text-[30px] md:text-[48px] font-normal text-white relative inline-block">
+          <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-white relative inline-block">
             Our Practice Areas & Services
             <span className="absolute left-0 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
           </h2>
@@ -57,7 +57,7 @@ export default function PracticeAreas() {
                 <h3 className="text-[20px] font-semibold text-black mb-3 transition-colors group-hover:text-white">
                   {area.title}
                 </h3>
-                <p className="font-poppins text-[14px] md:text-[16px] font-normal text-black leading-relaxed transition-colors group-hover:text-white">
+                <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-normal text-black leading-relaxed transition-colors group-hover:text-white">
                   {area.description}
                 </p>
               </Link>

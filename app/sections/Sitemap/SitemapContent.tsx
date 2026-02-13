@@ -26,7 +26,7 @@ const PAGES_COL1 = [
 const PAGES_COL2 = [
   { label: 'Criminal Law And Your Rights', href: '/practice-areas' },
   { label: 'Payments', href: '/make-payment' },
-  { label: 'Zoom Court Information', href: '/resources' },
+  { label: 'Zoom Court Information', href: '/your-rights' },
   { label: 'Blogs', href: '/blog' },
   { label: 'Sitemap', href: '/sitemap' },
   { label: 'Disclaimer', href: '/disclaimer' },
@@ -280,11 +280,11 @@ const YOUR_RIGHTS_COL3 = [
 ]
 
 const VIDEOS = [
-  { label: 'Criminal Record Expungement Video', href: '/resources' },
-  { label: 'DUI Video Transcript', href: '/resources' },
-  { label: 'Plea Bargain Video Transcript', href: '/resources' },
-  { label: 'Search and Seizure Video', href: '/resources' },
-  { label: 'What is Battery?', href: '/resources' },
+  { label: 'Criminal Record Expungement Video', href: '/your-rights' },
+  { label: 'DUI Video Transcript', href: '/your-rights' },
+  { label: 'Plea Bargain Video Transcript', href: '/your-rights' },
+  { label: 'Search and Seizure Video', href: '/your-rights' },
+  { label: 'What is Battery?', href: '/your-rights' },
 ]
 
 const linkClass =
@@ -383,7 +383,7 @@ function YourRightsColumn({ items }: { items: string[] }) {
     <ul className="space-y-2 list-disc list-inside text-primary">
       {items.map((item) => (
         <li key={item}>
-          <Link href="/resources" className={linkClass}>
+          <Link href="/your-rights" className={linkClass}>
             {item}
           </Link>
         </li>

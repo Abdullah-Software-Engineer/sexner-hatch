@@ -5,9 +5,11 @@ export default function Container({
   children,
   className,
   maxWidth = 'default',
+  id,
 }: ContainerProps) {
   return (
     <div
+      id={id}
       className={cn(
         'mx-auto px-4 sm:px-6 lg:px-8',
         maxWidth === 'default' && 'max-w-[1390px]',

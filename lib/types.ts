@@ -40,4 +40,5 @@ export interface ContainerProps {
   children: React.ReactNode
   className?: string
   maxWidth?: 'default' | 'full'
+  id?: string
 }

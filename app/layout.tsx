@@ -96,6 +96,35 @@ export default function RootLayout({
         <Script id="tawk-to" strategy="afterInteractive">
           {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            
+            // Hide welcome message popup
+            Tawk_API.onLoad = function(){
+              // Hide any welcome message or popup elements
+              setTimeout(function() {
+                var popups = document.querySelectorAll('[class*="tawk"][class*="welcome"], [class*="tawk"][class*="popup"], [class*="tawk"][class*="bubble"], [id*="tawk"][id*="welcome"], [id*="tawk"][id*="popup"]');
+                popups.forEach(function(el) {
+                  if (el.textContent && el.textContent.toLowerCase().includes('we are here')) {
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                    el.style.opacity = '0';
+                    el.style.pointerEvents = 'none';
+                  }
+                });
+                
+                // Also check for elements with "We Are Here" text
+                var allElements = document.querySelectorAll('*');
+                allElements.forEach(function(el) {
+                  if (el.textContent && el.textContent.toLowerCase().includes('we are here') && 
+                      (el.className && (el.className.includes('tawk') || el.className.includes('popup') || el.className.includes('welcome') || el.className.includes('bubble')))) {
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                    el.style.opacity = '0';
+                    el.style.pointerEvents = 'none';
+                  }
+                });
+              }, 1000);
+            };
+            
             (function(){
               var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
               s1.async=true;
@@ -104,6 +133,37 @@ export default function RootLayout({
               s1.setAttribute('crossorigin','*');
               s0.parentNode.insertBefore(s1,s0);
             })();
+            
+            // Additional check after page load to hide popup
+            if (typeof window !== 'undefined') {
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  var observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                      mutation.addedNodes.forEach(function(node) {
+                        if (node.nodeType === 1) {
+                          if (node.textContent && node.textContent.toLowerCase().includes('we are here')) {
+                            var hasTawkClass = node.className && (
+                              node.className.includes('tawk') || 
+                              node.className.includes('popup') || 
+                              node.className.includes('welcome') || 
+                              node.className.includes('bubble')
+                            );
+                            if (hasTawkClass || node.querySelector('[class*="tawk"], [id*="tawk"]')) {
+                              node.style.display = 'none';
+                              node.style.visibility = 'hidden';
+                              node.style.opacity = '0';
+                              node.style.pointerEvents = 'none';
+                            }
+                          }
+                        }
+                      });
+                    });
+                  });
+                  observer.observe(document.body, { childList: true, subtree: true });
+                }, 2000);
+              });
+            }
           `}
         </Script>
       </body>

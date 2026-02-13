@@ -24,10 +24,10 @@ export default function ServiceCard({ title, description, href, icon, featured }
     <div className="flex gap-4">
       {icon ?? <DefaultIcon />}
       <div className="min-w-0 flex-1">
-        <h3 className="font-libre font-bold text-[#374151] text-[18px] md:text-[20px] mb-2">
+        <h3 className="font-libre font-bold text-[#374151] text-[20px] md:text-[20px] lg:text-[20px] xl:text-[20px] mb-2">
           {title}
         </h3>
-        <p className="font-poppins text-[#4b5563] text-[14px] leading-relaxed">
+        <p className="font-poppins text-[#4b5563] text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] leading-relaxed">
           {description}
         </p>
       </div>

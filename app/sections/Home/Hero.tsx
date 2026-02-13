@@ -27,10 +27,10 @@ export default function Hero() {
             {/* Heading */}
             <div className="flex items-center justify-center flex-1 pt-12 sm:pt-16 md:pt-20 lg:pt-[120px] xl:pt-[200px]">
               <div className="text-center w-full px-4 sm:px-6">
-                <h1 className="text-[85px] font-playfair font-light text-white mb-3 sm:mb-4" style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}>
+                <h1 className="text-[36px] md:text-[48px] lg:text-[56px] xl:text-[56px] font-playfair font-light text-white mb-3 sm:mb-4" style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}>
                   CHICAGO CRIMINAL DEFENSE
                 </h1>
-                <h1 className="text-[115px] font-playfair font-bold text-secondary" style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}>
+                <h1 className="text-[36px] md:text-[48px] lg:text-[56px] xl:text-[56px] font-playfair font-bold text-secondary" style={{ textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6)' }}>
                   ATTORNEYS
                 </h1>
               </div>

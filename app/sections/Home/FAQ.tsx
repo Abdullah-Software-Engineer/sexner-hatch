@@ -60,7 +60,7 @@ export default function FAQ() {
     <Section className="bg-[#F5F5F5]" id="faq">
       <Container>
         <FadeUp className="text-center mb-10 md:mb-12">
-          <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+          <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5 relative inline-block">
             Frequently asked questions
             <span className="absolute left-8 -translate-x-1/2 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
           </h2>
@@ -91,7 +91,7 @@ export default function FAQ() {
                   >
                     {item.id}
                   </span>
-                  <span className="flex-1 font-poppins text-[14px] md:text-[16px] font-medium text-[#333333]">
+                  <span className="flex-1 font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-medium text-[#333333]">
                     {item.question}
                   </span>
                   <motion.span
@@ -123,7 +123,7 @@ export default function FAQ() {
                         >
                           <SpeechBubbleIcon className="w-8 h-8" />
                         </span>
-                        <p className="font-poppins text-[14px] md:text-[16px] text-white leading-relaxed">
+                        <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] text-white leading-relaxed">
                           {item.answer}
                         </p>
                       </div>

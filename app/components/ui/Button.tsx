@@ -22,9 +22,9 @@ export default function Button({
   }
   
   const sizes = {
-    sm: 'px-4 py-2 text-[14px]',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'px-4 py-2 text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px]',
+    md: 'px-6 py-3 text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px]',
+    lg: 'px-8 py-4 text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px]',
   }
   
   const combinedClassName = cn(

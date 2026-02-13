@@ -8,17 +8,16 @@ import { STATS } from '@/lib/constants'
 
 export default function LookingForLawyer() {
   return (
-    <Section className="bg-white" id="looking-for-lawyer">
-      <Container>
+      <Container className="bg-white py-8 sm:py-10 md:py-14" id="looking-for-lawyer">
         <div className="text-center">
           <FadeUp>
-            <h2 className="text-[30px] md:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+            <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5 relative inline-block">
               Looking for a Criminal Defense Lawyer?
               <span className="absolute left-0 -bottom-1.5 w-[70px] h-1 bg-secondary " aria-hidden="true"></span>
             </h2>
           </FadeUp>
           <FadeUp delay={0.08}>
-            <p className="font-poppins text-[14px] md:text-[16px] text-black leading-relaxed max-w-[900px] md:max-w-[1000px] mx-auto my-8 md:my-10">
+            <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] text-black leading-relaxed max-w-[900px] md:max-w-[1000px] mx-auto my-8 md:my-10">
               With over 30 years of experience defending clients in Chicago, our dedicated team of criminal defense attorneys has successfully helped over 20,000 individuals navigate complex legal challenges. We understand the stress and uncertainty of facing criminal charges, and we're committed to providing aggressive, compassionate representation to protect your rights and your future.
             </p>
           </FadeUp>
@@ -51,7 +50,7 @@ export default function LookingForLawyer() {
                   <div className="font-poppins text-[13px] md:text-sm font-normal text-white mb-1">
                     {stat.label}
                   </div>
-                  <div className="font-poppins text-2xl md:text-[28px] font-semibold text-white">
+                  <div className="font-poppins text-[30px] md:text-[30px] lg:text-[30px] xl:text-[30px] font-semibold text-white">
                     <AnimatedCounter value={stat.value} />
                   </div>
                 </div>
@@ -60,6 +59,5 @@ export default function LookingForLawyer() {
           </StaggerChildren>
         </div>
       </Container>
-    </Section>
   )
 }
