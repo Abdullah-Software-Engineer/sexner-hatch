@@ -115,17 +115,17 @@ export default function Header() {
                       </Link>
                       <div
                         className={cn(
-                          'absolute left-1/2 -translate-x-1/2 top-full pt-4 z-[110] transition-all duration-300 ease-out',
-                          'md:left-1/2 md:-translate-x-1/2 lg:left-0 lg:translate-x-0 xl:left-1/2 xl:-translate-x-1/2',
-                          'w-[calc(100vw-32px)] md:w-[calc(100vw-64px)] lg:w-[800px] xl:w-[900px]',
-                          'max-w-[calc(100vw-32px)] md:max-w-[calc(100vw-64px)] lg:max-w-[800px] xl:max-w-[900px]',
+                          'absolute top-full pt-4 z-[110] transition-all duration-300 ease-out',
+                          'lg:left-3/4 -translate-x-1/2',
+                          'w-[calc(100vw-32px)] md:w-[calc(100vw-64px)] lg:w-[850px] xl:w-[950px]',
+                          'max-w-[calc(100vw-32px)] md:max-w-[calc(100vw-64px)] lg:max-w-[calc(100vw-96px)] xl:max-w-[calc(100vw-140px)]',
                           'pointer-events-auto',
                           isPracticeAreasOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible pointer-events-none -translate-y-2'
                         )}
                         onMouseEnter={() => setIsPracticeAreasOpen(true)}
                         onMouseLeave={() => setIsPracticeAreasOpen(false)}
                       >
-                        <div className="bg-primary text-white rounded-xl shadow-2xl border border-white/10 overflow-hidden w-full">
+                        <div className="bg-primary text-white rounded-xl shadow-2xl border border-white/10 overflow-hidden w-full backdrop-blur-sm">
                           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 divide-x divide-white/10 auto-cols-fr">
                             {(() => {
                               const totalItems = PRACTICE_AREAS_FULL.length
@@ -144,13 +144,17 @@ export default function Header() {
                                         key={area.slug}
                                         href={`/practice-areas/${area.slug}`}
                                         className={cn(
-                                          'block px-5 py-3.5 text-white hover:bg-white/5 hover:text-secondary transition-colors duration-150',
-                                          'font-poppins text-sm font-medium uppercase tracking-wide truncate',
+                                          'block px-4 py-2 text-white/95 hover:bg-white/10 hover:text-secondary transition-all duration-200',
+                                          'font-poppins text-xs lg:text-[13px] font-medium uppercase tracking-wide',
+                                          'group relative overflow-hidden',
                                           itemIndex < colItems.length - 1 && 'border-b border-white/5'
                                         )}
                                         title={area.title}
                                       >
-                                        {area.title}
+                                        <span className="relative z-10 block truncate group-hover:translate-x-1 transition-transform duration-200">
+                                          {area.title}
+                                        </span>
+                                        <div className="absolute inset-0 bg-gradient-to-r from-secondary/0 via-secondary/0 to-secondary/0 group-hover:from-secondary/5 group-hover:via-secondary/10 group-hover:to-secondary/5 transition-all duration-200" />
                                       </Link>
                                     ))}
                                   </div>
@@ -187,8 +191,7 @@ export default function Header() {
                       <div
                         className={cn(
                           'absolute left-1/2 -translate-x-1/2 top-full pt-3 z-[110] transition-all duration-300 ease-out',
-                          'md:left-1/2 md:-translate-x-1/2 lg:left-0 lg:translate-x-0 xl:left-1/2 xl:-translate-x-1/2',
-                          'w-[calc(100vw-32px)] md:w-auto mt-3',
+                          'w-[calc(100vw-32px)] md:w-auto',
                           'max-w-[calc(100vw-32px)] md:max-w-none',
                           'pointer-events-auto',
                           isResourcesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible pointer-events-none -translate-y-2'
@@ -196,12 +199,12 @@ export default function Header() {
                         onMouseEnter={() => setIsResourcesOpen(true)}
                         onMouseLeave={() => setIsResourcesOpen(false)}
                       >
-                        <ul className="bg-[#1e2d3d] text-white rounded-xl shadow-2xl border border-white/20 overflow-hidden backdrop-blur-sm py-2 min-w-[200px] md:min-w-[220px] xl:min-w-[240px]">
+                        <ul className="bg-primary text-white rounded-xl shadow-2xl border border-white/10 overflow-hidden backdrop-blur-sm py-2 min-w-[200px] md:min-w-[220px] xl:min-w-[240px]">
                           {RESOURCES_DROPDOWN_LINKS.map((item, index) => (
                             <li key={`${item.href}-${item.label}`} className="border-b border-white/10 last:border-0">
                               <Link
                                 href={item.href}
-                                className="group flex items-center font-poppins text-sm md:text-[15px] text-white/95 hover:text-secondary hover:bg-white/10 px-4 md:px-5 py-3 md:py-3.5 transition-all duration-200"
+                                className="group flex items-center font-poppins text-sm md:text-[13px] text-white/95 hover:text-secondary hover:bg-white/10 px-4 md:px-3 py-3 md:py-2 transition-all duration-200"
                               >
                                 <span className="group-hover:translate-x-1 transition-transform duration-200">
                                   {item.label}
