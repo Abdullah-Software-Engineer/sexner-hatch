@@ -1,5 +1,4 @@
 'use client'
-
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
 import Button from '../../components/ui/Button'
@@ -7,8 +6,7 @@ import { FadeUp } from '../../components/ui/AnimateOnScroll'
 
 export default function SpeakWithTeam() {
   return (
-    <Section className="bg-white py-8 sm:py-10 md:py-14" id="speak-with-team">
-      <Container>
+      <Container className="py-8 sm:py-10 md:py-14 bg-white ">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-5 sm:gap-6 md:gap-8">
           <FadeUp className="flex-1">
             <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-6 md:mb-8 relative inline-block">
@@ -32,6 +30,5 @@ export default function SpeakWithTeam() {
           </FadeUp>
         </div>
       </Container>
-    </Section>
   )
 }

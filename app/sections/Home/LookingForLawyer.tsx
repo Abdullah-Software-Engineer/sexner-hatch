@@ -8,8 +8,7 @@ import { STATS } from '@/lib/constants'
 
 export default function LookingForLawyer() {
   return (
-    <Section className="bg-white" id="looking-for-lawyer">
-      <Container>
+      <Container className="bg-white py-8 sm:py-10 md:py-14" id="looking-for-lawyer">
         <div className="text-center">
           <FadeUp>
             <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5 relative inline-block">
@@ -60,6 +59,5 @@ export default function LookingForLawyer() {
           </StaggerChildren>
         </div>
       </Container>
-    </Section>
   )
 }

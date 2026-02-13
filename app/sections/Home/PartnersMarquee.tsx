@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Section from '../../components/ui/Section'
+import Container from '@/app/components/ui/Container'
 
 const partnerImages = [
   { name: 'av-1-3-1.png 1.png', alt: 'AV Preeminent Rating' },
@@ -23,7 +24,7 @@ export default function PartnersMarquee() {
   const duplicatedPartners = [...partnerImages, ...partnerImages]
 
   return (
-    <Section className="bg-white overflow-hidden py-10" id="partners">
+    <Container className="bg-white overflow-hidden py-10">
       <div className="relative w-full overflow-hidden" aria-label="Our partners and affiliations">
         <div 
           className="flex flex-nowrap items-center gap-10 md:gap-[60px] xl:gap-20 animate-marquee-scroll will-change-transform"
@@ -46,6 +47,6 @@ export default function PartnersMarquee() {
           ))}
         </div>
       </div>
-    </Section>
+    </Container>
   )
 }
