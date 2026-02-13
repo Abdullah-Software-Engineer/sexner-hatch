@@ -194,3 +194,37 @@
     }
   }
 }
+
+/* Hide tawk.to welcome message popup */
+#tawkchat-container,
+iframe[id^="tawk"],
+iframe[src*="tawk.to"] {
+  /* Keep the chat widget visible */
+}
+
+/* Hide the welcome message popup/bubble */
+.tawk-welcome-message,
+.tawk-popup,
+.tawk-bubble,
+[class*="tawk"][class*="welcome"],
+[class*="tawk"][class*="popup"],
+[class*="tawk"][class*="bubble"],
+div[id*="tawk"][id*="welcome"],
+div[id*="tawk"][id*="popup"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Hide any element containing "We Are Here" text near tawk.to */
+body > div:not(#tawkchat-container):has([class*="tawk"], [id*="tawk"]) {
+  /* This will hide popup containers */
+}
+
+/* More specific targeting for tawk.to popup elements */
+iframe[src*="tawk.to"] + div,
+iframe[src*="tawk.to"] ~ div[class*="popup"],
+iframe[src*="tawk.to"] ~ div[class*="welcome"] {
+  display: none !important;
+}
