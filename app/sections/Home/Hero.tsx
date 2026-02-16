@@ -37,7 +37,7 @@ export default function Hero() {
             </div>
 
             {/* CTA Button */}
-            <div className="flex items-center justify-center pb-8 sm:pb-10 md:pb-12 lg:pb-[50px]">
+            <div className="flex items-center justify-center mt-6 sm:mt-8 md:mt-10 pb-8 sm:pb-10 md:pb-12 lg:pb-[50px]">
               <div className="mx-auto">
                 <PhoneButton size="md" />
               </div>

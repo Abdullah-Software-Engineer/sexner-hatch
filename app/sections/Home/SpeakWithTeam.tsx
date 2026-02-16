@@ -19,7 +19,7 @@ export default function SpeakWithTeam() {
           </FadeUp>
           <FadeUp delay={0.12} className="shrink-0 md:pt-1">
             <Button
-              href="#contact"
+              href="/contact"
               variant="primary"
               size="sm"
               className="rounded-lg shadow-md hover:shadow-lg w-full md:w-auto transition-shadow duration-300"
