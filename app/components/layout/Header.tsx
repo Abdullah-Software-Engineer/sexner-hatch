@@ -239,7 +239,7 @@ export default function Header() {
               </nav>
 
               {/* Desktop Phone + Mobile Menu Button */}
-              <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0 ml-2 md:ml-4 lg:ml-4 xl:ml-14">
+              <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0">
                 {/* Phone button - visible from tablet (md) up */}
                 <div className="hidden lg:block flex-shrink-0">
                   <PhoneButton size="md" />

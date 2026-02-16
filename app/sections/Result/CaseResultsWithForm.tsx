@@ -89,12 +89,12 @@ export default function CaseResultsWithForm() {
                 const imageLeft = index % 2 === 0
                 const imagePlaceholder = (
                   <div
-                    className="shrink-0 w-[38%] min-w-[140px] aspect-4/3 rounded-xl bg-gray-400"
+                    className="shrink-0 w-full md:w-[38%] min-w-0 md:min-w-[140px] aspect-4/3 rounded-xl bg-gray-400 order-2 md:order-none"
                     aria-hidden
                   />
                 )
                 const textBlock = (
-                  <div className="min-w-0 flex-1 flex flex-col justify-center">
+                  <div className="min-w-0 flex-1 flex flex-col justify-center order-1 md:order-none">
                     <h3 className="font-libre font-semibold text-primary text-[20px] mb-3">
                       {card.title}
                     </h3>
@@ -106,7 +106,7 @@ export default function CaseResultsWithForm() {
                 return (
                   <article
                     key={card.id}
-                    className="flex gap-5 md:gap-8 p-5 md:p-6 bg-[#FAFAFA] rounded-2xl shadow-sm border border-gray-200/80 overflow-hidden"
+                    className="flex flex-col md:flex-row gap-5 md:gap-8 p-5 md:p-6 bg-[#FAFAFA] rounded-2xl shadow-sm border border-gray-200/80 overflow-hidden"
                   >
                     {imageLeft ? (
                       <>
