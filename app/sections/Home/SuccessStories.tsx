@@ -46,15 +46,17 @@ export default function SuccessStories() {
       `}</style>
       <Container>
         <FadeUp className="text-center mb-10 md:mb-12">
-          <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+          <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5">
             Success Stories
-            <span className="absolute left-8 -translate-x-1/2 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
           </h2>
+          <div className="flex justify-center -mt-2.5 mb-2.5">
+            <span className="w-[70px] h-1 bg-secondary shrink-0" aria-hidden="true"></span>
+          </div>
         </FadeUp>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-          <FadeUp delay={0.08} className="lg:col-span-5 flex flex-col gap-3 md:gap-4">
-            <div className="relative aspect-[4/3] min-h-[300px] h-full rounded-xl overflow-hidden bg-[#333] flex-1">
+          <FadeUp delay={0.08} className="lg:col-span-5 flex flex-col gap-3 md:gap-4 min-w-0">
+            <div className="relative w-full aspect-4/3 min-h-0 rounded-xl overflow-hidden bg-[#333] flex-none lg:flex-1 lg:min-h-[300px]">
               <Image
                 src={IMAGE_PATH}
                 alt="Legal success - gavel and law books"

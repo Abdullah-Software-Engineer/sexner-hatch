@@ -18,7 +18,7 @@ export default function ExperiencedAttorney() {
                 <span className="sm:hidden"> </span>Defense Attorney in Chicago
                 <div className="w-[50px] sm:w-[60px] h-0.5 sm:h-1 bg-secondary mt-3 sm:mt-4"></div>
               </h2>
-              <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] text-black/80 leading-relaxed max-w-2xl">
+              <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] text-black/80 leading-relaxed max-w-2xl mb-8 sm:mb-10 md:mb-12">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum
                 dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur.

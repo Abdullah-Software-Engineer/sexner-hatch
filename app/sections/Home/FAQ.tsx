@@ -60,10 +60,12 @@ export default function FAQ() {
     <Section className="bg-[#F5F5F5]" id="faq">
       <Container>
         <FadeUp className="text-center mb-10 md:mb-12">
-          <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+          <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5">
             Frequently asked questions
-            <span className="absolute left-8 -translate-x-1/2 -bottom-1.5 w-[70px] h-1 bg-secondary" aria-hidden="true"></span>
           </h2>
+          <div className="flex justify-center -mt-2.5 mb-2.5">
+            <span className="w-[70px] h-1 bg-secondary shrink-0" aria-hidden="true"></span>
+          </div>
         </FadeUp>
 
         <StaggerChildren className="space-y-3" stagger={0.06} amount={0.05}>
