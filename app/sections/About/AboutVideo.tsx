@@ -10,7 +10,7 @@ type AboutVideoProps = {
 
 export default function AboutVideo({ videoUrl }: AboutVideoProps) {
   return (
-    <Section className="bg-white" id="about-video">
+    <Section className="bg-white min-h-0 py-4 sm:py-5 md:py-6" id="about-video">
       <Container>
         <div className="flex justify-center">
           <div className="relative w-full rounded-xl overflow-hidden bg-[#e0e0e0] aspect-video flex items-center justify-center">

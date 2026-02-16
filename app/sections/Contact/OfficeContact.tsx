@@ -69,31 +69,18 @@ export default function OfficeContact() {
           <ContactCard />
           <ContactCard />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-          <div className="aspect-4/3 min-h-[280px] rounded-lg overflow-hidden bg-[#e8e8e8]">
+        <div className="w-full min-w-0 max-w-4xl mx-auto overflow-hidden">
+          <div className="relative w-full aspect-4/3 min-h-[240px] sm:min-h-[280px] rounded-lg overflow-hidden bg-[#e8e8e8]">
             <iframe
-              title="Law office location - map 1"
+              title="Law office location"
               src={MAP_EMBED_URL}
               width="100%"
               height="100%"
-              style={{ border: 0 }}
+              style={{ border: 0, maxWidth: '100%' }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full min-h-[280px]"
-            />
-          </div>
-          <div className="aspect-4/3 min-h-[280px] rounded-lg overflow-hidden bg-[#e8e8e8]">
-            <iframe
-              title="Law office location - map 2"
-              src={MAP_EMBED_URL}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full min-h-[280px]"
+              className="absolute inset-0 h-full w-full max-w-full"
             />
           </div>
         </div>

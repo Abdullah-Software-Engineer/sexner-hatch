@@ -80,67 +80,118 @@ export default function AboutTeam() {
             </Link>
           </div>
 
-          {/* Expandable team cards */}
-          <div className="lg:col-span-7 flex justify-end overflow-visible">
-            <div className="flex items-end gap-0">
-              {TEAM_MEMBERS.map((member, index) => {
-                const isExpanded = expandedIndex === index
-                return (
-                  <div
-                    key={member.id}
-                    role="button"
-                    tabIndex={0}
-                    onClick={() => setExpandedIndex(index)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault()
-                        setExpandedIndex(index)
-                      }
-                    }}
-                    className="relative shrink-0 rounded-[10px] overflow-hidden bg-[#F8F8F8] shadow-md hover:shadow-lg transition-all duration-300 ease-out cursor-pointer flex flex-col"
-                    style={{
-                      width: isExpanded ? EXPANDED_WIDTH : COLLAPSED_WIDTH,
-                      height: CARD_HEIGHT,
-                      zIndex: isExpanded ? 20 : 10 - index,
-                    }}
-                    aria-expanded={isExpanded}
-                    aria-label={`${member.name}, click to ${isExpanded ? 'collapse' : 'expand'} profile`}
-                  >
-                    <div className="relative w-full flex-1 min-h-0 bg-[#F8F8F8]">
-                      <Image
-                        src={member.image}
-                        alt=""
-                        fill
-                        className="object-cover transition-[object-position] duration-300"
-                        style={{
-                          objectPosition: isExpanded ? 'center center' : 'right center',
-                        }}
-                        sizes="(max-width: 1024px) 240px, 240px"
-                      />
-                      <Link
-                        href={`/team/${member.slug}`}
-                        onClick={(e) => e.stopPropagation()}
-                        className="absolute top-2 right-2 w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center z-10 shadow hover:opacity-90 transition-opacity"
-                        aria-label={`View full profile: ${member.name}`}
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-4 h-4">
-                          <path d="M15 3h6v6h-2V5.41l-7.29 7.3-1.42-1.42L17.59 4H15V3zM3 8v13h13v-2H5V8H3z" />
-                        </svg>
-                      </Link>
-                      {/* Name overlay - only when expanded */}
-                      <div
-                        className="absolute bottom-0 left-0 right-0 h-14 bg-[#364F6B] flex items-center pl-3 pr-2 transition-opacity duration-300"
-                        style={{ opacity: isExpanded ? 1 : 0 }}
-                      >
-                        <span className="w-0.5 h-5 bg-[#D4AF37] rounded-full shrink-0 mr-2.5" aria-hidden="true" />
-                        <span className="font-poppins text-white text-[20px] font-medium truncate">
-                          {member.name}
-                        </span>
-                      </div>
+          {/* Team cards: grid on mobile (no overlap), expandable stack on desktop */}
+          <div className="lg:col-span-7">
+            {/* Mobile: 2-column grid, equal cards, no overlap */}
+            <div className="lg:hidden grid grid-cols-2 gap-4 min-w-0">
+              {TEAM_MEMBERS.map((member, index) => (
+                <div
+                  key={member.id}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setExpandedIndex(index)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      setExpandedIndex(index)
+                    }
+                  }}
+                  className={`relative rounded-[10px] overflow-hidden bg-[#F8F8F8] shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer flex flex-col aspect-3/4 min-h-0 ${
+                    expandedIndex === index ? 'ring-2 ring-[#D4AF37] ring-offset-2' : ''
+                  }`}
+                  aria-expanded={expandedIndex === index}
+                  aria-label={`${member.name}, click to ${expandedIndex === index ? 'collapse' : 'expand'} profile`}
+                >
+                  <div className="relative w-full flex-1 min-h-0 bg-[#F8F8F8]">
+                    <Image
+                      src={member.image}
+                      alt=""
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 240px"
+                    />
+                    <Link
+                      href={`/team/${member.slug}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="absolute top-2 right-2 w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center z-10 shadow hover:opacity-90 transition-opacity"
+                      aria-label={`View full profile: ${member.name}`}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-4 h-4">
+                        <path d="M15 3h6v6h-2V5.41l-7.29 7.3-1.42-1.42L17.59 4H15V3zM3 8v13h13v-2H5V8H3z" />
+                      </svg>
+                    </Link>
+                    <div className="absolute bottom-0 left-0 right-0 h-14 bg-[#364F6B] flex items-center pl-3 pr-2">
+                      <span className="w-0.5 h-5 bg-[#D4AF37] rounded-full shrink-0 mr-2.5" aria-hidden="true" />
+                      <span className="font-poppins text-white text-[16px] md:text-[18px] font-medium truncate">
+                        {member.name}
+                      </span>
                     </div>
                   </div>
-                )
-              })}
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop: overlapping expandable cards */}
+            <div className="hidden lg:flex justify-end overflow-visible">
+              <div className="flex items-end gap-0">
+                {TEAM_MEMBERS.map((member, index) => {
+                  const isExpanded = expandedIndex === index
+                  return (
+                    <div
+                      key={member.id}
+                      role="button"
+                      tabIndex={0}
+                      onClick={() => setExpandedIndex(index)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault()
+                          setExpandedIndex(index)
+                        }
+                      }}
+                      className="relative shrink-0 rounded-[10px] overflow-hidden bg-[#F8F8F8] shadow-md hover:shadow-lg transition-all duration-300 ease-out cursor-pointer flex flex-col"
+                      style={{
+                        width: isExpanded ? EXPANDED_WIDTH : COLLAPSED_WIDTH,
+                        height: CARD_HEIGHT,
+                        zIndex: isExpanded ? 20 : 10 - index,
+                      }}
+                      aria-expanded={isExpanded}
+                      aria-label={`${member.name}, click to ${isExpanded ? 'collapse' : 'expand'} profile`}
+                    >
+                      <div className="relative w-full flex-1 min-h-0 bg-[#F8F8F8]">
+                        <Image
+                          src={member.image}
+                          alt=""
+                          fill
+                          className="object-cover transition-[object-position] duration-300"
+                          style={{
+                            objectPosition: isExpanded ? 'center center' : 'right center',
+                          }}
+                          sizes="(max-width: 1024px) 240px, 240px"
+                        />
+                        <Link
+                          href={`/team/${member.slug}`}
+                          onClick={(e) => e.stopPropagation()}
+                          className="absolute top-2 right-2 w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center z-10 shadow hover:opacity-90 transition-opacity"
+                          aria-label={`View full profile: ${member.name}`}
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-4 h-4">
+                            <path d="M15 3h6v6h-2V5.41l-7.29 7.3-1.42-1.42L17.59 4H15V3zM3 8v13h13v-2H5V8H3z" />
+                          </svg>
+                        </Link>
+                        <div
+                          className="absolute bottom-0 left-0 right-0 h-14 bg-[#364F6B] flex items-center pl-3 pr-2 transition-opacity duration-300"
+                          style={{ opacity: isExpanded ? 1 : 0 }}
+                        >
+                          <span className="w-0.5 h-5 bg-[#D4AF37] rounded-full shrink-0 mr-2.5" aria-hidden="true" />
+                          <span className="font-poppins text-white text-[20px] font-medium truncate">
+                            {member.name}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           </div>
         </div>
