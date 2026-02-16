@@ -11,10 +11,12 @@ export default function LookingForLawyer() {
       <Container className="bg-white py-8 sm:py-10 md:py-14" id="looking-for-lawyer">
         <div className="text-center">
           <FadeUp>
-            <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5 relative inline-block">
+            <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5">
               Looking for a Criminal Defense Lawyer?
-              <span className="absolute left-0 -bottom-1.5 w-[70px] h-1 bg-secondary " aria-hidden="true"></span>
             </h2>
+            <div className="flex justify-center -mt-2.5 mb-2.5">
+              <span className="w-[70px] h-1 bg-secondary shrink-0" aria-hidden="true"></span>
+            </div>
           </FadeUp>
           <FadeUp delay={0.08}>
             <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] text-black leading-relaxed max-w-[900px] md:max-w-[1000px] mx-auto my-8 md:my-10">
