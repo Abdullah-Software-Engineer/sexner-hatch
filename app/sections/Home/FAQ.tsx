@@ -16,27 +16,27 @@ const faqItems = [
   },
   {
     id: 2,
-    question: 'When should I contact a criminal defense attorney?',
+    question: 'What are the qualifications of a good criminal defense lawyer in Chicago?',
     answer:
-      "You should contact a criminal defense attorney as soon as possible if you're under investigation, have been arrested, or charged with a crime. Early involvement allows your attorney to protect your rights, advise you on interactions with law enforcement, and begin building your defense. Delaying can sometimes harm your case.",
+      "A good Chicago criminal defense lawyer should have extensive experience in criminal law and a deep understanding of Illinois laws and the justice system. They must possess strong communication and negotiation skills, develop effective defense strategies, and work closely with clients throughout the process. Above all, they should be ethical, professional, and committed to delivering high-quality legal representation.",
   },
   {
     id: 3,
-    question: 'What should I expect during my first consultation?',
+    question: 'How do I find the best criminal defense lawyer in Chicago?',
     answer:
-      "During your first consultation, your attorney will listen to your situation, ask questions to understand the details, and explain your legal options. They may discuss potential strategies, fees, and next steps. This meeting is confidential and is an opportunity for you to evaluate whether the attorney is the right fit for your case.",
+      "Finding the best Chicago criminal lawyer can feel overwhelming, but a few smart steps can help. Start by researching online & reading verified client reviews on platforms like Google, AVVO & the Better Business Bureau. Check whether the attorney has earned recognition from respected organizations such as Super Lawyers or The National Trial Lawyers. You can also ask friends, family, or colleagues for referrals to better understand an attorney's approach & experience. Finally, consider hiring a lawyer who is part of an established legal team rather than practicing alone, as collaboration with other experienced attorneys can strengthen your defense strategy.",
   },
   {
     id: 4,
-    question: 'Can I change lawyers if I am not satisfied?',
+    question: 'What should I expect during the process of hiring a criminal defense lawyer?',
     answer:
-      "Yes, you have the right to change legal representation. If you're not satisfied with your current attorney, you can hire a new one. There may be procedural steps and potential fee considerations depending on your agreement, so it's best to discuss the transition with both your current and new attorney.",
+      "Hiring a criminal defense lawyer usually starts with a free initial consultation, where you discuss your case and legal options. A good attorney will answer your questions and ask detailed ones to fully understand your situation. If you choose to move forward, you'll sign a representation agreement outlining fees and any available payment plans. From there, your Chicago criminal lawyer will build a strong defense strategy, negotiate with prosecutors, appear at all required court dates, and represent you at trial if necessary.",
   },
   {
     id: 5,
-    question: 'What types of cases do you handle?',
+    question: 'What should I look for in a criminal defense attorney?',
     answer:
-      "We handle a wide range of criminal defense matters, including DUI, drug offenses, assault, theft, white-collar crimes, and more. Our experienced team can advise you on the specifics of your case and the best approach to protect your rights and achieve the best possible outcome.",
+      "When looking for a Chicago criminal defense attorney, it's crucial to find someone with experience in your type of case. Look for a lawyer with a track record of success in similar cases, who can communicate effectively with you about your case, and preferably an attorney who works as part of a legal team. It's also essential to find a lawyer who is responsive, accessible, and willing to work with you to develop a strong defense strategy.",
   },
 ]
 

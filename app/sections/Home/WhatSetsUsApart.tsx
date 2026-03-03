@@ -12,19 +12,19 @@ const features = [
     id: 1,
     icon: FaComments,
     title: 'Straight Talk',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
+    description: 'Expect honest answers from your first free consultation. We tell you exactly where your case stands, good or bad. We believe successful results require true partnership and proceeding with eyes wide open.',
   },
   {
     id: 2,
     icon: FaUsers,
     title: 'Team Effort',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
+    description: 'Every case is serious to us because it impacts your future. Your file is managed by an experienced attorney who collaborates with Mr. Sexner and our entire legal team to ensure superior advocacy.',
   },
   {
     id: 3,
     icon: FaClipboardCheck,
     title: 'Hard Work',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.  Lorem ipsum dolor sit amet, cons.',
+    description: 'We work tirelessly between court dates, reviewing evidence and visiting scenes. From conducting deep legal research to filing motions and negotiating with prosecutors, we do whatever it takes to protect your rights.',
   },
 ]
 

@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, type Variants } from 'framer-motion'
-import { FaGavel, FaFileContract, FaShieldAlt, FaBalanceScale, FaLock, FaUserShield } from 'react-icons/fa'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
 import Button from '../../components/ui/Button'
@@ -10,14 +10,7 @@ import { FadeUp, StaggerChildren } from '../../components/ui/AnimateOnScroll'
 import { PRACTICE_AREAS } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 
-const iconMap = {
-  '1': FaGavel,
-  '2': FaFileContract,
-  '3': FaShieldAlt,
-  '4': FaBalanceScale,
-  '5': FaLock,
-  '6': FaUserShield,
-}
+const CARD_LOGO_SRC = '/home/Group.webp'
 
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 24, scale: 0.96 },
@@ -58,7 +51,6 @@ export default function PracticeAreas() {
 
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6 xl:gap-7" stagger={0.08} amount={0.08}>
           {PRACTICE_AREAS.map((area, index) => {
-            const IconComponent = iconMap[area.id as keyof typeof iconMap]
             const isHighlighted = index === 0
             return (
               <motion.div
@@ -80,15 +72,18 @@ export default function PracticeAreas() {
                 >
                   <div
                     className={cn(
-                      'w-[50px] h-[50px] md:w-[56px] md:h-[56px] xl:w-[60px] xl:h-[60px] min-w-[50px] min-h-[50px] md:min-w-[56px] md:min-h-[56px] xl:min-w-[60px] xl:min-h-[60px] rounded-full flex items-center justify-center mb-5 transition-all',
+                      'w-[50px] h-[50px] md:w-[56px] md:h-[56px] xl:w-[60px] xl:h-[60px] min-w-[50px] min-h-[50px] md:min-w-[56px] md:min-h-[56px] xl:min-w-[60px] xl:min-h-[60px] rounded-full flex items-center justify-center mb-5 transition-all overflow-hidden',
                       isHighlighted ? 'bg-white/20 group-hover:bg-white/30' : 'bg-primary group-hover:bg-white'
                     )}
                     aria-hidden="true"
                   >
-                    <IconComponent className={cn(
-                      'w-6 h-6 md:w-[26px] md:h-[26px] xl:w-7 xl:h-7 transition-colors',
-                      isHighlighted ? 'text-white' : 'text-white group-hover:text-secondary'
-                    )} />
+                    <Image
+                      src={CARD_LOGO_SRC}
+                      alt=""
+                      width={32}
+                      height={32}
+                      className="w-6 h-6 md:w-[26px] md:h-[26px] xl:w-7 xl:h-7 object-contain"
+                    />
                   </div>
                   <h3 className={cn(
                     'text-[20px] font-semibold mb-3 transition-colors',

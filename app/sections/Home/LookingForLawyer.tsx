@@ -19,9 +19,14 @@ export default function LookingForLawyer() {
             </div>
           </FadeUp>
           <FadeUp delay={0.08}>
-            <p className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] text-black leading-relaxed max-w-[900px] md:max-w-[1000px] mx-auto my-8 md:my-10">
-              With over 30 years of experience defending clients in Chicago, our dedicated team of criminal defense attorneys has successfully helped over 20,000 individuals navigate complex legal challenges. We understand the stress and uncertainty of facing criminal charges, and we're committed to providing aggressive, compassionate representation to protect your rights and your future.
-            </p>
+            <div className="font-poppins text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] text-black leading-relaxed max-w-[900px] md:max-w-[1000px] mx-auto my-8 md:my-10 space-y-4">
+              <p>
+                Facing a criminal charge in Chicago or across Illinois is a heavy burden, whether it is a first-time arrest or a familiar legal challenge. Since 1990, Mitchell S. Sexner & Associates LLC has provided relentless advocacy for over 20,000 clients. With 30+ years of experience, our defence team understands that your future and family are at stake. We deliver 100% effort to every case, striving for the superior results you deserve.
+              </p>
+              <p>
+                From DUIs to serious felonies, we are prepared to protect your rights. Contacting our office immediately allows our veteran lawyers to safeguard your rights and minimise legal impact.
+              </p>
+            </div>
           </FadeUp>
 
           <StaggerChildren className="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-6 xl:gap-6 max-w-[900px] mx-auto mt-10 md:mt-12 xl:mt-12" stagger={0.1}>

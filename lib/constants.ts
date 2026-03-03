@@ -68,14 +68,14 @@ export const PRACTICE_AREAS_FULL = [
   { title: 'Traffic Violation', slug: 'traffic-violation' },
 ] as const
 
-// Legacy list (kept for any existing references; prefer PRACTICE_AREAS_FULL)
+// Homepage practice area cards (shown in "Our Practice Areas & Services" section)
 export const PRACTICE_AREAS = [
-  { id: '1', title: 'Criminal Defense', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'criminal-defense' },
-  { id: '2', title: 'DUI Defense', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'dui-defense' },
-  { id: '3', title: 'Drug Crimes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'drug-crimes' },
-  { id: '4', title: 'Violent Crimes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'violent-crimes' },
-  { id: '5', title: 'White Collar Crimes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'white-collar-crimes' },
-  { id: '6', title: 'Domestic Violence', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', slug: 'domestic-violence' },
+  { id: '1', title: 'Aggravated Speeding', description: 'Exceeding limits by 26+ mph is a criminal misdemeanour in Illinois. We defend you against heavy fines, jail time, and potential license loss.', slug: 'speeding-aggravated' },
+  { id: '2', title: 'DUI Defense', description: 'Driving under the influence carries severe penalties. Whether a first-time misdemeanour or a felony charge, we fight to protect your freedom and license.', slug: 'dui-defense' },
+  { id: '3', title: 'Suspended Licenses', description: 'Driving while suspended or revoked risks imprisonment. Our team identifies the root cause of your suspension to help restore your legal driving privileges.', slug: 'suspended-revoked-license' },
+  { id: '4', title: 'License Reinstatement', description: 'Navigating Secretary of State hearings is complex. We provide the experienced guidance necessary to secure hardship permits or a full restoration of your driver\'s license.', slug: 'license-reinstatement' },
+  { id: '5', title: 'Traffic Violations', description: 'From reckless driving to basic citations, multiple offences can lead to criminal records. We work to minimise fines, school requirements and long-term impacts.', slug: 'traffic-violation' },
+  { id: '6', title: 'Property Crimes', description: 'Facing charges for criminal trespass or property damage? We provide a robust defence against these offences to avoid restitution, fines, and potential incarceration.', slug: 'property-crimes' },
 ] as const
 
 // ============================================

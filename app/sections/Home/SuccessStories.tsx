@@ -10,9 +10,9 @@ const IMAGE_PATH = '/home/sucess-stories/Group.webp'
 
 const stories = [
   {
-    title: 'Dismissed',
-    subtitle: 'Felony cannabis possession',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.'
+    title: 'Not Guilty',
+    subtitle: 'Aggravated Assault',
+    description: 'Despite multiple witnesses testifying that our client brandished a knife during a domestic dispute, our attorneys strategically challenged the evidence. We successfully convinced the Judge to issue a Not Guilty verdict, protecting our client\'s freedom.'
   },
   {
     title: 'Dismissed',
@@ -47,7 +47,7 @@ export default function SuccessStories() {
       <Container>
         <FadeUp className="text-center mb-10 md:mb-12">
           <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[48px] font-normal text-black mb-2.5">
-            Success Stories
+            Success stories
           </h2>
           <div className="flex justify-center -mt-2.5 mb-2.5">
             <span className="w-[70px] h-1 bg-secondary shrink-0" aria-hidden="true"></span>
