@@ -25,9 +25,7 @@ export default function ResourcesExperiencedAttorney() {
             {/* Text Content - Right Side (replacing image) */}
             <div className="w-full lg:w-[40%] xl:w-[45%]">
               <p className="font-poppins text-[14px] md:text-[16px] text-black/80 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum
-                dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur.
+                Founder Mitchell S. Sexner is an AV Preeminent-rated attorney and National Trial Lawyers Top 100 member. A former Chicago prosecutor with over 30 years of experience, he and his team deliver aggressive, results-driven representation in criminal defense and personal injury cases.
               </p>
             </div>
           </div>
@@ -38,22 +36,30 @@ export default function ResourcesExperiencedAttorney() {
       <div className="bg-white py-12 sm:py-16 md:py-20">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {[1, 2, 3].map((item) => (
-              <div
-                key={item}
-                className="bg-primary text-white p-10 sm:p-12 rounded-xl shadow-lg hover:translate-y-[-5px] transition-transform duration-300"
-              >
-                <h3 className="text-[20px] font-medium mb-4">
-                  Traffic Violation
-                </h3>
-                <p className="font-poppins text-[14px] leading-relaxed text-gray-300">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
-                  Lorem ipsum dolor sit amet, cons. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet,
-                  cons.Lorem ipsum dolor sit amet, consecte.
-                </p>
-              </div>
-            ))}
+            <div className="bg-primary text-white p-10 sm:p-12 rounded-xl shadow-lg hover:translate-y-[-5px] transition-transform duration-300">
+              <h3 className="text-[20px] font-medium mb-4">
+                Elite Legal Standing
+              </h3>
+              <p className="font-poppins text-[14px] leading-relaxed text-gray-300">
+                Holds the &quot;AV Preeminent&quot; rating from Martindale-Hubbell, a prestigious honour reflecting the highest level of professional excellence and ethical standards in the legal community.
+              </p>
+            </div>
+            <div className="bg-primary text-white p-10 sm:p-12 rounded-xl shadow-lg hover:translate-y-[-5px] transition-transform duration-300">
+              <h3 className="text-[20px] font-medium mb-4">
+                Former Assistant State&apos;s Attorney
+              </h3>
+              <p className="font-poppins text-[14px] leading-relaxed text-gray-300">
+                Leverages his previous experience as a Chicago prosecutor to anticipate government tactics and build more effective, proactive defence strategies for his clients.
+              </p>
+            </div>
+            <div className="bg-primary text-white p-10 sm:p-12 rounded-xl shadow-lg hover:translate-y-[-5px] transition-transform duration-300">
+              <h3 className="text-[20px] font-medium mb-4">
+                National Recognition
+              </h3>
+              <p className="font-poppins text-[14px] leading-relaxed text-gray-300">
+                Recognised by &quot;Who&apos;s Who&quot; in American Law and selected as one of the Top 100 Attorneys nationwide by The National Trial Lawyers.
+              </p>
+            </div>
           </div>
         </Container>
       </div>
