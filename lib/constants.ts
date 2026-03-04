@@ -68,6 +68,40 @@ export const PRACTICE_AREAS_FULL = [
   { title: 'Traffic Violation', slug: 'traffic-violation' },
 ] as const
 
+// Practice area descriptions for the Practice Areas listing page
+export const PRACTICE_AREAS_DESCRIPTIONS: Record<string, string> = {
+  'arson': 'Arson charges carry severe penalties and often rely on complex forensic evidence. We carefully examine investigative methods, intent, and expert findings to build a strong defense.',
+  'assault-battery': 'Allegations of assault or battery can impact your freedom and reputation. We analyze witness statements, self-defense claims, and evidence to protect your rights.',
+  'carjacking': 'Carjacking is a serious felony that demands an aggressive defense. We challenge identification, intent, and prosecutorial assumptions at every stage.',
+  'cannabis': 'Despite changing laws, cannabis-related charges can still lead to serious consequences. We defend against possession, distribution, and intent-to-deliver allegations.',
+  'child-endangerment': 'Child endangerment accusations are sensitive and carry lasting consequences. We provide strategic, discreet defense aimed at protecting your rights and your future.',
+  'contributing-to-delinquency': 'These charges involve allegations of encouraging or assisting a minor in unlawful conduct. We focus on intent and factual inconsistencies to challenge the prosecution\'s case.',
+  'crimes-by-a-minor': 'Juvenile offenses require a defense that considers long-term impact. We advocate for outcomes that prioritize rehabilitation and protect future opportunities.',
+  'disorderly-conduct': 'Disorderly conduct charges often stem from public disputes or misunderstandings. We work to minimize penalties or pursue dismissal whenever possible.',
+  'domestic-violence': 'Domestic violence cases are complex and emotionally charged. We thoroughly examine evidence and pursue a defense strategy tailored to the facts.',
+  'drug-crimes': 'Drug charges range from possession to trafficking and can carry severe penalties. We challenge unlawful searches and fight to suppress improperly obtained evidence.',
+  'dui-defense': 'DUI cases frequently depend on traffic stops and testing procedures. We scrutinize police conduct and testing accuracy to seek reduced or dismissed charges.',
+  'expungements': 'A criminal record can limit employment and housing opportunities. We guide clients through the process of clearing eligible records.',
+  'guns-weapons': 'Weapons charges often involve strict penalties and constitutional issues. We examine possession, intent, and search legality to build a strong defense.',
+  'harassment': 'Harassment allegations can affect your personal and professional life. We challenge credibility and evidence to protect your reputation.',
+  'identity-theft': 'Identity theft cases typically involve financial records and digital evidence. We carefully analyze documentation and intent to defend against felony charges.',
+  'kidnapping': 'Kidnapping allegations are among the most serious criminal charges. We provide trial-ready representation focused on protecting your freedom.',
+  'license-reinstatement': 'License suspensions can disrupt daily life and employment. We represent clients in hearings to pursue reinstatement of driving privileges.',
+  'murder-reckless-homicide': 'These life-altering charges require experienced and meticulous trial preparation. We build comprehensive defenses in high-stakes felony cases.',
+  'pleas-sentencing': 'Plea negotiations and sentencing hearings significantly impact case outcomes. We advocate strategically to pursue favorable resolutions.',
+  'police-brutality': 'Allegations involving police misconduct can affect the integrity of a case. We challenge constitutional violations and unlawful conduct.',
+  'property-crimes': 'Property crime charges may include damage, trespass, or burglary. We analyze intent and evidence to seek reduced or dismissed charges.',
+  'resisting-obstructing-arrest': 'These charges often arise during tense encounters with law enforcement. We review officer conduct and available footage to challenge the allegations.',
+  'retail-theft': 'Retail theft accusations can lead to criminal records and fines. We work to reduce penalties and pursue dismissal when possible.',
+  'scotts-law': 'Scott\'s Law violations involve failure to move over for emergency vehicles. We defend against these traffic-related charges to minimize fines and license consequences.',
+  'search-warrants': 'Search warrant cases focus on whether law enforcement followed constitutional procedures. We scrutinize probable cause and execution to suppress unlawful evidence.',
+  'solicitation': 'Solicitation charges require discreet and strategic defense. We carefully examine the evidence and protect client privacy throughout the process.',
+  'speeding-aggravated': 'Aggravated speeding can result in criminal penalties beyond simple fines. We work to reduce charges and protect your driving record.',
+  'suspended-revoked-license': 'Driving on a suspended or revoked license can lead to additional consequences. We defend against new charges and address underlying suspension issues.',
+  'theft-burglary-robbery': 'These offenses range from non-violent theft to serious robbery allegations. We challenge identification, intent, and evidence to build a strong defense.',
+  'traffic-violation': 'Traffic violations can impact your license and insurance rates. We provide representation aimed at minimizing penalties and protecting your record.',
+}
+
 // Homepage practice area cards (shown in "Our Practice Areas & Services" section)
 export const PRACTICE_AREAS = [
   { id: '1', title: 'Aggravated Speeding', description: 'Exceeding limits by 26+ mph is a criminal misdemeanour in Illinois. We defend you against heavy fines, jail time, and potential license loss.', slug: 'speeding-aggravated' },

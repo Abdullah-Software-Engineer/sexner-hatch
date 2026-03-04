@@ -32,7 +32,7 @@ export default function PracticeAreasHero() {
               <span className="text-secondary" style={{ fontFamily: 'var(--font-playfair), serif' }}>AREAS</span>
             </h1>
             <p className="font-poppins text-white text-[16px] md:text-[16px] lg:text-[16px] xl:text-[18px] leading-relaxed drop-shadow-md text-left mb-6">
-              Our experienced criminal defense attorneys handle a wide range of practice areas. Select an area below to learn more.
+              Strategic defense across a full range of criminal matters, built on preparation, precision, and proven results.
             </p>
             <div className="flex justify-start">
               <Link

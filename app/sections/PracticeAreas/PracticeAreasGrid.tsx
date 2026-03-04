@@ -1,11 +1,10 @@
 'use client'
 
-import Link from 'next/link'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
 import ScrollFollowingForm from '../../components/ScrollFollowingForm'
 import ServiceCard from '../../components/ui/ServiceCard'
-import { PRACTICE_AREAS_FULL } from '@/lib/constants'
+import { PRACTICE_AREAS_FULL, PRACTICE_AREAS_DESCRIPTIONS } from '@/lib/constants'
 
 const DEFAULT_DESCRIPTION =
   'Our experienced criminal defense attorneys provide skilled representation in this area. Contact us for a confidential case evaluation.'
@@ -25,7 +24,7 @@ export default function PracticeAreasGrid() {
                 <ServiceCard
                   key={area.slug}
                   title={area.title}
-                  description={DEFAULT_DESCRIPTION}
+                  description={PRACTICE_AREAS_DESCRIPTIONS[area.slug] ?? DEFAULT_DESCRIPTION}
                   href={`/practice-areas/${area.slug}`}
                   featured={index === 0}
                 />
