@@ -1,32 +1,6 @@
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
-
-const COURTHOUSE_LOCATIONS = [
-  '111th Street Branch Court',
-  '26th & California (Criminal)',
-  'Daley Center (Civil)',
-  '555 W. Harrison (Domestic Violence)',
-  'Grand & Central Branch',
-  'Skokie Courthouse',
-  'Rolling Meadows Courthouse',
-  'Maywood Courthouse',
-  'Bridgeview Courthouse',
-  'Markham Courthouse',
-  'Chicago Lawn (63rd) Branch',
-  'Harrison (Kedzie) Branch',
-  'Leighton Criminal Court',
-  'George N. Leighton Courthouse',
-  'Richard J. Daley Center',
-  'Englewood Branch Court',
-  'First Municipal District',
-  'Second Municipal District',
-  'Third Municipal District',
-  'Fourth Municipal District',
-  'Fifth Municipal District',
-  'Sixth Municipal District',
-  'Juvenile Justice Division',
-  'Traffic Court (Daley Center)',
-]
+import { COURTHOUSE_LOCATIONS } from '../../lib/constants'
 
 export default function CourthouseLocations() {
   return (
@@ -39,7 +13,7 @@ export default function CourthouseLocations() {
           </h2>
         </div>
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-          {COURTHOUSE_LOCATIONS.map((name) => (
+          {COURTHOUSE_LOCATIONS.map(({ name }) => (
             <li key={name} className="flex">
               <div className="bg-white rounded-lg border border-gray-200 shadow-sm py-5 px-4 text-center font-poppins text-primary text-[14px] hover:shadow-md hover:border-secondary transition-all w-full">
                 {name}

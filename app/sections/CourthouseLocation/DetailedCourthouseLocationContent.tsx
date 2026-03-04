@@ -1,8 +1,32 @@
 import Container from '../../components/ui/Container'
 import ScrollFollowingForm from '../../components/ScrollFollowingForm'
 
-// Placeholder locations based on the image
-const COURTHOUSE_LOCATIONS = Array(16).fill('111th Street Branch Court')
+const COURTHOUSE_NAMES = [
+  '111th Street Branch Court',
+  '51st Street Branch Court',
+  'Addison Field Court',
+  'Aurora Branch Court',
+  'Belmont & Western Courthouse',
+  'Bridgeview Courthouse',
+  'Cook County Criminal Court',
+  'Downers Grove Field Court',
+  'Elgin Branch Court',
+  'Flournoy Branch Court',
+  'Grand Avenue Branch Court',
+  'Harrison Branch Court',
+  'Kane Branch Court',
+  'Markham Courthouse',
+  'Maywood Courthouse',
+  'Mundelein Branch Court',
+  'Park City Branch Court',
+  'Richard J. Daley Center',
+  'Rolling Meadows Courthouse',
+  'Round Lake Branch Court',
+  'Skokie Courthouse',
+  'St. Charles Courthouse',
+  'Waukegan Courthouse',
+  'Wheaton Courthouse',
+]
 
 export default function DetailedCourthouseLocationContent() {
   return (
@@ -14,18 +38,17 @@ export default function DetailedCourthouseLocationContent() {
             <h2 className="font-libre font-bold text-black text-[26px] md:text-[32px] mb-6">
               Courthouses in Chicago area
             </h2>
-            
+
             <p className="font-poppins text-primary/80 text-sm md:text-base leading-relaxed mb-10 max-w-3xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons. 
-              Lorem ipsum dolor sit amet, cons.
+              Navigating the legal systems can be overwhelming, especially when you are facing criminal charges. To help you identify where your case might be heard, here is an overview of the primary judicial hubs across the Chicago metropolitan area.
             </p>
 
             {/* Locations Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {COURTHOUSE_LOCATIONS.map((location, index) => (
+              {COURTHOUSE_NAMES.map((location, index) => (
                 <button
                   key={index}
+                  type="button"
                   className="w-full text-left bg-[#F9F9F9] hover:bg-[#F0F0F0] border border-[#EAEAEA] rounded-lg px-6 py-4 font-poppins text-primary text-sm transition-colors duration-200"
                 >
                   {location}
