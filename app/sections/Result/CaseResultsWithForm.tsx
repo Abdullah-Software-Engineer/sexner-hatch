@@ -1,49 +1,36 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
+import { CASE_RESULTS, type ResultCategory } from '@/lib/caseResultsData'
 
-const FILTERS = [
-  { id: 'dismissed' as const, label: 'Dismissed' },
-  { id: 'not-guilty' as const, label: 'Not guilty' },
-  { id: 'reduced-charges' as const, label: 'Reduced charges' },
+type FilterId = ResultCategory | 'all'
+
+const FILTERS: { id: FilterId; label: string }[] = [
+  { id: 'all', label: 'All' },
+  { id: 'dismissed', label: 'Dismissed' },
+  { id: 'not-guilty', label: 'Not guilty' },
+  { id: 'reduced-charges', label: 'Reduced charges' },
 ]
 
-const RESULT_CARDS = [
-  {
-    id: 1,
-    title: 'Drug DUI with Injuries Trial',
-    summary:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
-  },
-  {
-    id: 2,
-    title: 'Drug DUI with Injuries Trial',
-    summary:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
-  },
-  { id: 3, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 4, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 5, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 6, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 7, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 8, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 9, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 10, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 11, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 12, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 13, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 14, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 15, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 16, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 17, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-  { id: 18, title: 'Drug DUI with Injuries Trial', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.' },
-]
+const INTRO_TEXT =
+  'Since 1990, Mitchell S. Sexner & Associates LLC has defended the rights of the accused with a strong record of successful outcomes. Our attorneys bring decades of experience, meticulous preparation, and relentless advocacy to protect your future and pursue the best possible results.'
+
+const DISCLAIMER =
+  'These results represent a sampling of cases litigated by Mitchell S. Sexner & Associates LLC. Every case is unique; these summaries are for illustrative purposes and do not guarantee or predict similar outcomes for future cases.'
 
 export default function CaseResultsWithForm() {
-  const [activeFilter, setActiveFilter] = useState<'dismissed' | 'not-guilty' | 'reduced-charges'>('dismissed')
+  const [activeFilter, setActiveFilter] = useState<FilterId>('all')
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+
+  const filteredResults = useMemo(
+    () =>
+      activeFilter === 'all'
+        ? CASE_RESULTS
+        : CASE_RESULTS.filter((card) => card.category === activeFilter),
+    [activeFilter]
+  )
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -59,9 +46,7 @@ export default function CaseResultsWithForm() {
           {/* Left: Intro + Filters + Result Cards */}
           <div className="flex-1 lg:w-[58.33%] space-y-6 min-w-0">
             <p className="font-poppins text-primary text-[14px] md:text-[16px] leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              {INTRO_TEXT}
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -85,7 +70,7 @@ export default function CaseResultsWithForm() {
             </div>
 
             <div className="space-y-8 mt-16">
-              {RESULT_CARDS.map((card, index) => {
+              {filteredResults.map((card, index) => {
                 const imageLeft = index % 2 === 0
                 const imagePlaceholder = (
                   <div
@@ -123,6 +108,10 @@ export default function CaseResultsWithForm() {
                 )
               })}
             </div>
+
+            <p className="font-poppins text-gray-500 text-[13px] md:text-[14px] leading-relaxed mt-10 pt-6 border-t border-gray-200">
+              {DISCLAIMER}
+            </p>
           </div>
 
           {/* Right: Contact Form - Sticky Sidebar */}
