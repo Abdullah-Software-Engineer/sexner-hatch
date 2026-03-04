@@ -5,6 +5,7 @@ import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
 import { ContactForm } from '../../components/ui/ContactForm'
 import { PRACTICE_AREAS_FULL } from '@/lib/constants'
+import { getPracticeAreaContent } from '@/lib/practiceAreaContent'
 
 const LOREM =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
@@ -17,65 +18,122 @@ interface PracticeAreaDetailContentProps {
 }
 
 export default function PracticeAreaDetailContent({ title = 'Overview', currentSlug }: PracticeAreaDetailContentProps) {
+  const content = currentSlug ? getPracticeAreaContent(currentSlug) : null
+
   return (
     <Section className="bg-white py-14 md:py-20">
       <Container>
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-12">
-          {/* Left: Main content - headings, paragraphs, grey placeholder blocks */}
+          {/* Left: Main content */}
           <div className="flex-1 min-w-0 space-y-8">
-            <section>
-              <h2 className="font-libre font-bold text-primary text-2xl md:text-3xl mb-4">
-                Heading!
-              </h2>
-              <div className="space-y-4 font-poppins text-primary/90 text-[15px] md:text-base leading-relaxed">
-                <p>{LOREM}</p>
-                <p>{LOREM_2}</p>
-              </div>
-            </section>
+            {content ? (
+              <>
+                {/* Table of content */}
+                <div className="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                  <h2 className="font-libre text-[20px] font-semibold text-primary mb-6">
+                    Table of Content
+                  </h2>
+                  <ol className="space-y-3 font-poppins text-[14px] text-primary">
+                    {content.tableOfContents.map((item, index) => (
+                      <li key={item.id} className="flex items-start gap-3">
+                        <span className="text-secondary font-semibold shrink-0">{index + 1}.</span>
+                        <a href={`#${item.id}`} className="hover:text-secondary transition-colors cursor-pointer">
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
 
-            {/* Grey placeholder block - image/content */}
-            <div
-              className="w-full max-w-[66.67%] aspect-video rounded-lg bg-[#e5e7eb] flex items-center justify-center text-[#6b7280] text-sm font-poppins"
-              aria-hidden
-            >
-              Image or media placeholder
-            </div>
+                {/* Sections */}
+                <div className="space-y-8">
+                  {content.sections.map((section) => (
+                    <section
+                      key={section.id}
+                      id={section.id}
+                      className="scroll-mt-24"
+                    >
+                      <h2 className="font-libre font-bold text-primary text-2xl md:text-3xl mb-4">
+                        {section.title}
+                      </h2>
+                      <p className="font-poppins text-primary/90 text-[15px] md:text-base leading-relaxed">
+                        {section.body}
+                      </p>
+                    </section>
+                  ))}
+                </div>
 
-            <section>
-              <h2 className="font-libre font-bold text-primary text-2xl md:text-3xl mb-4">
-                Heading!
-              </h2>
-              <div className="space-y-4 font-poppins text-primary/90 text-[15px] md:text-base leading-relaxed">
-                <p>{LOREM}</p>
-                <p>{LOREM_2}</p>
-              </div>
-            </section>
+                {/* CTA */}
+                <div
+                  id={content.tableOfContents[content.tableOfContents.length - 1]?.id}
+                  className="scroll-mt-24 pt-4 border-t border-gray-200"
+                >
+                  <h2 className="font-libre font-bold text-primary text-2xl md:text-3xl mb-4">
+                    {content.ctaTitle}
+                  </h2>
+                  <p className="font-poppins text-primary/90 text-[15px] md:text-base leading-relaxed">
+                    {content.ctaBody}{' '}
+                    <a href={`tel:${content.ctaPhoneRaw}`} className="text-secondary font-semibold hover:underline">
+                      {content.ctaPhone}
+                    </a>{' '}
+                    to begin building your defence.
+                  </p>
+                </div>
+              </>
+            ) : (
+              <>
+                <section>
+                  <h2 className="font-libre font-bold text-primary text-2xl md:text-3xl mb-4">
+                    Heading!
+                  </h2>
+                  <div className="space-y-4 font-poppins text-primary/90 text-[15px] md:text-base leading-relaxed">
+                    <p>{LOREM}</p>
+                    <p>{LOREM_2}</p>
+                  </div>
+                </section>
 
-            {/* Second grey placeholder block */}
-            <div
-              className="w-full max-w-[66.67%] aspect-[4/3] rounded-lg bg-[#e5e7eb] flex items-center justify-center text-[#6b7280] text-sm font-poppins"
-              aria-hidden
-            >
-              Image or media placeholder
-            </div>
+                <div
+                  className="w-full max-w-[66.67%] aspect-video rounded-lg bg-[#e5e7eb] flex items-center justify-center text-[#6b7280] text-sm font-poppins"
+                  aria-hidden
+                >
+                  Image or media placeholder
+                </div>
 
-            <section>
-              <h2 className="font-libre font-bold text-primary text-2xl md:text-3xl mb-4">
-                Heading!
-              </h2>
-              <div className="space-y-4 font-poppins text-primary/90 text-[15px] md:text-base leading-relaxed">
-                <p>{LOREM}</p>
-                <p>{LOREM_2}</p>
-              </div>
-            </section>
+                <section>
+                  <h2 className="font-libre font-bold text-primary text-2xl md:text-3xl mb-4">
+                    Heading!
+                  </h2>
+                  <div className="space-y-4 font-poppins text-primary/90 text-[15px] md:text-base leading-relaxed">
+                    <p>{LOREM}</p>
+                    <p>{LOREM_2}</p>
+                  </div>
+                </section>
 
-            {/* Third grey placeholder block */}
-            <div
-              className="w-full max-w-[66.67%] h-48 rounded-lg bg-[#e5e7eb] flex items-center justify-center text-[#6b7280] text-sm font-poppins"
-              aria-hidden
-            >
-              Image or media placeholder
-            </div>
+                <div
+                  className="w-full max-w-[66.67%] aspect-[4/3] rounded-lg bg-[#e5e7eb] flex items-center justify-center text-[#6b7280] text-sm font-poppins"
+                  aria-hidden
+                >
+                  Image or media placeholder
+                </div>
+
+                <section>
+                  <h2 className="font-libre font-bold text-primary text-2xl md:text-3xl mb-4">
+                    Heading!
+                  </h2>
+                  <div className="space-y-4 font-poppins text-primary/90 text-[15px] md:text-base leading-relaxed">
+                    <p>{LOREM}</p>
+                    <p>{LOREM_2}</p>
+                  </div>
+                </section>
+
+                <div
+                  className="w-full max-w-[66.67%] h-48 rounded-lg bg-[#e5e7eb] flex items-center justify-center text-[#6b7280] text-sm font-poppins"
+                  aria-hidden
+                >
+                  Image or media placeholder
+                </div>
+              </>
+            )}
           </div>
 
           {/* Right: Sidebar - Practice Areas nav card + Contact form card */}

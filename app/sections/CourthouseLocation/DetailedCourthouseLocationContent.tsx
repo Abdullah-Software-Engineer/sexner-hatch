@@ -1,32 +1,7 @@
+import Link from 'next/link'
 import Container from '../../components/ui/Container'
 import ScrollFollowingForm from '../../components/ScrollFollowingForm'
-
-const COURTHOUSE_NAMES = [
-  '111th Street Branch Court',
-  '51st Street Branch Court',
-  'Addison Field Court',
-  'Aurora Branch Court',
-  'Belmont & Western Courthouse',
-  'Bridgeview Courthouse',
-  'Cook County Criminal Court',
-  'Downers Grove Field Court',
-  'Elgin Branch Court',
-  'Flournoy Branch Court',
-  'Grand Avenue Branch Court',
-  'Harrison Branch Court',
-  'Kane Branch Court',
-  'Markham Courthouse',
-  'Maywood Courthouse',
-  'Mundelein Branch Court',
-  'Park City Branch Court',
-  'Richard J. Daley Center',
-  'Rolling Meadows Courthouse',
-  'Round Lake Branch Court',
-  'Skokie Courthouse',
-  'St. Charles Courthouse',
-  'Waukegan Courthouse',
-  'Wheaton Courthouse',
-]
+import { COURTHOUSE_LOCATIONS } from '../../lib/constants'
 
 export default function DetailedCourthouseLocationContent() {
   return (
@@ -45,14 +20,14 @@ export default function DetailedCourthouseLocationContent() {
 
             {/* Locations Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {COURTHOUSE_NAMES.map((location, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  className="w-full text-left bg-[#F9F9F9] hover:bg-[#F0F0F0] border border-[#EAEAEA] rounded-lg px-6 py-4 font-poppins text-primary text-sm transition-colors duration-200"
+              {COURTHOUSE_LOCATIONS.map(({ slug, name }) => (
+                <Link
+                  key={slug}
+                  href={`/courthouse-location#${slug}`}
+                  className="w-full text-left bg-[#F9F9F9] hover:bg-[#F0F0F0] border border-[#EAEAEA] rounded-lg px-6 py-4 font-poppins text-primary text-sm transition-colors duration-200 block"
                 >
-                  {location}
-                </button>
+                  {name}
+                </Link>
               ))}
             </div>
           </div>
