@@ -16,26 +16,30 @@ function ChartLineIcon({ className = 'w-6 h-6' }: { className?: string }) {
 const expectCards = [
   {
     id: 1,
-    title: 'Heading',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.',
+    title: 'Professionalism',
+    description:
+      'Every attorney is a dedicated, compassionate professional. We collaborate to find creative solutions that meet your specific needs and point your life in a positive direction.',
     highlighted: true,
   },
   {
     id: 2,
-    title: 'Heading',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.',
+    title: 'Fair Fees',
+    description:
+      'We believe quality representation should be accessible. For criminal or traffic matters, flat fees are quoted upfront with flexible payment plans available in most cases.',
     highlighted: false,
   },
   {
     id: 3,
-    title: 'Heading',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.',
+    title: 'Total Honesty',
+    description:
+      'We tell it like it is. A successful legal outcome requires a relationship built on the truth, ensuring you have the realistic information needed to make vital decisions.',
     highlighted: false,
   },
   {
     id: 4,
-    title: 'Heading',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, cons.',
+    title: '100% Effort',
+    description:
+      'No one will work harder for your results. We treat our clients like extended family, taking immense pride in every success we achieve on your behalf.',
     highlighted: false,
   },
 ]
@@ -46,7 +50,7 @@ export default function WhatYouShouldExpect() {
       <Container>
         {/* Upper text block */}
         <p className="text-gray-600 text-[14px] md:text-[16px] leading-relaxed max-w-full mb-10 md:mb-12 xl:mb-16">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Since 1990, our mission has been simple: deliver elite legal representation with the respect every client deserves. What began as a single attorney has grown into a powerhouse team serving clients across Illinois, while staying true to our commitment to excellence and results. With more than 20,000 clients helped, we continue to prioritize one thing above all—protecting your future. Contact us today to experience the difference our skill, dedication, and proven track record can make.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-start">
@@ -62,7 +66,7 @@ export default function WhatYouShouldExpect() {
               aria-hidden="true"
             />
             <p className="mt-6 text-gray-600 text-base md:text-lg leading-relaxed max-w-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Our firm is built on a foundation of integrity and tireless advocacy. We provide the high-level legal assistance you need during life&apos;s most challenging moments.
             </p>
             <Link
               href="/practice-areas"

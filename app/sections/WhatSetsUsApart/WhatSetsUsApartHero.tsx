@@ -33,7 +33,7 @@ export default function WhatSetsUsApartHero() {
               What sets us <span className="text-secondary">apart</span>
             </h1>
             <p className="font-poppins text-white/80 text-[16px] md:text-[16px] lg:text-[16px] xl:text-[18px] leading-relaxed mt-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+              We combine aggressive advocacy with personalized attention, ensuring every client receives the focus and respect they deserve.
             </p>
             <Link
               href="/contact"

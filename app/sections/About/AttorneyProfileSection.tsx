@@ -66,26 +66,26 @@ export default function AttorneyProfileSection() {
             {/* Biography */}
             <div className="font-poppins text-[#3C3C3C] text-[15px] md:text-base leading-relaxed space-y-6">
               <p>
-                Mitchell S. Sexner is the founding attorney of Mitchell S. Sexner & Associates LLC, a law firm first established in 1990. A graduate of Northwestern University in Evanston and the IIT Chicago Kent College of Law in Chicago, he is a life-long Chicago area resident who has devoted his career to the protection and defense of those charged with criminal and traffic matters, as well as those injured due to the negligence of others.
+                Mitchell S. Sexner is the founding attorney of Mitchell S. Sexner &amp; Associates LLC, established in 1990. A graduate of Northwestern University and Chicago-Kent College of Law, he is a lifelong Chicago-area resident dedicated to defending individuals charged with criminal and traffic offenses and representing those injured due to the negligence of others.
               </p>
-              
+
               <p>
-                Mr. Sexner began his legal career at the Cook County States Attorney&apos;s Office where he prosecuted thousands of cases involving traffic matters, DUIs, juvenile crimes and all types of criminal offenses ranging from <Link href="#" className="underline decoration-gray-400 hover:text-secondary">disorderly conduct</Link> to attempted murder. Sometimes handling more than a hundred cases in a single day, he maintained a high attention to detail, while winning the vast majority of his trials, often being called upon to supervise or educate other prosecutors on the law during his tenure. Mr. Sexner has been a guest television commentator and worked for a period of time for the Illinois Secretary of State as well as the Cook County Clerk of the Circuit Court, further expanding his knowledge of the court system and driver&apos;s license privileges. He is admitted to the Federal Trial Bar and to the U.S. District Courts in Illinois, Hawaii, Texas, and Wisconsin.
+                He began his legal career at the Cook County State&apos;s Attorney&apos;s Office, prosecuting thousands of cases—from traffic violations to serious felonies—often handling 100+ cases per day. Known for meticulous preparation and trial success, he trained and supervised fellow prosecutors, served as a legal commentator, worked with the Illinois Secretary of State and Cook County Clerk, and is admitted to the Federal Trial Bar and U.S. District Courts in Illinois, Hawaii, Texas, and Wisconsin.
               </p>
-              
+
               <p>
-                After leaving the States Attorney&apos;s Office, he opened the Law Offices of Mitchell S. Sexner in 1990, first in Chicago&apos;s northwest suburbs and later expanding to an additional office location in the city of Chicago to better serve the legal needs of all residents in the Northern portion of Illinois. Over the last 30 years, he has meticulously hand-picked a select group of experienced attorneys and support staff in order to provide the highest standards of legal services to those in need. In addition to hundreds of successfully litigated criminal and traffic cases, his firm has also been responsible for securing over $25,000,000 in settlements and verdicts for injured clients.
+                After leaving the State&apos;s Attorney&apos;s Office, he founded the Law Offices of Mitchell S. Sexner, first in Chicago&apos;s northwest suburbs and later expanding to a Chicago office to better serve Northern Illinois. Over 30 years, he has carefully built a team of experienced attorneys and support staff, delivering the highest standard of legal services. His firm has successfully litigated hundreds of criminal and traffic cases and secured over $25 million in settlements and verdicts for injured clients.
               </p>
-              
+
               <p>
-                For further information or to set up a free consultation to discuss your legal matter, contact Mitch Sexner at <a href="tel:3122623576" className="font-bold text-[#C5A059] hover:underline">(312) 262-3576</a> or by email at <a href="mailto:mitch@sexner.com" className="font-bold text-[#C5A059] hover:underline">mitch@sexner.com</a>.
+                For more information or to schedule a free consultation, contact Mitch Sexner at <a href="tel:3122623576" className="font-bold text-[#C5A059] hover:underline">(312) 262-3576</a> or <a href="mailto:mitch@sexner.com" className="font-bold text-[#C5A059] hover:underline">mitch@sexner.com</a>.
               </p>
             </div>
 
             {/* Attorney profiles */}
             <div className="pt-2">
               <h3 className="font-poppins font-bold text-black text-[16px] uppercase tracking-wide mb-4">
-                ATTORNEY PROFILES FOR MITCHELL S. SEXNER
+                Attorney Profiles for Mitchell S. Sexner
               </h3>
               <div className="flex flex-wrap gap-x-1.5 gap-y-2 text-[15px] text-[#C5A059] font-poppins">
                 {ATTORNEY_PROFILES.map((item, i) => (
