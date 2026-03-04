@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Container from '../../components/ui/Container'
 import ScrollFollowingForm from '../../components/ScrollFollowingForm'
-import { COURTHOUSE_LOCATIONS } from '../../lib/constants'
+import { COURTHOUSE_LOCATIONS } from '../../../lib/constants'
 
 export default function DetailedCourthouseLocationContent() {
   return (

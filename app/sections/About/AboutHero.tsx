@@ -32,16 +32,16 @@ export default function AboutHero() {
               <span className="text-secondary" style={{ fontFamily: 'var(--font-playfair), serif' }}>US</span>
             </h1>
             <p className="font-poppins text-white text-[16px] md:text-[16px] lg:text-[16px] xl:text-[18px] mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+              Decades of courtroom experience, strategic advocacy and an unwavering commitment to protecting our clients&apos; rights.
             </p>
             <div className="flex flex-col gap-5">
               <div className="flex justify-start">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-4 pl-8 pr-1.5 py-1.5 rounded-full bg-secondary text-white font-medium hover:bg-secondary/90 transition-colors w-fit shadow-lg group h-14"
-                  aria-label="Book an appointment"
+                  aria-label="Schedule a consultation"
                 >
-                  <span className="text-[14px] md:text-[14px] lg:text-[14px] xl:text-[16px] font-medium tracking-wide">Book an appointment</span>
+                  <span className="text-[14px] md:text-[14px] lg:text-[14px] xl:text-[16px] font-medium tracking-wide">Schedule a Consultation</span>
                   <div className="flex items-center justify-center w-11 h-11 rounded-full bg-primary text-white shrink-0 group-hover:translate-x-1 transition-transform">
                     <FaArrowRight className="w-5 h-5" />
                   </div>

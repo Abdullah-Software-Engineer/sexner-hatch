@@ -1,6 +1,6 @@
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
-import { COURTHOUSE_LOCATIONS } from '../../lib/constants'
+import { COURTHOUSE_LOCATIONS } from '../../../lib/constants'
 
 export default function CourthouseLocations() {
   return (

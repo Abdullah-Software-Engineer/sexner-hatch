@@ -15,10 +15,12 @@ const ArrowIcon = () => (
 export default function AboutContent() {
   return (
     <Section className="bg-white overflow-hidden" id="about-content">
-      {/* Top: Repeating marquee heading */}
+      {/* Top: Intro paragraph */}
       <div className="bg-white py-4 md:py-5">
         <Container>
-          <p className="font-poppins text-primary/90 text-[18px] md:text-[16px] leading-relaxed text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+          <p className="font-poppins text-primary/90 text-[18px] md:text-[16px] leading-relaxed text-center max-w-4xl mx-auto">
+            For over 25 years, the award-winning team at Mitchell S. Sexner &amp; Associates LLC has fought for fairness. We treat your trust as a solemn responsibility, working tirelessly to achieve the successful results you deserve. Having successfully represented over 20,000 clients, we give 100% effort to every case. Our attorneys work daily to help clients avoid jail, prevent convictions, and maintain clean records. Whether facing minor traffic matters or serious criminal charges, our experienced litigators use creative solutions and specialized skills to protect your future.
+          </p>
         </Container>
       </div>
 
@@ -27,13 +29,10 @@ export default function AboutContent() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
           <div className="lg:col-span-2 bg-secondary rounded-2xl p-6 md:p-8 flex flex-col justify-center">
             <h2 className="font-libre text-[20px] font-bold text-white leading-tight mb-4">
-              Heading will come here Heading will come here
+              Justice Is What Drives Our Team
             </h2>
             <p className="font-poppins text-white/95 text-[14px] md:text-[16px] leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-            </p>
-            <p className="font-poppins text-white/95 text-[14px] md:text-[16px] leading-relaxed mt-3">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+              For over 25 years, Mitchell S. Sexner &amp; Associates LLC has fought for fairness. We take your trust seriously, working tirelessly toward the successful results you desire. Every client has a right to be treated with dignity and fairness.
             </p>
           </div>
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-between">
@@ -44,10 +43,10 @@ export default function AboutContent() {
               <p className="font-poppins text-white/90 text-[14px] mt-2">Years of experience</p>
             </div>
             <Link
-              href="#"
+              href="/results"
               className="inline-flex items-center gap-2 mt-6 px-4 py-3 bg-white text-primary rounded-xl font-poppins font-medium text-[16px] hover:bg-white/90 transition-colors w-fit"
             >
-              Any button link here
+              Proven Results
               <ArrowIcon />
             </Link>
           </div>
@@ -59,7 +58,7 @@ export default function AboutContent() {
               <p className="font-poppins text-white/90 text-[14px] mt-2">People we have helped</p>
             </div>
             <Link
-              href="/result#testimonials"
+              href="/testimonial"
               className="inline-flex items-center gap-2 mt-6 px-4 py-3 bg-white text-primary rounded-xl font-poppins font-medium text-[16px] hover:bg-white/90 transition-colors w-fit"
             >
               What our clients say
@@ -82,7 +81,7 @@ export default function AboutContent() {
           </div>
           <div className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col justify-center">
             <h2 className="font-libre text-[20px] font-bold text-white leading-tight">
-              Heading will come here Heading will come here
+              Superior Results For Our Clients
             </h2>
           </div>
         </div>
@@ -91,22 +90,22 @@ export default function AboutContent() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mt-10 md:mt-12 lg:mt-14 pb-4">
           <div>
             <h2 className="font-libre text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight">
-              Some text which is a bit long will be here{' '}
+              Experience counts when choosing your{' '}
               <span className="!font-libre relative inline-block text-black">
-                like
+                legal
                 <span className="absolute left-0 bottom-0.5 w-full h-0.5 bg-secondary" aria-hidden="true" />
               </span>{' '}
-              a heading
+              representation
             </h2>
           </div>
           <div>
             <p className="font-poppins text-primary/90 text-[14px] md:text-[16px] leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Our legal team is composed of experienced attorneys with years of specialised skills. We know how to reach your goals and will go the extra mile to get you there.
             </p>
           </div>
           <div>
             <p className="font-poppins text-primary/90 text-[14px] md:text-[16px] leading-relaxed">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              If you are looking for knowledgeable and compassionate representation, speak to one of our experienced attorneys today.
             </p>
           </div>
         </div>

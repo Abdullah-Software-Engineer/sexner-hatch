@@ -20,7 +20,6 @@ const contentVariants = {
 
 export default function AboutTeam() {
   const [expandedIndex, setExpandedIndex] = useState(0)
-  const selectedMember = TEAM_MEMBERS[expandedIndex]
 
   return (
     <Section className="bg-[#FDFDFC]" id="meet-our-team">
@@ -56,20 +55,8 @@ export default function AboutTeam() {
                   Since 1990, we&apos;ve served over 20,000 clients by tailoring our approach to each person&apos;s unique circumstances—because no two cases are ever the same.
                 </p>
                 <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
-                  When you hire us, you&apos;re not just getting a lawyer— you&apos;re gaining a full legal team committed to guiding you toward a successful result.
+                  When you hire us, you&apos;re not just getting a lawyer—you&apos;re gaining a full legal team committed to guiding you toward a successful result.
                 </p>
-                {/* Selected member bio - animates when card changes */}
-                <div className="pt-2 border-t border-[#e5e7eb]">
-                  <h3 className="font-poppins font-bold text-[#3C3C3C] text-base mb-2">
-                    {selectedMember.name}
-                    {selectedMember.title && (
-                      <span className="font-normal text-[#5A5A5A]"> — {selectedMember.title}</span>
-                    )}
-                  </h3>
-                  <p className="font-poppins text-[#5A5A5A] text-[14px] md:text-[16px] leading-relaxed">
-                    {selectedMember.bio}
-                  </p>
-                </div>
               </motion.div>
             </AnimatePresence>
             <Link
