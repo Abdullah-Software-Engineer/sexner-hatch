@@ -4,8 +4,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Container from '../../components/ui/Container'
 import Section from '../../components/ui/Section'
-import ScrollFollowingForm from '../../components/ScrollFollowingForm'
 import { TEAM_MEMBERS } from '@/lib/constants'
+
+const ATTORNEY_PROFILES = [
+  { label: 'Justia Profile', href: '#' },
+  { label: 'Findlaw Profile', href: '#' },
+  { label: 'HG.org Profile', href: '#' },
+  { label: 'Martindale Profile', href: '#' },
+  { label: 'Avvo Profile', href: '#' },
+  { label: 'Lawyer.com Profile', href: '#' },
+  { label: 'National Association of Distinguished Counsel', href: '#' },
+  { label: 'Better Business Bureau Profile', href: '#' },
+  { label: 'Google Business Profile', href: '#' },
+]
 
 interface TeamMemberContentProps {
   name: string
@@ -22,6 +33,9 @@ export default function TeamMemberContent({
   bio,
   currentSlug,
 }: TeamMemberContentProps) {
+  const bioParagraphs = bio.split(/\n\n+/).filter(Boolean)
+  const isMitchell = currentSlug === 'mitchell-s-sexner'
+
   return (
     <Section className="bg-white " id="team-member-profile">
       <Container>
@@ -56,7 +70,36 @@ export default function TeamMemberContent({
             </div>
 
             <div className="font-poppins text-[#3C3C3C] text-[15px] md:text-base leading-relaxed space-y-6">
-              <p>{bio}</p>
+              {bioParagraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+              {isMitchell && (
+                <>
+                  <p>
+                    For more information or to schedule a free consultation, contact Mitch Sexner at{' '}
+                    <a href="tel:3122623576" className="font-bold text-[#C5A059] hover:underline">(312) 262-3576</a>
+                    {' '}or{' '}
+                    <a href="mailto:mitch@sexner.com" className="font-bold text-[#C5A059] hover:underline">mitch@sexner.com</a>.
+                  </p>
+                  <div className="pt-2">
+                    <h3 className="font-poppins font-bold text-black text-[16px] uppercase tracking-wide mb-4">
+                      Attorney Profiles for Mitchell S. Sexner
+                    </h3>
+                    <div className="flex flex-wrap gap-x-1.5 gap-y-2 text-[15px] text-[#C5A059] font-poppins">
+                      {ATTORNEY_PROFILES.map((item, i) => (
+                        <span key={item.label} className="inline-flex items-center">
+                          <Link href={item.href} className="hover:underline hover:text-[#b08d48] transition-colors">
+                            {item.label}
+                          </Link>
+                          {i < ATTORNEY_PROFILES.length - 1 && (
+                            <span className="text-black ml-1.5">|</span>
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
 
